@@ -6,10 +6,10 @@
 const { CdktfProviderProject } = require("@cdktf/provider-project");
 const project = new CdktfProviderProject({
   useCustomGithubRunner: false,
-  terraformProvider: "databricks/databricks@~> 1.0",
-  cdktfVersion: "^0.18.0",
-  constructsVersion: "^10.0.0",
-  minNodeVersion: "16.14.0",
+  terraformProvider: "rhizo-co/wiz@~> 1.1.6",
+  cdktfVersion: "^0.16.0",
+  constructsVersion: "^10.2.0",
+  minNodeVersion: "18.0.0",
   jsiiVersion: "^5.0.1",
   devDeps: ["@cdktf/provider-project@^0.2.95"],
 });
