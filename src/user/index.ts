@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user
+// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,90 +8,54 @@ import * as cdktf from 'cdktf';
 
 export interface UserConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#acl_principal_id User#acl_principal_id}
+  * Assigned Project Identifiers.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#assigned_project_ids User#assigned_project_ids}
   */
-  readonly aclPrincipalId?: string;
+  readonly assignedProjectIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#active User#active}
+  * The user email address.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#email User#email}
   */
-  readonly active?: boolean | cdktf.IResolvable;
+  readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#allow_cluster_create User#allow_cluster_create}
+  * The user name.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#name User#name}
   */
-  readonly allowClusterCreate?: boolean | cdktf.IResolvable;
+  readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#allow_instance_pool_create User#allow_instance_pool_create}
+  * Whether the project is archived/inactive
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#role User#role}
   */
-  readonly allowInstancePoolCreate?: boolean | cdktf.IResolvable;
+  readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#databricks_sql_access User#databricks_sql_access}
+  * Send email invite?
+    - Defaults to `true`.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#send_email_invite User#send_email_invite}
   */
-  readonly databricksSqlAccess?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#disable_as_user_deletion User#disable_as_user_deletion}
-  */
-  readonly disableAsUserDeletion?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#display_name User#display_name}
-  */
-  readonly displayName?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#external_id User#external_id}
-  */
-  readonly externalId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#force User#force}
-  */
-  readonly force?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#force_delete_home_dir User#force_delete_home_dir}
-  */
-  readonly forceDeleteHomeDir?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#force_delete_repos User#force_delete_repos}
-  */
-  readonly forceDeleteRepos?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#home User#home}
-  */
-  readonly home?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#id User#id}
-  *
-  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-  */
-  readonly id?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#repos User#repos}
-  */
-  readonly repos?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#user_name User#user_name}
-  */
-  readonly userName: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#workspace_access User#workspace_access}
-  */
-  readonly workspaceAccess?: boolean | cdktf.IResolvable;
+  readonly sendEmailInvite?: boolean | cdktf.IResolvable;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user databricks_user}
+* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user wiz_user}
 */
 export class User extends cdktf.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType = "databricks_user";
+  public static readonly tfResourceType = "wiz_user";
 
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user databricks_user} Resource
+  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user wiz_user} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -104,11 +63,11 @@ export class User extends cdktf.TerraformResource {
   */
   public constructor(scope: Construct, id: string, config: UserConfig) {
     super(scope, id, {
-      terraformResourceType: 'databricks_user',
+      terraformResourceType: 'wiz_user',
       terraformGeneratorMetadata: {
-        providerName: 'databricks',
-        providerVersion: '1.24.1',
-        providerVersionConstraint: '~> 1.0'
+        providerName: 'wiz',
+        providerVersion: '1.1.6',
+        providerVersionConstraint: '~> 1.1.6'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -118,279 +77,91 @@ export class User extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
-    this._aclPrincipalId = config.aclPrincipalId;
-    this._active = config.active;
-    this._allowClusterCreate = config.allowClusterCreate;
-    this._allowInstancePoolCreate = config.allowInstancePoolCreate;
-    this._databricksSqlAccess = config.databricksSqlAccess;
-    this._disableAsUserDeletion = config.disableAsUserDeletion;
-    this._displayName = config.displayName;
-    this._externalId = config.externalId;
-    this._force = config.force;
-    this._forceDeleteHomeDir = config.forceDeleteHomeDir;
-    this._forceDeleteRepos = config.forceDeleteRepos;
-    this._home = config.home;
-    this._id = config.id;
-    this._repos = config.repos;
-    this._userName = config.userName;
-    this._workspaceAccess = config.workspaceAccess;
+    this._assignedProjectIds = config.assignedProjectIds;
+    this._email = config.email;
+    this._name = config.name;
+    this._role = config.role;
+    this._sendEmailInvite = config.sendEmailInvite;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
 
-  // acl_principal_id - computed: true, optional: true, required: false
-  private _aclPrincipalId?: string; 
-  public get aclPrincipalId() {
-    return this.getStringAttribute('acl_principal_id');
+  // assigned_project_ids - computed: false, optional: true, required: false
+  private _assignedProjectIds?: string[]; 
+  public get assignedProjectIds() {
+    return this.getListAttribute('assigned_project_ids');
   }
-  public set aclPrincipalId(value: string) {
-    this._aclPrincipalId = value;
+  public set assignedProjectIds(value: string[]) {
+    this._assignedProjectIds = value;
   }
-  public resetAclPrincipalId() {
-    this._aclPrincipalId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get aclPrincipalIdInput() {
-    return this._aclPrincipalId;
-  }
-
-  // active - computed: false, optional: true, required: false
-  private _active?: boolean | cdktf.IResolvable; 
-  public get active() {
-    return this.getBooleanAttribute('active');
-  }
-  public set active(value: boolean | cdktf.IResolvable) {
-    this._active = value;
-  }
-  public resetActive() {
-    this._active = undefined;
+  public resetAssignedProjectIds() {
+    this._assignedProjectIds = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get activeInput() {
-    return this._active;
+  public get assignedProjectIdsInput() {
+    return this._assignedProjectIds;
   }
 
-  // allow_cluster_create - computed: false, optional: true, required: false
-  private _allowClusterCreate?: boolean | cdktf.IResolvable; 
-  public get allowClusterCreate() {
-    return this.getBooleanAttribute('allow_cluster_create');
+  // email - computed: false, optional: false, required: true
+  private _email?: string; 
+  public get email() {
+    return this.getStringAttribute('email');
   }
-  public set allowClusterCreate(value: boolean | cdktf.IResolvable) {
-    this._allowClusterCreate = value;
-  }
-  public resetAllowClusterCreate() {
-    this._allowClusterCreate = undefined;
+  public set email(value: string) {
+    this._email = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get allowClusterCreateInput() {
-    return this._allowClusterCreate;
+  public get emailInput() {
+    return this._email;
   }
 
-  // allow_instance_pool_create - computed: false, optional: true, required: false
-  private _allowInstancePoolCreate?: boolean | cdktf.IResolvable; 
-  public get allowInstancePoolCreate() {
-    return this.getBooleanAttribute('allow_instance_pool_create');
-  }
-  public set allowInstancePoolCreate(value: boolean | cdktf.IResolvable) {
-    this._allowInstancePoolCreate = value;
-  }
-  public resetAllowInstancePoolCreate() {
-    this._allowInstancePoolCreate = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get allowInstancePoolCreateInput() {
-    return this._allowInstancePoolCreate;
-  }
-
-  // databricks_sql_access - computed: false, optional: true, required: false
-  private _databricksSqlAccess?: boolean | cdktf.IResolvable; 
-  public get databricksSqlAccess() {
-    return this.getBooleanAttribute('databricks_sql_access');
-  }
-  public set databricksSqlAccess(value: boolean | cdktf.IResolvable) {
-    this._databricksSqlAccess = value;
-  }
-  public resetDatabricksSqlAccess() {
-    this._databricksSqlAccess = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get databricksSqlAccessInput() {
-    return this._databricksSqlAccess;
-  }
-
-  // disable_as_user_deletion - computed: true, optional: true, required: false
-  private _disableAsUserDeletion?: boolean | cdktf.IResolvable; 
-  public get disableAsUserDeletion() {
-    return this.getBooleanAttribute('disable_as_user_deletion');
-  }
-  public set disableAsUserDeletion(value: boolean | cdktf.IResolvable) {
-    this._disableAsUserDeletion = value;
-  }
-  public resetDisableAsUserDeletion() {
-    this._disableAsUserDeletion = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get disableAsUserDeletionInput() {
-    return this._disableAsUserDeletion;
-  }
-
-  // display_name - computed: true, optional: true, required: false
-  private _displayName?: string; 
-  public get displayName() {
-    return this.getStringAttribute('display_name');
-  }
-  public set displayName(value: string) {
-    this._displayName = value;
-  }
-  public resetDisplayName() {
-    this._displayName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get displayNameInput() {
-    return this._displayName;
-  }
-
-  // external_id - computed: false, optional: true, required: false
-  private _externalId?: string; 
-  public get externalId() {
-    return this.getStringAttribute('external_id');
-  }
-  public set externalId(value: string) {
-    this._externalId = value;
-  }
-  public resetExternalId() {
-    this._externalId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get externalIdInput() {
-    return this._externalId;
-  }
-
-  // force - computed: false, optional: true, required: false
-  private _force?: boolean | cdktf.IResolvable; 
-  public get force() {
-    return this.getBooleanAttribute('force');
-  }
-  public set force(value: boolean | cdktf.IResolvable) {
-    this._force = value;
-  }
-  public resetForce() {
-    this._force = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get forceInput() {
-    return this._force;
-  }
-
-  // force_delete_home_dir - computed: false, optional: true, required: false
-  private _forceDeleteHomeDir?: boolean | cdktf.IResolvable; 
-  public get forceDeleteHomeDir() {
-    return this.getBooleanAttribute('force_delete_home_dir');
-  }
-  public set forceDeleteHomeDir(value: boolean | cdktf.IResolvable) {
-    this._forceDeleteHomeDir = value;
-  }
-  public resetForceDeleteHomeDir() {
-    this._forceDeleteHomeDir = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get forceDeleteHomeDirInput() {
-    return this._forceDeleteHomeDir;
-  }
-
-  // force_delete_repos - computed: false, optional: true, required: false
-  private _forceDeleteRepos?: boolean | cdktf.IResolvable; 
-  public get forceDeleteRepos() {
-    return this.getBooleanAttribute('force_delete_repos');
-  }
-  public set forceDeleteRepos(value: boolean | cdktf.IResolvable) {
-    this._forceDeleteRepos = value;
-  }
-  public resetForceDeleteRepos() {
-    this._forceDeleteRepos = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get forceDeleteReposInput() {
-    return this._forceDeleteRepos;
-  }
-
-  // home - computed: true, optional: true, required: false
-  private _home?: string; 
-  public get home() {
-    return this.getStringAttribute('home');
-  }
-  public set home(value: string) {
-    this._home = value;
-  }
-  public resetHome() {
-    this._home = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get homeInput() {
-    return this._home;
-  }
-
-  // id - computed: true, optional: true, required: false
-  private _id?: string; 
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
   }
-  public set id(value: string) {
-    this._id = value;
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
   }
-  public resetId() {
-    this._id = undefined;
+  public set name(value: string) {
+    this._name = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get idInput() {
-    return this._id;
+  public get nameInput() {
+    return this._name;
   }
 
-  // repos - computed: true, optional: true, required: false
-  private _repos?: string; 
-  public get repos() {
-    return this.getStringAttribute('repos');
+  // role - computed: false, optional: false, required: true
+  private _role?: string; 
+  public get role() {
+    return this.getStringAttribute('role');
   }
-  public set repos(value: string) {
-    this._repos = value;
-  }
-  public resetRepos() {
-    this._repos = undefined;
+  public set role(value: string) {
+    this._role = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get reposInput() {
-    return this._repos;
+  public get roleInput() {
+    return this._role;
   }
 
-  // user_name - computed: false, optional: false, required: true
-  private _userName?: string; 
-  public get userName() {
-    return this.getStringAttribute('user_name');
+  // send_email_invite - computed: false, optional: true, required: false
+  private _sendEmailInvite?: boolean | cdktf.IResolvable; 
+  public get sendEmailInvite() {
+    return this.getBooleanAttribute('send_email_invite');
   }
-  public set userName(value: string) {
-    this._userName = value;
+  public set sendEmailInvite(value: boolean | cdktf.IResolvable) {
+    this._sendEmailInvite = value;
   }
-  // Temporarily expose input value. Use with caution.
-  public get userNameInput() {
-    return this._userName;
-  }
-
-  // workspace_access - computed: false, optional: true, required: false
-  private _workspaceAccess?: boolean | cdktf.IResolvable; 
-  public get workspaceAccess() {
-    return this.getBooleanAttribute('workspace_access');
-  }
-  public set workspaceAccess(value: boolean | cdktf.IResolvable) {
-    this._workspaceAccess = value;
-  }
-  public resetWorkspaceAccess() {
-    this._workspaceAccess = undefined;
+  public resetSendEmailInvite() {
+    this._sendEmailInvite = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get workspaceAccessInput() {
-    return this._workspaceAccess;
+  public get sendEmailInviteInput() {
+    return this._sendEmailInvite;
   }
 
   // =========
@@ -399,22 +170,11 @@ export class User extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      acl_principal_id: cdktf.stringToTerraform(this._aclPrincipalId),
-      active: cdktf.booleanToTerraform(this._active),
-      allow_cluster_create: cdktf.booleanToTerraform(this._allowClusterCreate),
-      allow_instance_pool_create: cdktf.booleanToTerraform(this._allowInstancePoolCreate),
-      databricks_sql_access: cdktf.booleanToTerraform(this._databricksSqlAccess),
-      disable_as_user_deletion: cdktf.booleanToTerraform(this._disableAsUserDeletion),
-      display_name: cdktf.stringToTerraform(this._displayName),
-      external_id: cdktf.stringToTerraform(this._externalId),
-      force: cdktf.booleanToTerraform(this._force),
-      force_delete_home_dir: cdktf.booleanToTerraform(this._forceDeleteHomeDir),
-      force_delete_repos: cdktf.booleanToTerraform(this._forceDeleteRepos),
-      home: cdktf.stringToTerraform(this._home),
-      id: cdktf.stringToTerraform(this._id),
-      repos: cdktf.stringToTerraform(this._repos),
-      user_name: cdktf.stringToTerraform(this._userName),
-      workspace_access: cdktf.booleanToTerraform(this._workspaceAccess),
+      assigned_project_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._assignedProjectIds),
+      email: cdktf.stringToTerraform(this._email),
+      name: cdktf.stringToTerraform(this._name),
+      role: cdktf.stringToTerraform(this._role),
+      send_email_invite: cdktf.booleanToTerraform(this._sendEmailInvite),
     };
   }
 }

@@ -1,36 +1,36 @@
 
-# Terraform CDK databricks Provider ~> 1.0
+# Terraform CDK wiz Provider ~> 1.1.6
 
-This repo builds and publishes the Terraform databricks Provider bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the Terraform wiz Provider bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Available Packages
 
 ### NPM
 
-The npm package is available at [https://www.npmjs.com/package/@cdktf/provider-databricks](https://www.npmjs.com/package/@cdktf/provider-databricks).
+The npm package is available at [https://www.npmjs.com/package/@rhizo-co/provider-wiz](https://www.npmjs.com/package/@rhizo-co/provider-wiz).
 
-`npm install @cdktf/provider-databricks`
+`npm install @rhizo-co/provider-wiz`
 
 ### PyPI
 
-The PyPI package is available at [https://pypi.org/project/cdktf-cdktf-provider-databricks](https://pypi.org/project/cdktf-cdktf-provider-databricks).
+The PyPI package is available at [https://pypi.org/project/rhizo-co-cdktf-provider-wiz](https://pypi.org/project/rhizo-co-cdktf-provider-wiz).
 
-`pipenv install cdktf-cdktf-provider-databricks`
+`pipenv install rhizo-co-cdktf-provider-wiz`
 
 ### Nuget
 
-The Nuget package is available at [https://www.nuget.org/packages/HashiCorp.Cdktf.Providers.Databricks](https://www.nuget.org/packages/HashiCorp.Cdktf.Providers.Databricks).
+The Nuget package is available at [https://www.nuget.org/packages/HashiCorp.Cdktf.Providers.Wiz](https://www.nuget.org/packages/HashiCorp.Cdktf.Providers.Wiz).
 
-`dotnet add package HashiCorp.Cdktf.Providers.Databricks`
+`dotnet add package HashiCorp.Cdktf.Providers.Wiz`
 
 ### Maven
 
-The Maven package is available at [https://mvnrepository.com/artifact/com.hashicorp/cdktf-provider-databricks](https://mvnrepository.com/artifact/com.hashicorp/cdktf-provider-databricks).
+The Maven package is available at [https://mvnrepository.com/artifact/com.hashicorp/cdktf-provider-wiz](https://mvnrepository.com/artifact/com.hashicorp/cdktf-provider-wiz).
 
 ```
 <dependency>
     <groupId>com.hashicorp</groupId>
-    <artifactId>cdktf-provider-databricks</artifactId>
+    <artifactId>cdktf-provider-wiz</artifactId>
     <version>[REPLACE WITH DESIRED VERSION]</version>
 </dependency>
 ```
@@ -38,9 +38,9 @@ The Maven package is available at [https://mvnrepository.com/artifact/com.hashic
 
 ### Go
 
-The go package is generated into the [`github.com/cdktf/cdktf-provider-databricks-go`](https://github.com/cdktf/cdktf-provider-databricks-go) package.
+The go package is generated into the [`github.com/rhizo-co/cdktf-provider-wiz-go`](https://github.com/rhizo-co/cdktf-provider-wiz-go) package.
 
-`go get github.com/cdktf/cdktf-provider-databricks-go/databricks`
+`go get github.com/rhizo-co/cdktf-provider-wiz-go/wiz`
 
 ## Docs
 
@@ -52,17 +52,17 @@ Find auto-generated docs for this provider here:
 - [C#](./docs/API.csharp.md)
 - [Go](./docs/API.go.md)
 
-You can also visit a hosted version of the documentation on [constructs.dev](https://constructs.dev/packages/@cdktf/provider-databricks).
+You can also visit a hosted version of the documentation on [constructs.dev](https://constructs.dev/packages/@cdktf/provider-wiz).
 
 ## Versioning
 
-This project is explicitly not tracking the Terraform databricks Provider version 1:1. In fact, it always tracks `latest` of `~> 1.0` with every release. If there are scenarios where you explicitly have to pin your provider version, you can do so by generating the [provider constructs manually](https://cdk.tf/imports).
+This project is explicitly not tracking the Terraform wiz Provider version 1:1. In fact, it always tracks `latest` of `~> 1.1.6` with every release. If there are scenarios where you explicitly have to pin your provider version, you can do so by generating the [provider constructs manually](https://cdk.tf/imports).
 
 These are the upstream dependencies:
 
 - [Terraform CDK](https://cdk.tf)
-- [Terraform databricks Provider](https://registry.terraform.io/providers/databricks/databricks/1.0.0)
-    - This links to the minimum version being tracked, you can find the latest released version [in our releases](https://github.com/cdktf/cdktf-provider-databricks/releases)
+- [Terraform wiz Provider](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6.0)
+    - This links to the minimum version being tracked, you can find the latest released version [in our releases](https://github.com/cdktf/cdktf-provider-wiz/releases)
 - [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.

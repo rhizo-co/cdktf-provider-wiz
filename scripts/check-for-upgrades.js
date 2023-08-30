@@ -14,8 +14,8 @@ const actions = require("@actions/core");
 // const { versionMatchesConstraint } = require('cdktf-cli/lib/dependencies/version-constraints');
 
 // set by the projen file that generates this script
-const CONSTRAINT = "~> 1.0";
-const FQ_PROVIDER_NAME = "databricks/databricks";
+const CONSTRAINT = "~> 1.1.6";
+const FQ_PROVIDER_NAME = "rhizo-co/wiz";
 
 (async function main() {
   if (await newerMatchingProviderVersionExists()) {
