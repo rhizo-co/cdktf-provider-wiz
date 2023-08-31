@@ -5,6 +5,8 @@
 
 const { CdktfProviderProject } = require("@cdktf/provider-project");
 const project = new CdktfProviderProject({
+  author: "rhizo-co",
+  authorAddress: "https://github.com/rhizo-co/cdktf-provider-wiz",
   packageName: 'rhizo-co-terraform-provider-wiz',
   githubNamespace: 'rhizo-co',
   useCustomGithubRunner: false,
