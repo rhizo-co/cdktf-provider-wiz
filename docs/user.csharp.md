@@ -1,32 +1,32 @@
-# `databricks_user`
+# `wiz_user`
 
-Refer to the Terraform Registory for docs: [`databricks_user`](https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user).
+Refer to the Terraform Registory for docs: [`wiz_user`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user).
 
-# `user` Submodule <a name="`user` Submodule" id="@cdktf/provider-databricks.user"></a>
+# `user` Submodule <a name="`user` Submodule" id="rhizo-co-terraform-provider-wiz.user"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### User <a name="User" id="@cdktf/provider-databricks.user.User"></a>
+### User <a name="User" id="rhizo-co-terraform-provider-wiz.user.User"></a>
 
-Represents a {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user databricks_user}.
+Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user wiz_user}.
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-databricks.user.User.Initializer"></a>
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.user.User.Initializer"></a>
 
 ```csharp
-using HashiCorp.Cdktf.Providers.Databricks;
+using HashiCorp.Cdktf.Providers.Wiz;
 
 new User(Construct Scope, string Id, UserConfig Config);
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.user.User.Initializer.parameter.scope">Scope</a></code> | <code>Constructs.Construct</code> | The scope in which to define this construct. |
-| <code><a href="#@cdktf/provider-databricks.user.User.Initializer.parameter.id">Id</a></code> | <code>string</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-databricks.user.User.Initializer.parameter.config">Config</a></code> | <code><a href="#@cdktf/provider-databricks.user.UserConfig">UserConfig</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.Initializer.parameter.scope">Scope</a></code> | <code>Constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.Initializer.parameter.id">Id</a></code> | <code>string</code> | The scoped construct ID. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.Initializer.parameter.config">Config</a></code> | <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig">UserConfig</a></code> | *No description.* |
 
 ---
 
-##### `Scope`<sup>Required</sup> <a name="Scope" id="@cdktf/provider-databricks.user.User.Initializer.parameter.scope"></a>
+##### `Scope`<sup>Required</sup> <a name="Scope" id="rhizo-co-terraform-provider-wiz.user.User.Initializer.parameter.scope"></a>
 
 - *Type:* Constructs.Construct
 
@@ -34,7 +34,7 @@ The scope in which to define this construct.
 
 ---
 
-##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-databricks.user.User.Initializer.parameter.id"></a>
+##### `Id`<sup>Required</sup> <a name="Id" id="rhizo-co-terraform-provider-wiz.user.User.Initializer.parameter.id"></a>
 
 - *Type:* string
 
@@ -44,9 +44,9 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `Config`<sup>Required</sup> <a name="Config" id="@cdktf/provider-databricks.user.User.Initializer.parameter.config"></a>
+##### `Config`<sup>Required</sup> <a name="Config" id="rhizo-co-terraform-provider-wiz.user.User.Initializer.parameter.config"></a>
 
-- *Type:* <a href="#@cdktf/provider-databricks.user.UserConfig">UserConfig</a>
+- *Type:* <a href="#rhizo-co-terraform-provider-wiz.user.UserConfig">UserConfig</a>
 
 ---
 
@@ -54,41 +54,28 @@ Must be unique amongst siblings in the same scope
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.user.User.toString">ToString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdktf/provider-databricks.user.User.addOverride">AddOverride</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
-| <code><a href="#@cdktf/provider-databricks.user.User.toMetadata">ToMetadata</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
-| <code><a href="#@cdktf/provider-databricks.user.User.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetAclPrincipalId">ResetAclPrincipalId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetActive">ResetActive</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetAllowClusterCreate">ResetAllowClusterCreate</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetAllowInstancePoolCreate">ResetAllowInstancePoolCreate</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetDatabricksSqlAccess">ResetDatabricksSqlAccess</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetDisableAsUserDeletion">ResetDisableAsUserDeletion</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetDisplayName">ResetDisplayName</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetExternalId">ResetExternalId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetForce">ResetForce</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetForceDeleteHomeDir">ResetForceDeleteHomeDir</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetForceDeleteRepos">ResetForceDeleteRepos</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetHome">ResetHome</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetId">ResetId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetRepos">ResetRepos</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.resetWorkspaceAccess">ResetWorkspaceAccess</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.toMetadata">ToMetadata</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.resetAssignedProjectIds">ResetAssignedProjectIds</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.resetSendEmailInvite">ResetSendEmailInvite</a></code> | *No description.* |
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-databricks.user.User.toString"></a>
+##### `ToString` <a name="ToString" id="rhizo-co-terraform-provider-wiz.user.User.toString"></a>
 
 ```csharp
 private string ToString()
@@ -96,25 +83,25 @@ private string ToString()
 
 Returns a string representation of this construct.
 
-##### `AddOverride` <a name="AddOverride" id="@cdktf/provider-databricks.user.User.addOverride"></a>
+##### `AddOverride` <a name="AddOverride" id="rhizo-co-terraform-provider-wiz.user.User.addOverride"></a>
 
 ```csharp
 private void AddOverride(string Path, object Value)
 ```
 
-###### `Path`<sup>Required</sup> <a name="Path" id="@cdktf/provider-databricks.user.User.addOverride.parameter.path"></a>
+###### `Path`<sup>Required</sup> <a name="Path" id="rhizo-co-terraform-provider-wiz.user.User.addOverride.parameter.path"></a>
 
 - *Type:* string
 
 ---
 
-###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-databricks.user.User.addOverride.parameter.value"></a>
+###### `Value`<sup>Required</sup> <a name="Value" id="rhizo-co-terraform-provider-wiz.user.User.addOverride.parameter.value"></a>
 
 - *Type:* object
 
 ---
 
-##### `OverrideLogicalId` <a name="OverrideLogicalId" id="@cdktf/provider-databricks.user.User.overrideLogicalId"></a>
+##### `OverrideLogicalId` <a name="OverrideLogicalId" id="rhizo-co-terraform-provider-wiz.user.User.overrideLogicalId"></a>
 
 ```csharp
 private void OverrideLogicalId(string NewLogicalId)
@@ -122,7 +109,7 @@ private void OverrideLogicalId(string NewLogicalId)
 
 Overrides the auto-generated logical ID with a specific ID.
 
-###### `NewLogicalId`<sup>Required</sup> <a name="NewLogicalId" id="@cdktf/provider-databricks.user.User.overrideLogicalId.parameter.newLogicalId"></a>
+###### `NewLogicalId`<sup>Required</sup> <a name="NewLogicalId" id="rhizo-co-terraform-provider-wiz.user.User.overrideLogicalId.parameter.newLogicalId"></a>
 
 - *Type:* string
 
@@ -130,7 +117,7 @@ The new logical ID to use for this stack element.
 
 ---
 
-##### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="@cdktf/provider-databricks.user.User.resetOverrideLogicalId"></a>
+##### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="rhizo-co-terraform-provider-wiz.user.User.resetOverrideLogicalId"></a>
 
 ```csharp
 private void ResetOverrideLogicalId()
@@ -138,13 +125,13 @@ private void ResetOverrideLogicalId()
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
-##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-databricks.user.User.toMetadata"></a>
+##### `ToMetadata` <a name="ToMetadata" id="rhizo-co-terraform-provider-wiz.user.User.toMetadata"></a>
 
 ```csharp
 private object ToMetadata()
 ```
 
-##### `ToTerraform` <a name="ToTerraform" id="@cdktf/provider-databricks.user.User.toTerraform"></a>
+##### `ToTerraform` <a name="ToTerraform" id="rhizo-co-terraform-provider-wiz.user.User.toTerraform"></a>
 
 ```csharp
 private object ToTerraform()
@@ -152,230 +139,152 @@ private object ToTerraform()
 
 Adds this resource to the terraform JSON output.
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-databricks.user.User.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getAnyMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-databricks.user.User.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getBooleanAttribute"></a>
 
 ```csharp
 private IResolvable GetBooleanAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-databricks.user.User.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getBooleanMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-databricks.user.User.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getListAttribute"></a>
 
 ```csharp
 private string[] GetListAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.getListAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-databricks.user.User.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getNumberAttribute"></a>
 
 ```csharp
 private double GetNumberAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-databricks.user.User.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getNumberListAttribute"></a>
 
 ```csharp
 private double[] GetNumberListAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-databricks.user.User.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getNumberMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-databricks.user.User.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getStringAttribute"></a>
 
 ```csharp
 private string GetStringAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.getStringAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-databricks.user.User.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getStringMapAttribute"></a>
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-databricks.user.User.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="rhizo-co-terraform-provider-wiz.user.User.interpolationForAttribute"></a>
 
 ```csharp
 private IResolvable InterpolationForAttribute(string TerraformAttribute)
 ```
 
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-databricks.user.User.interpolationForAttribute.parameter.terraformAttribute"></a>
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
 
 ---
 
-##### `ResetAclPrincipalId` <a name="ResetAclPrincipalId" id="@cdktf/provider-databricks.user.User.resetAclPrincipalId"></a>
+##### `ResetAssignedProjectIds` <a name="ResetAssignedProjectIds" id="rhizo-co-terraform-provider-wiz.user.User.resetAssignedProjectIds"></a>
 
 ```csharp
-private void ResetAclPrincipalId()
+private void ResetAssignedProjectIds()
 ```
 
-##### `ResetActive` <a name="ResetActive" id="@cdktf/provider-databricks.user.User.resetActive"></a>
+##### `ResetSendEmailInvite` <a name="ResetSendEmailInvite" id="rhizo-co-terraform-provider-wiz.user.User.resetSendEmailInvite"></a>
 
 ```csharp
-private void ResetActive()
-```
-
-##### `ResetAllowClusterCreate` <a name="ResetAllowClusterCreate" id="@cdktf/provider-databricks.user.User.resetAllowClusterCreate"></a>
-
-```csharp
-private void ResetAllowClusterCreate()
-```
-
-##### `ResetAllowInstancePoolCreate` <a name="ResetAllowInstancePoolCreate" id="@cdktf/provider-databricks.user.User.resetAllowInstancePoolCreate"></a>
-
-```csharp
-private void ResetAllowInstancePoolCreate()
-```
-
-##### `ResetDatabricksSqlAccess` <a name="ResetDatabricksSqlAccess" id="@cdktf/provider-databricks.user.User.resetDatabricksSqlAccess"></a>
-
-```csharp
-private void ResetDatabricksSqlAccess()
-```
-
-##### `ResetDisableAsUserDeletion` <a name="ResetDisableAsUserDeletion" id="@cdktf/provider-databricks.user.User.resetDisableAsUserDeletion"></a>
-
-```csharp
-private void ResetDisableAsUserDeletion()
-```
-
-##### `ResetDisplayName` <a name="ResetDisplayName" id="@cdktf/provider-databricks.user.User.resetDisplayName"></a>
-
-```csharp
-private void ResetDisplayName()
-```
-
-##### `ResetExternalId` <a name="ResetExternalId" id="@cdktf/provider-databricks.user.User.resetExternalId"></a>
-
-```csharp
-private void ResetExternalId()
-```
-
-##### `ResetForce` <a name="ResetForce" id="@cdktf/provider-databricks.user.User.resetForce"></a>
-
-```csharp
-private void ResetForce()
-```
-
-##### `ResetForceDeleteHomeDir` <a name="ResetForceDeleteHomeDir" id="@cdktf/provider-databricks.user.User.resetForceDeleteHomeDir"></a>
-
-```csharp
-private void ResetForceDeleteHomeDir()
-```
-
-##### `ResetForceDeleteRepos` <a name="ResetForceDeleteRepos" id="@cdktf/provider-databricks.user.User.resetForceDeleteRepos"></a>
-
-```csharp
-private void ResetForceDeleteRepos()
-```
-
-##### `ResetHome` <a name="ResetHome" id="@cdktf/provider-databricks.user.User.resetHome"></a>
-
-```csharp
-private void ResetHome()
-```
-
-##### `ResetId` <a name="ResetId" id="@cdktf/provider-databricks.user.User.resetId"></a>
-
-```csharp
-private void ResetId()
-```
-
-##### `ResetRepos` <a name="ResetRepos" id="@cdktf/provider-databricks.user.User.resetRepos"></a>
-
-```csharp
-private void ResetRepos()
-```
-
-##### `ResetWorkspaceAccess` <a name="ResetWorkspaceAccess" id="@cdktf/provider-databricks.user.User.resetWorkspaceAccess"></a>
-
-```csharp
-private void ResetWorkspaceAccess()
+private void ResetSendEmailInvite()
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.user.User.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdktf/provider-databricks.user.User.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
 
 ---
 
-##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-databricks.user.User.isConstruct"></a>
+##### `IsConstruct` <a name="IsConstruct" id="rhizo-co-terraform-provider-wiz.user.User.isConstruct"></a>
 
 ```csharp
-using HashiCorp.Cdktf.Providers.Databricks;
+using HashiCorp.Cdktf.Providers.Wiz;
 
 User.IsConstruct(object X);
 ```
@@ -396,7 +305,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `X`<sup>Required</sup> <a name="X" id="@cdktf/provider-databricks.user.User.isConstruct.parameter.x"></a>
+###### `X`<sup>Required</sup> <a name="X" id="rhizo-co-terraform-provider-wiz.user.User.isConstruct.parameter.x"></a>
 
 - *Type:* object
 
@@ -404,29 +313,29 @@ Any object.
 
 ---
 
-##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-databricks.user.User.isTerraformElement"></a>
+##### `IsTerraformElement` <a name="IsTerraformElement" id="rhizo-co-terraform-provider-wiz.user.User.isTerraformElement"></a>
 
 ```csharp
-using HashiCorp.Cdktf.Providers.Databricks;
+using HashiCorp.Cdktf.Providers.Wiz;
 
 User.IsTerraformElement(object X);
 ```
 
-###### `X`<sup>Required</sup> <a name="X" id="@cdktf/provider-databricks.user.User.isTerraformElement.parameter.x"></a>
+###### `X`<sup>Required</sup> <a name="X" id="rhizo-co-terraform-provider-wiz.user.User.isTerraformElement.parameter.x"></a>
 
 - *Type:* object
 
 ---
 
-##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-databricks.user.User.isTerraformResource"></a>
+##### `IsTerraformResource` <a name="IsTerraformResource" id="rhizo-co-terraform-provider-wiz.user.User.isTerraformResource"></a>
 
 ```csharp
-using HashiCorp.Cdktf.Providers.Databricks;
+using HashiCorp.Cdktf.Providers.Wiz;
 
 User.IsTerraformResource(object X);
 ```
 
-###### `X`<sup>Required</sup> <a name="X" id="@cdktf/provider-databricks.user.User.isTerraformResource.parameter.x"></a>
+###### `X`<sup>Required</sup> <a name="X" id="rhizo-co-terraform-provider-wiz.user.User.isTerraformResource.parameter.x"></a>
 
 - *Type:* object
 
@@ -436,56 +345,35 @@ User.IsTerraformResource(object X);
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.node">Node</a></code> | <code>Constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.cdktfStack">CdktfStack</a></code> | <code>HashiCorp.Cdktf.TerraformStack</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.count">Count</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.aclPrincipalIdInput">AclPrincipalIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.activeInput">ActiveInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.allowClusterCreateInput">AllowClusterCreateInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.allowInstancePoolCreateInput">AllowInstancePoolCreateInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.databricksSqlAccessInput">DatabricksSqlAccessInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.disableAsUserDeletionInput">DisableAsUserDeletionInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.displayNameInput">DisplayNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.externalIdInput">ExternalIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.forceDeleteHomeDirInput">ForceDeleteHomeDirInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.forceDeleteReposInput">ForceDeleteReposInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.forceInput">ForceInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.homeInput">HomeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.reposInput">ReposInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.userNameInput">UserNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.workspaceAccessInput">WorkspaceAccessInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.aclPrincipalId">AclPrincipalId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.active">Active</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.allowClusterCreate">AllowClusterCreate</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.allowInstancePoolCreate">AllowInstancePoolCreate</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.databricksSqlAccess">DatabricksSqlAccess</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.disableAsUserDeletion">DisableAsUserDeletion</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.displayName">DisplayName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.externalId">ExternalId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.force">Force</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.forceDeleteHomeDir">ForceDeleteHomeDir</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.forceDeleteRepos">ForceDeleteRepos</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.home">Home</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.id">Id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.repos">Repos</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.userName">UserName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.workspaceAccess">WorkspaceAccess</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.node">Node</a></code> | <code>Constructs.Node</code> | The tree node. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.cdktfStack">CdktfStack</a></code> | <code>HashiCorp.Cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.id">Id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.assignedProjectIdsInput">AssignedProjectIdsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.emailInput">EmailInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.roleInput">RoleInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.sendEmailInviteInput">SendEmailInviteInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.assignedProjectIds">AssignedProjectIds</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.email">Email</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.name">Name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.role">Role</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.sendEmailInvite">SendEmailInvite</a></code> | <code>object</code> | *No description.* |
 
 ---
 
-##### `Node`<sup>Required</sup> <a name="Node" id="@cdktf/provider-databricks.user.User.property.node"></a>
+##### `Node`<sup>Required</sup> <a name="Node" id="rhizo-co-terraform-provider-wiz.user.User.property.node"></a>
 
 ```csharp
 public Node Node { get; }
@@ -497,7 +385,7 @@ The tree node.
 
 ---
 
-##### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="@cdktf/provider-databricks.user.User.property.cdktfStack"></a>
+##### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="rhizo-co-terraform-provider-wiz.user.User.property.cdktfStack"></a>
 
 ```csharp
 public TerraformStack CdktfStack { get; }
@@ -507,7 +395,7 @@ public TerraformStack CdktfStack { get; }
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-databricks.user.User.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="rhizo-co-terraform-provider-wiz.user.User.property.fqn"></a>
 
 ```csharp
 public string Fqn { get; }
@@ -517,7 +405,7 @@ public string Fqn { get; }
 
 ---
 
-##### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="@cdktf/provider-databricks.user.User.property.friendlyUniqueId"></a>
+##### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="rhizo-co-terraform-provider-wiz.user.User.property.friendlyUniqueId"></a>
 
 ```csharp
 public string FriendlyUniqueId { get; }
@@ -527,7 +415,7 @@ public string FriendlyUniqueId { get; }
 
 ---
 
-##### `TerraformMetaArguments`<sup>Required</sup> <a name="TerraformMetaArguments" id="@cdktf/provider-databricks.user.User.property.terraformMetaArguments"></a>
+##### `TerraformMetaArguments`<sup>Required</sup> <a name="TerraformMetaArguments" id="rhizo-co-terraform-provider-wiz.user.User.property.terraformMetaArguments"></a>
 
 ```csharp
 public System.Collections.Generic.IDictionary<string, object> TerraformMetaArguments { get; }
@@ -537,7 +425,7 @@ public System.Collections.Generic.IDictionary<string, object> TerraformMetaArgum
 
 ---
 
-##### `TerraformResourceType`<sup>Required</sup> <a name="TerraformResourceType" id="@cdktf/provider-databricks.user.User.property.terraformResourceType"></a>
+##### `TerraformResourceType`<sup>Required</sup> <a name="TerraformResourceType" id="rhizo-co-terraform-provider-wiz.user.User.property.terraformResourceType"></a>
 
 ```csharp
 public string TerraformResourceType { get; }
@@ -547,7 +435,7 @@ public string TerraformResourceType { get; }
 
 ---
 
-##### `TerraformGeneratorMetadata`<sup>Optional</sup> <a name="TerraformGeneratorMetadata" id="@cdktf/provider-databricks.user.User.property.terraformGeneratorMetadata"></a>
+##### `TerraformGeneratorMetadata`<sup>Optional</sup> <a name="TerraformGeneratorMetadata" id="rhizo-co-terraform-provider-wiz.user.User.property.terraformGeneratorMetadata"></a>
 
 ```csharp
 public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
@@ -557,7 +445,7 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 
 ---
 
-##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-databricks.user.User.property.connection"></a>
+##### `Connection`<sup>Optional</sup> <a name="Connection" id="rhizo-co-terraform-provider-wiz.user.User.property.connection"></a>
 
 ```csharp
 public object Connection { get; }
@@ -567,7 +455,7 @@ public object Connection { get; }
 
 ---
 
-##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-databricks.user.User.property.count"></a>
+##### `Count`<sup>Optional</sup> <a name="Count" id="rhizo-co-terraform-provider-wiz.user.User.property.count"></a>
 
 ```csharp
 public object Count { get; }
@@ -577,7 +465,7 @@ public object Count { get; }
 
 ---
 
-##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktf/provider-databricks.user.User.property.dependsOn"></a>
+##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="rhizo-co-terraform-provider-wiz.user.User.property.dependsOn"></a>
 
 ```csharp
 public string[] DependsOn { get; }
@@ -587,7 +475,7 @@ public string[] DependsOn { get; }
 
 ---
 
-##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktf/provider-databricks.user.User.property.forEach"></a>
+##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="rhizo-co-terraform-provider-wiz.user.User.property.forEach"></a>
 
 ```csharp
 public ITerraformIterator ForEach { get; }
@@ -597,7 +485,7 @@ public ITerraformIterator ForEach { get; }
 
 ---
 
-##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktf/provider-databricks.user.User.property.lifecycle"></a>
+##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="rhizo-co-terraform-provider-wiz.user.User.property.lifecycle"></a>
 
 ```csharp
 public TerraformResourceLifecycle Lifecycle { get; }
@@ -607,7 +495,7 @@ public TerraformResourceLifecycle Lifecycle { get; }
 
 ---
 
-##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktf/provider-databricks.user.User.property.provider"></a>
+##### `Provider`<sup>Optional</sup> <a name="Provider" id="rhizo-co-terraform-provider-wiz.user.User.property.provider"></a>
 
 ```csharp
 public TerraformProvider Provider { get; }
@@ -617,7 +505,7 @@ public TerraformProvider Provider { get; }
 
 ---
 
-##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-databricks.user.User.property.provisioners"></a>
+##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="rhizo-co-terraform-provider-wiz.user.User.property.provisioners"></a>
 
 ```csharp
 public object[] Provisioners { get; }
@@ -627,287 +515,7 @@ public object[] Provisioners { get; }
 
 ---
 
-##### `AclPrincipalIdInput`<sup>Optional</sup> <a name="AclPrincipalIdInput" id="@cdktf/provider-databricks.user.User.property.aclPrincipalIdInput"></a>
-
-```csharp
-public string AclPrincipalIdInput { get; }
-```
-
-- *Type:* string
-
----
-
-##### `ActiveInput`<sup>Optional</sup> <a name="ActiveInput" id="@cdktf/provider-databricks.user.User.property.activeInput"></a>
-
-```csharp
-public object ActiveInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `AllowClusterCreateInput`<sup>Optional</sup> <a name="AllowClusterCreateInput" id="@cdktf/provider-databricks.user.User.property.allowClusterCreateInput"></a>
-
-```csharp
-public object AllowClusterCreateInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `AllowInstancePoolCreateInput`<sup>Optional</sup> <a name="AllowInstancePoolCreateInput" id="@cdktf/provider-databricks.user.User.property.allowInstancePoolCreateInput"></a>
-
-```csharp
-public object AllowInstancePoolCreateInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `DatabricksSqlAccessInput`<sup>Optional</sup> <a name="DatabricksSqlAccessInput" id="@cdktf/provider-databricks.user.User.property.databricksSqlAccessInput"></a>
-
-```csharp
-public object DatabricksSqlAccessInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `DisableAsUserDeletionInput`<sup>Optional</sup> <a name="DisableAsUserDeletionInput" id="@cdktf/provider-databricks.user.User.property.disableAsUserDeletionInput"></a>
-
-```csharp
-public object DisableAsUserDeletionInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `DisplayNameInput`<sup>Optional</sup> <a name="DisplayNameInput" id="@cdktf/provider-databricks.user.User.property.displayNameInput"></a>
-
-```csharp
-public string DisplayNameInput { get; }
-```
-
-- *Type:* string
-
----
-
-##### `ExternalIdInput`<sup>Optional</sup> <a name="ExternalIdInput" id="@cdktf/provider-databricks.user.User.property.externalIdInput"></a>
-
-```csharp
-public string ExternalIdInput { get; }
-```
-
-- *Type:* string
-
----
-
-##### `ForceDeleteHomeDirInput`<sup>Optional</sup> <a name="ForceDeleteHomeDirInput" id="@cdktf/provider-databricks.user.User.property.forceDeleteHomeDirInput"></a>
-
-```csharp
-public object ForceDeleteHomeDirInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `ForceDeleteReposInput`<sup>Optional</sup> <a name="ForceDeleteReposInput" id="@cdktf/provider-databricks.user.User.property.forceDeleteReposInput"></a>
-
-```csharp
-public object ForceDeleteReposInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `ForceInput`<sup>Optional</sup> <a name="ForceInput" id="@cdktf/provider-databricks.user.User.property.forceInput"></a>
-
-```csharp
-public object ForceInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `HomeInput`<sup>Optional</sup> <a name="HomeInput" id="@cdktf/provider-databricks.user.User.property.homeInput"></a>
-
-```csharp
-public string HomeInput { get; }
-```
-
-- *Type:* string
-
----
-
-##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-databricks.user.User.property.idInput"></a>
-
-```csharp
-public string IdInput { get; }
-```
-
-- *Type:* string
-
----
-
-##### `ReposInput`<sup>Optional</sup> <a name="ReposInput" id="@cdktf/provider-databricks.user.User.property.reposInput"></a>
-
-```csharp
-public string ReposInput { get; }
-```
-
-- *Type:* string
-
----
-
-##### `UserNameInput`<sup>Optional</sup> <a name="UserNameInput" id="@cdktf/provider-databricks.user.User.property.userNameInput"></a>
-
-```csharp
-public string UserNameInput { get; }
-```
-
-- *Type:* string
-
----
-
-##### `WorkspaceAccessInput`<sup>Optional</sup> <a name="WorkspaceAccessInput" id="@cdktf/provider-databricks.user.User.property.workspaceAccessInput"></a>
-
-```csharp
-public object WorkspaceAccessInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `AclPrincipalId`<sup>Required</sup> <a name="AclPrincipalId" id="@cdktf/provider-databricks.user.User.property.aclPrincipalId"></a>
-
-```csharp
-public string AclPrincipalId { get; }
-```
-
-- *Type:* string
-
----
-
-##### `Active`<sup>Required</sup> <a name="Active" id="@cdktf/provider-databricks.user.User.property.active"></a>
-
-```csharp
-public object Active { get; }
-```
-
-- *Type:* object
-
----
-
-##### `AllowClusterCreate`<sup>Required</sup> <a name="AllowClusterCreate" id="@cdktf/provider-databricks.user.User.property.allowClusterCreate"></a>
-
-```csharp
-public object AllowClusterCreate { get; }
-```
-
-- *Type:* object
-
----
-
-##### `AllowInstancePoolCreate`<sup>Required</sup> <a name="AllowInstancePoolCreate" id="@cdktf/provider-databricks.user.User.property.allowInstancePoolCreate"></a>
-
-```csharp
-public object AllowInstancePoolCreate { get; }
-```
-
-- *Type:* object
-
----
-
-##### `DatabricksSqlAccess`<sup>Required</sup> <a name="DatabricksSqlAccess" id="@cdktf/provider-databricks.user.User.property.databricksSqlAccess"></a>
-
-```csharp
-public object DatabricksSqlAccess { get; }
-```
-
-- *Type:* object
-
----
-
-##### `DisableAsUserDeletion`<sup>Required</sup> <a name="DisableAsUserDeletion" id="@cdktf/provider-databricks.user.User.property.disableAsUserDeletion"></a>
-
-```csharp
-public object DisableAsUserDeletion { get; }
-```
-
-- *Type:* object
-
----
-
-##### `DisplayName`<sup>Required</sup> <a name="DisplayName" id="@cdktf/provider-databricks.user.User.property.displayName"></a>
-
-```csharp
-public string DisplayName { get; }
-```
-
-- *Type:* string
-
----
-
-##### `ExternalId`<sup>Required</sup> <a name="ExternalId" id="@cdktf/provider-databricks.user.User.property.externalId"></a>
-
-```csharp
-public string ExternalId { get; }
-```
-
-- *Type:* string
-
----
-
-##### `Force`<sup>Required</sup> <a name="Force" id="@cdktf/provider-databricks.user.User.property.force"></a>
-
-```csharp
-public object Force { get; }
-```
-
-- *Type:* object
-
----
-
-##### `ForceDeleteHomeDir`<sup>Required</sup> <a name="ForceDeleteHomeDir" id="@cdktf/provider-databricks.user.User.property.forceDeleteHomeDir"></a>
-
-```csharp
-public object ForceDeleteHomeDir { get; }
-```
-
-- *Type:* object
-
----
-
-##### `ForceDeleteRepos`<sup>Required</sup> <a name="ForceDeleteRepos" id="@cdktf/provider-databricks.user.User.property.forceDeleteRepos"></a>
-
-```csharp
-public object ForceDeleteRepos { get; }
-```
-
-- *Type:* object
-
----
-
-##### `Home`<sup>Required</sup> <a name="Home" id="@cdktf/provider-databricks.user.User.property.home"></a>
-
-```csharp
-public string Home { get; }
-```
-
-- *Type:* string
-
----
-
-##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-databricks.user.User.property.id"></a>
+##### `Id`<sup>Required</sup> <a name="Id" id="rhizo-co-terraform-provider-wiz.user.User.property.id"></a>
 
 ```csharp
 public string Id { get; }
@@ -917,30 +525,100 @@ public string Id { get; }
 
 ---
 
-##### `Repos`<sup>Required</sup> <a name="Repos" id="@cdktf/provider-databricks.user.User.property.repos"></a>
+##### `AssignedProjectIdsInput`<sup>Optional</sup> <a name="AssignedProjectIdsInput" id="rhizo-co-terraform-provider-wiz.user.User.property.assignedProjectIdsInput"></a>
 
 ```csharp
-public string Repos { get; }
+public string[] AssignedProjectIdsInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `EmailInput`<sup>Optional</sup> <a name="EmailInput" id="rhizo-co-terraform-provider-wiz.user.User.property.emailInput"></a>
+
+```csharp
+public string EmailInput { get; }
 ```
 
 - *Type:* string
 
 ---
 
-##### `UserName`<sup>Required</sup> <a name="UserName" id="@cdktf/provider-databricks.user.User.property.userName"></a>
+##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="rhizo-co-terraform-provider-wiz.user.User.property.nameInput"></a>
 
 ```csharp
-public string UserName { get; }
+public string NameInput { get; }
 ```
 
 - *Type:* string
 
 ---
 
-##### `WorkspaceAccess`<sup>Required</sup> <a name="WorkspaceAccess" id="@cdktf/provider-databricks.user.User.property.workspaceAccess"></a>
+##### `RoleInput`<sup>Optional</sup> <a name="RoleInput" id="rhizo-co-terraform-provider-wiz.user.User.property.roleInput"></a>
 
 ```csharp
-public object WorkspaceAccess { get; }
+public string RoleInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SendEmailInviteInput`<sup>Optional</sup> <a name="SendEmailInviteInput" id="rhizo-co-terraform-provider-wiz.user.User.property.sendEmailInviteInput"></a>
+
+```csharp
+public object SendEmailInviteInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `AssignedProjectIds`<sup>Required</sup> <a name="AssignedProjectIds" id="rhizo-co-terraform-provider-wiz.user.User.property.assignedProjectIds"></a>
+
+```csharp
+public string[] AssignedProjectIds { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `Email`<sup>Required</sup> <a name="Email" id="rhizo-co-terraform-provider-wiz.user.User.property.email"></a>
+
+```csharp
+public string Email { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Name`<sup>Required</sup> <a name="Name" id="rhizo-co-terraform-provider-wiz.user.User.property.name"></a>
+
+```csharp
+public string Name { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Role`<sup>Required</sup> <a name="Role" id="rhizo-co-terraform-provider-wiz.user.User.property.role"></a>
+
+```csharp
+public string Role { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SendEmailInvite`<sup>Required</sup> <a name="SendEmailInvite" id="rhizo-co-terraform-provider-wiz.user.User.property.sendEmailInvite"></a>
+
+```csharp
+public object SendEmailInvite { get; }
 ```
 
 - *Type:* object
@@ -951,11 +629,11 @@ public object WorkspaceAccess { get; }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.user.User.property.tfResourceType">TfResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.property.tfResourceType">TfResourceType</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `TfResourceType`<sup>Required</sup> <a name="TfResourceType" id="@cdktf/provider-databricks.user.User.property.tfResourceType"></a>
+##### `TfResourceType`<sup>Required</sup> <a name="TfResourceType" id="rhizo-co-terraform-provider-wiz.user.User.property.tfResourceType"></a>
 
 ```csharp
 public string TfResourceType { get; }
@@ -967,12 +645,12 @@ public string TfResourceType { get; }
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### UserConfig <a name="UserConfig" id="@cdktf/provider-databricks.user.UserConfig"></a>
+### UserConfig <a name="UserConfig" id="rhizo-co-terraform-provider-wiz.user.UserConfig"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-databricks.user.UserConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-wiz.user.UserConfig.Initializer"></a>
 
 ```csharp
-using HashiCorp.Cdktf.Providers.Databricks;
+using HashiCorp.Cdktf.Providers.Wiz;
 
 new UserConfig {
     object Connection = null,
@@ -982,22 +660,11 @@ new UserConfig {
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
     object[] Provisioners = null,
-    string UserName,
-    string AclPrincipalId = null,
-    object Active = null,
-    object AllowClusterCreate = null,
-    object AllowInstancePoolCreate = null,
-    object DatabricksSqlAccess = null,
-    object DisableAsUserDeletion = null,
-    string DisplayName = null,
-    string ExternalId = null,
-    object Force = null,
-    object ForceDeleteHomeDir = null,
-    object ForceDeleteRepos = null,
-    string Home = null,
-    string Id = null,
-    string Repos = null,
-    object WorkspaceAccess = null
+    string Email,
+    string Name,
+    string Role,
+    string[] AssignedProjectIds = null,
+    object SendEmailInvite = null
 };
 ```
 
@@ -1005,33 +672,22 @@ new UserConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.userName">UserName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#user_name User#user_name}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.aclPrincipalId">AclPrincipalId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#acl_principal_id User#acl_principal_id}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.active">Active</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#active User#active}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.allowClusterCreate">AllowClusterCreate</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#allow_cluster_create User#allow_cluster_create}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.allowInstancePoolCreate">AllowInstancePoolCreate</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#allow_instance_pool_create User#allow_instance_pool_create}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.databricksSqlAccess">DatabricksSqlAccess</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#databricks_sql_access User#databricks_sql_access}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.disableAsUserDeletion">DisableAsUserDeletion</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#disable_as_user_deletion User#disable_as_user_deletion}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#display_name User#display_name}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.externalId">ExternalId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#external_id User#external_id}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.force">Force</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#force User#force}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.forceDeleteHomeDir">ForceDeleteHomeDir</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#force_delete_home_dir User#force_delete_home_dir}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.forceDeleteRepos">ForceDeleteRepos</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#force_delete_repos User#force_delete_repos}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.home">Home</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#home User#home}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#id User#id}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.repos">Repos</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#repos User#repos}. |
-| <code><a href="#@cdktf/provider-databricks.user.UserConfig.property.workspaceAccess">WorkspaceAccess</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#workspace_access User#workspace_access}. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.email">Email</a></code> | <code>string</code> | The user email address. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.name">Name</a></code> | <code>string</code> | The user name. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.role">Role</a></code> | <code>string</code> | Whether the project is archived/inactive. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.assignedProjectIds">AssignedProjectIds</a></code> | <code>string[]</code> | Assigned Project Identifiers. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.sendEmailInvite">SendEmailInvite</a></code> | <code>object</code> | Send email invite? - Defaults to `true`. |
 
 ---
 
-##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-databricks.user.UserConfig.property.connection"></a>
+##### `Connection`<sup>Optional</sup> <a name="Connection" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.connection"></a>
 
 ```csharp
 public object Connection { get; set; }
@@ -1041,7 +697,7 @@ public object Connection { get; set; }
 
 ---
 
-##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-databricks.user.UserConfig.property.count"></a>
+##### `Count`<sup>Optional</sup> <a name="Count" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.count"></a>
 
 ```csharp
 public object Count { get; set; }
@@ -1051,7 +707,7 @@ public object Count { get; set; }
 
 ---
 
-##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="@cdktf/provider-databricks.user.UserConfig.property.dependsOn"></a>
+##### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.dependsOn"></a>
 
 ```csharp
 public ITerraformDependable[] DependsOn { get; set; }
@@ -1061,7 +717,7 @@ public ITerraformDependable[] DependsOn { get; set; }
 
 ---
 
-##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="@cdktf/provider-databricks.user.UserConfig.property.forEach"></a>
+##### `ForEach`<sup>Optional</sup> <a name="ForEach" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.forEach"></a>
 
 ```csharp
 public ITerraformIterator ForEach { get; set; }
@@ -1071,7 +727,7 @@ public ITerraformIterator ForEach { get; set; }
 
 ---
 
-##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="@cdktf/provider-databricks.user.UserConfig.property.lifecycle"></a>
+##### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.lifecycle"></a>
 
 ```csharp
 public TerraformResourceLifecycle Lifecycle { get; set; }
@@ -1081,7 +737,7 @@ public TerraformResourceLifecycle Lifecycle { get; set; }
 
 ---
 
-##### `Provider`<sup>Optional</sup> <a name="Provider" id="@cdktf/provider-databricks.user.UserConfig.property.provider"></a>
+##### `Provider`<sup>Optional</sup> <a name="Provider" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.provider"></a>
 
 ```csharp
 public TerraformProvider Provider { get; set; }
@@ -1091,7 +747,7 @@ public TerraformProvider Provider { get; set; }
 
 ---
 
-##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-databricks.user.UserConfig.property.provisioners"></a>
+##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.provisioners"></a>
 
 ```csharp
 public object[] Provisioners { get; set; }
@@ -1101,198 +757,73 @@ public object[] Provisioners { get; set; }
 
 ---
 
-##### `UserName`<sup>Required</sup> <a name="UserName" id="@cdktf/provider-databricks.user.UserConfig.property.userName"></a>
+##### `Email`<sup>Required</sup> <a name="Email" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.email"></a>
 
 ```csharp
-public string UserName { get; set; }
+public string Email { get; set; }
 ```
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#user_name User#user_name}.
+The user email address.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#email User#email}
 
 ---
 
-##### `AclPrincipalId`<sup>Optional</sup> <a name="AclPrincipalId" id="@cdktf/provider-databricks.user.UserConfig.property.aclPrincipalId"></a>
+##### `Name`<sup>Required</sup> <a name="Name" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.name"></a>
 
 ```csharp
-public string AclPrincipalId { get; set; }
+public string Name { get; set; }
 ```
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#acl_principal_id User#acl_principal_id}.
+The user name.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#name User#name}
 
 ---
 
-##### `Active`<sup>Optional</sup> <a name="Active" id="@cdktf/provider-databricks.user.UserConfig.property.active"></a>
+##### `Role`<sup>Required</sup> <a name="Role" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.role"></a>
 
 ```csharp
-public object Active { get; set; }
-```
-
-- *Type:* object
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#active User#active}.
-
----
-
-##### `AllowClusterCreate`<sup>Optional</sup> <a name="AllowClusterCreate" id="@cdktf/provider-databricks.user.UserConfig.property.allowClusterCreate"></a>
-
-```csharp
-public object AllowClusterCreate { get; set; }
-```
-
-- *Type:* object
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#allow_cluster_create User#allow_cluster_create}.
-
----
-
-##### `AllowInstancePoolCreate`<sup>Optional</sup> <a name="AllowInstancePoolCreate" id="@cdktf/provider-databricks.user.UserConfig.property.allowInstancePoolCreate"></a>
-
-```csharp
-public object AllowInstancePoolCreate { get; set; }
-```
-
-- *Type:* object
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#allow_instance_pool_create User#allow_instance_pool_create}.
-
----
-
-##### `DatabricksSqlAccess`<sup>Optional</sup> <a name="DatabricksSqlAccess" id="@cdktf/provider-databricks.user.UserConfig.property.databricksSqlAccess"></a>
-
-```csharp
-public object DatabricksSqlAccess { get; set; }
-```
-
-- *Type:* object
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#databricks_sql_access User#databricks_sql_access}.
-
----
-
-##### `DisableAsUserDeletion`<sup>Optional</sup> <a name="DisableAsUserDeletion" id="@cdktf/provider-databricks.user.UserConfig.property.disableAsUserDeletion"></a>
-
-```csharp
-public object DisableAsUserDeletion { get; set; }
-```
-
-- *Type:* object
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#disable_as_user_deletion User#disable_as_user_deletion}.
-
----
-
-##### `DisplayName`<sup>Optional</sup> <a name="DisplayName" id="@cdktf/provider-databricks.user.UserConfig.property.displayName"></a>
-
-```csharp
-public string DisplayName { get; set; }
+public string Role { get; set; }
 ```
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#display_name User#display_name}.
+Whether the project is archived/inactive.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#role User#role}
 
 ---
 
-##### `ExternalId`<sup>Optional</sup> <a name="ExternalId" id="@cdktf/provider-databricks.user.UserConfig.property.externalId"></a>
+##### `AssignedProjectIds`<sup>Optional</sup> <a name="AssignedProjectIds" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.assignedProjectIds"></a>
 
 ```csharp
-public string ExternalId { get; set; }
+public string[] AssignedProjectIds { get; set; }
 ```
 
-- *Type:* string
+- *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#external_id User#external_id}.
+Assigned Project Identifiers.
 
----
-
-##### `Force`<sup>Optional</sup> <a name="Force" id="@cdktf/provider-databricks.user.UserConfig.property.force"></a>
-
-```csharp
-public object Force { get; set; }
-```
-
-- *Type:* object
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#force User#force}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#assigned_project_ids User#assigned_project_ids}
 
 ---
 
-##### `ForceDeleteHomeDir`<sup>Optional</sup> <a name="ForceDeleteHomeDir" id="@cdktf/provider-databricks.user.UserConfig.property.forceDeleteHomeDir"></a>
+##### `SendEmailInvite`<sup>Optional</sup> <a name="SendEmailInvite" id="rhizo-co-terraform-provider-wiz.user.UserConfig.property.sendEmailInvite"></a>
 
 ```csharp
-public object ForceDeleteHomeDir { get; set; }
+public object SendEmailInvite { get; set; }
 ```
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#force_delete_home_dir User#force_delete_home_dir}.
+Send email invite? - Defaults to `true`.
 
----
-
-##### `ForceDeleteRepos`<sup>Optional</sup> <a name="ForceDeleteRepos" id="@cdktf/provider-databricks.user.UserConfig.property.forceDeleteRepos"></a>
-
-```csharp
-public object ForceDeleteRepos { get; set; }
-```
-
-- *Type:* object
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#force_delete_repos User#force_delete_repos}.
-
----
-
-##### `Home`<sup>Optional</sup> <a name="Home" id="@cdktf/provider-databricks.user.UserConfig.property.home"></a>
-
-```csharp
-public string Home { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#home User#home}.
-
----
-
-##### `Id`<sup>Optional</sup> <a name="Id" id="@cdktf/provider-databricks.user.UserConfig.property.id"></a>
-
-```csharp
-public string Id { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#id User#id}.
-
-Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-
----
-
-##### `Repos`<sup>Optional</sup> <a name="Repos" id="@cdktf/provider-databricks.user.UserConfig.property.repos"></a>
-
-```csharp
-public string Repos { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#repos User#repos}.
-
----
-
-##### `WorkspaceAccess`<sup>Optional</sup> <a name="WorkspaceAccess" id="@cdktf/provider-databricks.user.UserConfig.property.workspaceAccess"></a>
-
-```csharp
-public object WorkspaceAccess { get; set; }
-```
-
-- *Type:* object
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs/resources/user#workspace_access User#workspace_access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#send_email_invite User#send_email_invite}
 
 ---
 

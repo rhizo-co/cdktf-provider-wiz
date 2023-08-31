@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs
+// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,191 +11,133 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DatabricksProviderConfig {
+export interface WizProviderConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#account_id DatabricksProvider#account_id}
+  * Base64 encoded PEM of the CA chain used when communicating with Wiz. If a proxy performs TLS interception/inspection, this will be the CA chain for the certificate used by the proxy. The default includes the CAs known to be used by Wiz: `C=IE, O=Baltimore, OU=CyberTrust, CN=Baltimore CyberTrust Root`, `C=US, O=Cloudflare, Inc., CN=Cloudflare Inc ECC CA-3`, `C=US, ST=Arizona, L=Scottsdale, O=Starfield Technologies, Inc., CN=Starfield Services Root Certificate Authority - G2`, `C=US, O=Amazon, CN=Amazon Root CA 1`, `C=US, O=Amazon, OU=Server CA 1B, CN=Amazon`. (environment variable: CA_CHAIN)
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#ca_chain WizProvider#ca_chain}
   */
-  readonly accountId?: string;
+  readonly caChain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#auth_type DatabricksProvider#auth_type}
+  * Maximum retry attempts.
+    - Defaults to `10`.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_max WizProvider#http_client_retry_max}
   */
-  readonly authType?: string;
+  readonly httpClientRetryMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_client_id DatabricksProvider#azure_client_id}
+  * Maximum time to wait before retrying, in seconds.
+    - Defaults to `10`.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_max WizProvider#http_client_retry_wait_max}
   */
-  readonly azureClientId?: string;
+  readonly httpClientRetryWaitMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_client_secret DatabricksProvider#azure_client_secret}
+  * Minimum time to wait before retrying, in seconds.
+    - Defaults to `1`.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_min WizProvider#http_client_retry_wait_min}
   */
-  readonly azureClientSecret?: string;
+  readonly httpClientRetryWaitMin?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_environment DatabricksProvider#azure_environment}
+  * Use an http proxy server? (default: false, environment variable: PROXY)
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy WizProvider#proxy}
   */
-  readonly azureEnvironment?: string;
+  readonly proxy?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_login_app_id DatabricksProvider#azure_login_app_id}
+  * Proxy server address.  Syntax: http[s]://[host]:[port]. (default: none, environment variable: PROXY_SERVER)
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy_server WizProvider#proxy_server}
   */
-  readonly azureLoginAppId?: string;
+  readonly proxyServer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_tenant_id DatabricksProvider#azure_tenant_id}
+  * Set this to 'beyond-api' if using auth0 and 'wiz-api' if using Cognito. (default: wiz-api, environment variable: WIZ_AUTH_AUDIENCE)
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_audience WizProvider#wiz_auth_audience}
   */
-  readonly azureTenantId?: string;
+  readonly wizAuthAudience?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_use_msi DatabricksProvider#azure_use_msi}
+  * Your application's Client ID. You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_ID)
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_id WizProvider#wiz_auth_client_id}
   */
-  readonly azureUseMsi?: boolean | cdktf.IResolvable;
+  readonly wizAuthClientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_workspace_resource_id DatabricksProvider#azure_workspace_resource_id}
+  * Your application's Client Secret. You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_SECRET)
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_secret WizProvider#wiz_auth_client_secret}
   */
-  readonly azureWorkspaceResourceId?: string;
+  readonly wizAuthClientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#client_id DatabricksProvider#client_id}
+  * Set this to 'client_credentials'. (default: client_credentials, environment variable: WIZ_AUTH_GRANT_TYPE)
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_grant_type WizProvider#wiz_auth_grant_type}
   */
-  readonly clientId?: string;
+  readonly wizAuthGrantType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#client_secret DatabricksProvider#client_secret}
+  * The authentication endpoint. (default: https://auth.app.wiz.io/oauth/token, environment variable: WIZ_AUTH_URL)
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_url WizProvider#wiz_auth_url}
   */
-  readonly clientSecret?: string;
+  readonly wizAuthUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#cluster_id DatabricksProvider#cluster_id}
+  * Wiz api endpoint.  This varies for each Wiz deployment.  See https://docs.wiz.io/wiz-docs/docs/using-the-wiz-api#the-graphql-endpoint. (default: none, environment variable: WIZ_URL)
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_url WizProvider#wiz_url}
   */
-  readonly clusterId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#config_file DatabricksProvider#config_file}
-  */
-  readonly configFile?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#databricks_cli_path DatabricksProvider#databricks_cli_path}
-  */
-  readonly databricksCliPath?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#debug_headers DatabricksProvider#debug_headers}
-  */
-  readonly debugHeaders?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#debug_truncate_bytes DatabricksProvider#debug_truncate_bytes}
-  */
-  readonly debugTruncateBytes?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#google_credentials DatabricksProvider#google_credentials}
-  */
-  readonly googleCredentials?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#google_service_account DatabricksProvider#google_service_account}
-  */
-  readonly googleServiceAccount?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#host DatabricksProvider#host}
-  */
-  readonly host?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#http_timeout_seconds DatabricksProvider#http_timeout_seconds}
-  */
-  readonly httpTimeoutSeconds?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#metadata_service_url DatabricksProvider#metadata_service_url}
-  */
-  readonly metadataServiceUrl?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#password DatabricksProvider#password}
-  */
-  readonly password?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#profile DatabricksProvider#profile}
-  */
-  readonly profile?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#rate_limit DatabricksProvider#rate_limit}
-  */
-  readonly rateLimit?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#retry_timeout_seconds DatabricksProvider#retry_timeout_seconds}
-  */
-  readonly retryTimeoutSeconds?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#skip_verify DatabricksProvider#skip_verify}
-  */
-  readonly skipVerify?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#token DatabricksProvider#token}
-  */
-  readonly token?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#username DatabricksProvider#username}
-  */
-  readonly username?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#warehouse_id DatabricksProvider#warehouse_id}
-  */
-  readonly warehouseId?: string;
+  readonly wizUrl: string;
   /**
   * Alias name
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#alias DatabricksProvider#alias}
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#alias WizProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs databricks}
+* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs wiz}
 */
-export class DatabricksProvider extends cdktf.TerraformProvider {
+export class WizProvider extends cdktf.TerraformProvider {
 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType = "databricks";
+  public static readonly tfResourceType = "wiz";
 
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs databricks} Resource
+  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs wiz} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DatabricksProviderConfig = {}
+  * @param options WizProviderConfig
   */
-  public constructor(scope: Construct, id: string, config: DatabricksProviderConfig = {}) {
+  public constructor(scope: Construct, id: string, config: WizProviderConfig) {
     super(scope, id, {
-      terraformResourceType: 'databricks',
+      terraformResourceType: 'wiz',
       terraformGeneratorMetadata: {
-        providerName: 'databricks',
-        providerVersion: '1.24.1',
-        providerVersionConstraint: '~> 1.0'
+        providerName: 'wiz',
+        providerVersion: '1.1.6',
+        providerVersionConstraint: '~> 1.1.6'
       },
-      terraformProviderSource: 'databricks/databricks'
+      terraformProviderSource: 'rhizo-co/wiz'
     });
-    this._accountId = config.accountId;
-    this._authType = config.authType;
-    this._azureClientId = config.azureClientId;
-    this._azureClientSecret = config.azureClientSecret;
-    this._azureEnvironment = config.azureEnvironment;
-    this._azureLoginAppId = config.azureLoginAppId;
-    this._azureTenantId = config.azureTenantId;
-    this._azureUseMsi = config.azureUseMsi;
-    this._azureWorkspaceResourceId = config.azureWorkspaceResourceId;
-    this._clientId = config.clientId;
-    this._clientSecret = config.clientSecret;
-    this._clusterId = config.clusterId;
-    this._configFile = config.configFile;
-    this._databricksCliPath = config.databricksCliPath;
-    this._debugHeaders = config.debugHeaders;
-    this._debugTruncateBytes = config.debugTruncateBytes;
-    this._googleCredentials = config.googleCredentials;
-    this._googleServiceAccount = config.googleServiceAccount;
-    this._host = config.host;
-    this._httpTimeoutSeconds = config.httpTimeoutSeconds;
-    this._metadataServiceUrl = config.metadataServiceUrl;
-    this._password = config.password;
-    this._profile = config.profile;
-    this._rateLimit = config.rateLimit;
-    this._retryTimeoutSeconds = config.retryTimeoutSeconds;
-    this._skipVerify = config.skipVerify;
-    this._token = config.token;
-    this._username = config.username;
-    this._warehouseId = config.warehouseId;
+    this._caChain = config.caChain;
+    this._httpClientRetryMax = config.httpClientRetryMax;
+    this._httpClientRetryWaitMax = config.httpClientRetryWaitMax;
+    this._httpClientRetryWaitMin = config.httpClientRetryWaitMin;
+    this._proxy = config.proxy;
+    this._proxyServer = config.proxyServer;
+    this._wizAuthAudience = config.wizAuthAudience;
+    this._wizAuthClientId = config.wizAuthClientId;
+    this._wizAuthClientSecret = config.wizAuthClientSecret;
+    this._wizAuthGrantType = config.wizAuthGrantType;
+    this._wizAuthUrl = config.wizAuthUrl;
+    this._wizUrl = config.wizUrl;
     this._alias = config.alias;
   }
 
@@ -203,468 +145,187 @@ export class DatabricksProvider extends cdktf.TerraformProvider {
   // ATTRIBUTES
   // ==========
 
-  // account_id - computed: false, optional: true, required: false
-  private _accountId?: string; 
-  public get accountId() {
-    return this._accountId;
+  // ca_chain - computed: false, optional: true, required: false
+  private _caChain?: string; 
+  public get caChain() {
+    return this._caChain;
   }
-  public set accountId(value: string | undefined) {
-    this._accountId = value;
+  public set caChain(value: string | undefined) {
+    this._caChain = value;
   }
-  public resetAccountId() {
-    this._accountId = undefined;
+  public resetCaChain() {
+    this._caChain = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get accountIdInput() {
-    return this._accountId;
+  public get caChainInput() {
+    return this._caChain;
   }
 
-  // auth_type - computed: false, optional: true, required: false
-  private _authType?: string; 
-  public get authType() {
-    return this._authType;
+  // http_client_retry_max - computed: false, optional: true, required: false
+  private _httpClientRetryMax?: number; 
+  public get httpClientRetryMax() {
+    return this._httpClientRetryMax;
   }
-  public set authType(value: string | undefined) {
-    this._authType = value;
+  public set httpClientRetryMax(value: number | undefined) {
+    this._httpClientRetryMax = value;
   }
-  public resetAuthType() {
-    this._authType = undefined;
+  public resetHttpClientRetryMax() {
+    this._httpClientRetryMax = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get authTypeInput() {
-    return this._authType;
+  public get httpClientRetryMaxInput() {
+    return this._httpClientRetryMax;
   }
 
-  // azure_client_id - computed: false, optional: true, required: false
-  private _azureClientId?: string; 
-  public get azureClientId() {
-    return this._azureClientId;
+  // http_client_retry_wait_max - computed: false, optional: true, required: false
+  private _httpClientRetryWaitMax?: number; 
+  public get httpClientRetryWaitMax() {
+    return this._httpClientRetryWaitMax;
   }
-  public set azureClientId(value: string | undefined) {
-    this._azureClientId = value;
+  public set httpClientRetryWaitMax(value: number | undefined) {
+    this._httpClientRetryWaitMax = value;
   }
-  public resetAzureClientId() {
-    this._azureClientId = undefined;
+  public resetHttpClientRetryWaitMax() {
+    this._httpClientRetryWaitMax = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get azureClientIdInput() {
-    return this._azureClientId;
+  public get httpClientRetryWaitMaxInput() {
+    return this._httpClientRetryWaitMax;
   }
 
-  // azure_client_secret - computed: false, optional: true, required: false
-  private _azureClientSecret?: string; 
-  public get azureClientSecret() {
-    return this._azureClientSecret;
+  // http_client_retry_wait_min - computed: false, optional: true, required: false
+  private _httpClientRetryWaitMin?: number; 
+  public get httpClientRetryWaitMin() {
+    return this._httpClientRetryWaitMin;
   }
-  public set azureClientSecret(value: string | undefined) {
-    this._azureClientSecret = value;
+  public set httpClientRetryWaitMin(value: number | undefined) {
+    this._httpClientRetryWaitMin = value;
   }
-  public resetAzureClientSecret() {
-    this._azureClientSecret = undefined;
+  public resetHttpClientRetryWaitMin() {
+    this._httpClientRetryWaitMin = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get azureClientSecretInput() {
-    return this._azureClientSecret;
+  public get httpClientRetryWaitMinInput() {
+    return this._httpClientRetryWaitMin;
   }
 
-  // azure_environment - computed: false, optional: true, required: false
-  private _azureEnvironment?: string; 
-  public get azureEnvironment() {
-    return this._azureEnvironment;
+  // proxy - computed: false, optional: true, required: false
+  private _proxy?: boolean | cdktf.IResolvable; 
+  public get proxy() {
+    return this._proxy;
   }
-  public set azureEnvironment(value: string | undefined) {
-    this._azureEnvironment = value;
+  public set proxy(value: boolean | cdktf.IResolvable | undefined) {
+    this._proxy = value;
   }
-  public resetAzureEnvironment() {
-    this._azureEnvironment = undefined;
+  public resetProxy() {
+    this._proxy = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get azureEnvironmentInput() {
-    return this._azureEnvironment;
+  public get proxyInput() {
+    return this._proxy;
   }
 
-  // azure_login_app_id - computed: false, optional: true, required: false
-  private _azureLoginAppId?: string; 
-  public get azureLoginAppId() {
-    return this._azureLoginAppId;
+  // proxy_server - computed: false, optional: true, required: false
+  private _proxyServer?: string; 
+  public get proxyServer() {
+    return this._proxyServer;
   }
-  public set azureLoginAppId(value: string | undefined) {
-    this._azureLoginAppId = value;
+  public set proxyServer(value: string | undefined) {
+    this._proxyServer = value;
   }
-  public resetAzureLoginAppId() {
-    this._azureLoginAppId = undefined;
+  public resetProxyServer() {
+    this._proxyServer = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get azureLoginAppIdInput() {
-    return this._azureLoginAppId;
+  public get proxyServerInput() {
+    return this._proxyServer;
   }
 
-  // azure_tenant_id - computed: false, optional: true, required: false
-  private _azureTenantId?: string; 
-  public get azureTenantId() {
-    return this._azureTenantId;
+  // wiz_auth_audience - computed: false, optional: true, required: false
+  private _wizAuthAudience?: string; 
+  public get wizAuthAudience() {
+    return this._wizAuthAudience;
   }
-  public set azureTenantId(value: string | undefined) {
-    this._azureTenantId = value;
+  public set wizAuthAudience(value: string | undefined) {
+    this._wizAuthAudience = value;
   }
-  public resetAzureTenantId() {
-    this._azureTenantId = undefined;
+  public resetWizAuthAudience() {
+    this._wizAuthAudience = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get azureTenantIdInput() {
-    return this._azureTenantId;
+  public get wizAuthAudienceInput() {
+    return this._wizAuthAudience;
   }
 
-  // azure_use_msi - computed: false, optional: true, required: false
-  private _azureUseMsi?: boolean | cdktf.IResolvable; 
-  public get azureUseMsi() {
-    return this._azureUseMsi;
+  // wiz_auth_client_id - computed: false, optional: false, required: true
+  private _wizAuthClientId?: string; 
+  public get wizAuthClientId() {
+    return this._wizAuthClientId;
   }
-  public set azureUseMsi(value: boolean | cdktf.IResolvable | undefined) {
-    this._azureUseMsi = value;
-  }
-  public resetAzureUseMsi() {
-    this._azureUseMsi = undefined;
+  public set wizAuthClientId(value: string | undefined) {
+    this._wizAuthClientId = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get azureUseMsiInput() {
-    return this._azureUseMsi;
+  public get wizAuthClientIdInput() {
+    return this._wizAuthClientId;
   }
 
-  // azure_workspace_resource_id - computed: false, optional: true, required: false
-  private _azureWorkspaceResourceId?: string; 
-  public get azureWorkspaceResourceId() {
-    return this._azureWorkspaceResourceId;
+  // wiz_auth_client_secret - computed: false, optional: false, required: true
+  private _wizAuthClientSecret?: string; 
+  public get wizAuthClientSecret() {
+    return this._wizAuthClientSecret;
   }
-  public set azureWorkspaceResourceId(value: string | undefined) {
-    this._azureWorkspaceResourceId = value;
-  }
-  public resetAzureWorkspaceResourceId() {
-    this._azureWorkspaceResourceId = undefined;
+  public set wizAuthClientSecret(value: string | undefined) {
+    this._wizAuthClientSecret = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get azureWorkspaceResourceIdInput() {
-    return this._azureWorkspaceResourceId;
+  public get wizAuthClientSecretInput() {
+    return this._wizAuthClientSecret;
   }
 
-  // client_id - computed: false, optional: true, required: false
-  private _clientId?: string; 
-  public get clientId() {
-    return this._clientId;
+  // wiz_auth_grant_type - computed: false, optional: true, required: false
+  private _wizAuthGrantType?: string; 
+  public get wizAuthGrantType() {
+    return this._wizAuthGrantType;
   }
-  public set clientId(value: string | undefined) {
-    this._clientId = value;
+  public set wizAuthGrantType(value: string | undefined) {
+    this._wizAuthGrantType = value;
   }
-  public resetClientId() {
-    this._clientId = undefined;
+  public resetWizAuthGrantType() {
+    this._wizAuthGrantType = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get clientIdInput() {
-    return this._clientId;
+  public get wizAuthGrantTypeInput() {
+    return this._wizAuthGrantType;
   }
 
-  // client_secret - computed: false, optional: true, required: false
-  private _clientSecret?: string; 
-  public get clientSecret() {
-    return this._clientSecret;
+  // wiz_auth_url - computed: false, optional: true, required: false
+  private _wizAuthUrl?: string; 
+  public get wizAuthUrl() {
+    return this._wizAuthUrl;
   }
-  public set clientSecret(value: string | undefined) {
-    this._clientSecret = value;
+  public set wizAuthUrl(value: string | undefined) {
+    this._wizAuthUrl = value;
   }
-  public resetClientSecret() {
-    this._clientSecret = undefined;
+  public resetWizAuthUrl() {
+    this._wizAuthUrl = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get clientSecretInput() {
-    return this._clientSecret;
+  public get wizAuthUrlInput() {
+    return this._wizAuthUrl;
   }
 
-  // cluster_id - computed: false, optional: true, required: false
-  private _clusterId?: string; 
-  public get clusterId() {
-    return this._clusterId;
+  // wiz_url - computed: false, optional: false, required: true
+  private _wizUrl?: string; 
+  public get wizUrl() {
+    return this._wizUrl;
   }
-  public set clusterId(value: string | undefined) {
-    this._clusterId = value;
-  }
-  public resetClusterId() {
-    this._clusterId = undefined;
+  public set wizUrl(value: string | undefined) {
+    this._wizUrl = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get clusterIdInput() {
-    return this._clusterId;
-  }
-
-  // config_file - computed: false, optional: true, required: false
-  private _configFile?: string; 
-  public get configFile() {
-    return this._configFile;
-  }
-  public set configFile(value: string | undefined) {
-    this._configFile = value;
-  }
-  public resetConfigFile() {
-    this._configFile = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get configFileInput() {
-    return this._configFile;
-  }
-
-  // databricks_cli_path - computed: false, optional: true, required: false
-  private _databricksCliPath?: string; 
-  public get databricksCliPath() {
-    return this._databricksCliPath;
-  }
-  public set databricksCliPath(value: string | undefined) {
-    this._databricksCliPath = value;
-  }
-  public resetDatabricksCliPath() {
-    this._databricksCliPath = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get databricksCliPathInput() {
-    return this._databricksCliPath;
-  }
-
-  // debug_headers - computed: false, optional: true, required: false
-  private _debugHeaders?: boolean | cdktf.IResolvable; 
-  public get debugHeaders() {
-    return this._debugHeaders;
-  }
-  public set debugHeaders(value: boolean | cdktf.IResolvable | undefined) {
-    this._debugHeaders = value;
-  }
-  public resetDebugHeaders() {
-    this._debugHeaders = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get debugHeadersInput() {
-    return this._debugHeaders;
-  }
-
-  // debug_truncate_bytes - computed: false, optional: true, required: false
-  private _debugTruncateBytes?: number; 
-  public get debugTruncateBytes() {
-    return this._debugTruncateBytes;
-  }
-  public set debugTruncateBytes(value: number | undefined) {
-    this._debugTruncateBytes = value;
-  }
-  public resetDebugTruncateBytes() {
-    this._debugTruncateBytes = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get debugTruncateBytesInput() {
-    return this._debugTruncateBytes;
-  }
-
-  // google_credentials - computed: false, optional: true, required: false
-  private _googleCredentials?: string; 
-  public get googleCredentials() {
-    return this._googleCredentials;
-  }
-  public set googleCredentials(value: string | undefined) {
-    this._googleCredentials = value;
-  }
-  public resetGoogleCredentials() {
-    this._googleCredentials = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get googleCredentialsInput() {
-    return this._googleCredentials;
-  }
-
-  // google_service_account - computed: false, optional: true, required: false
-  private _googleServiceAccount?: string; 
-  public get googleServiceAccount() {
-    return this._googleServiceAccount;
-  }
-  public set googleServiceAccount(value: string | undefined) {
-    this._googleServiceAccount = value;
-  }
-  public resetGoogleServiceAccount() {
-    this._googleServiceAccount = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get googleServiceAccountInput() {
-    return this._googleServiceAccount;
-  }
-
-  // host - computed: false, optional: true, required: false
-  private _host?: string; 
-  public get host() {
-    return this._host;
-  }
-  public set host(value: string | undefined) {
-    this._host = value;
-  }
-  public resetHost() {
-    this._host = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get hostInput() {
-    return this._host;
-  }
-
-  // http_timeout_seconds - computed: false, optional: true, required: false
-  private _httpTimeoutSeconds?: number; 
-  public get httpTimeoutSeconds() {
-    return this._httpTimeoutSeconds;
-  }
-  public set httpTimeoutSeconds(value: number | undefined) {
-    this._httpTimeoutSeconds = value;
-  }
-  public resetHttpTimeoutSeconds() {
-    this._httpTimeoutSeconds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get httpTimeoutSecondsInput() {
-    return this._httpTimeoutSeconds;
-  }
-
-  // metadata_service_url - computed: false, optional: true, required: false
-  private _metadataServiceUrl?: string; 
-  public get metadataServiceUrl() {
-    return this._metadataServiceUrl;
-  }
-  public set metadataServiceUrl(value: string | undefined) {
-    this._metadataServiceUrl = value;
-  }
-  public resetMetadataServiceUrl() {
-    this._metadataServiceUrl = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get metadataServiceUrlInput() {
-    return this._metadataServiceUrl;
-  }
-
-  // password - computed: false, optional: true, required: false
-  private _password?: string; 
-  public get password() {
-    return this._password;
-  }
-  public set password(value: string | undefined) {
-    this._password = value;
-  }
-  public resetPassword() {
-    this._password = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get passwordInput() {
-    return this._password;
-  }
-
-  // profile - computed: false, optional: true, required: false
-  private _profile?: string; 
-  public get profile() {
-    return this._profile;
-  }
-  public set profile(value: string | undefined) {
-    this._profile = value;
-  }
-  public resetProfile() {
-    this._profile = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get profileInput() {
-    return this._profile;
-  }
-
-  // rate_limit - computed: false, optional: true, required: false
-  private _rateLimit?: number; 
-  public get rateLimit() {
-    return this._rateLimit;
-  }
-  public set rateLimit(value: number | undefined) {
-    this._rateLimit = value;
-  }
-  public resetRateLimit() {
-    this._rateLimit = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get rateLimitInput() {
-    return this._rateLimit;
-  }
-
-  // retry_timeout_seconds - computed: false, optional: true, required: false
-  private _retryTimeoutSeconds?: number; 
-  public get retryTimeoutSeconds() {
-    return this._retryTimeoutSeconds;
-  }
-  public set retryTimeoutSeconds(value: number | undefined) {
-    this._retryTimeoutSeconds = value;
-  }
-  public resetRetryTimeoutSeconds() {
-    this._retryTimeoutSeconds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get retryTimeoutSecondsInput() {
-    return this._retryTimeoutSeconds;
-  }
-
-  // skip_verify - computed: false, optional: true, required: false
-  private _skipVerify?: boolean | cdktf.IResolvable; 
-  public get skipVerify() {
-    return this._skipVerify;
-  }
-  public set skipVerify(value: boolean | cdktf.IResolvable | undefined) {
-    this._skipVerify = value;
-  }
-  public resetSkipVerify() {
-    this._skipVerify = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get skipVerifyInput() {
-    return this._skipVerify;
-  }
-
-  // token - computed: false, optional: true, required: false
-  private _token?: string; 
-  public get token() {
-    return this._token;
-  }
-  public set token(value: string | undefined) {
-    this._token = value;
-  }
-  public resetToken() {
-    this._token = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tokenInput() {
-    return this._token;
-  }
-
-  // username - computed: false, optional: true, required: false
-  private _username?: string; 
-  public get username() {
-    return this._username;
-  }
-  public set username(value: string | undefined) {
-    this._username = value;
-  }
-  public resetUsername() {
-    this._username = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get usernameInput() {
-    return this._username;
-  }
-
-  // warehouse_id - computed: false, optional: true, required: false
-  private _warehouseId?: string; 
-  public get warehouseId() {
-    return this._warehouseId;
-  }
-  public set warehouseId(value: string | undefined) {
-    this._warehouseId = value;
-  }
-  public resetWarehouseId() {
-    this._warehouseId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get warehouseIdInput() {
-    return this._warehouseId;
+  public get wizUrlInput() {
+    return this._wizUrl;
   }
 
   // alias - computed: false, optional: true, required: false
@@ -689,35 +350,18 @@ export class DatabricksProvider extends cdktf.TerraformProvider {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_id: cdktf.stringToTerraform(this._accountId),
-      auth_type: cdktf.stringToTerraform(this._authType),
-      azure_client_id: cdktf.stringToTerraform(this._azureClientId),
-      azure_client_secret: cdktf.stringToTerraform(this._azureClientSecret),
-      azure_environment: cdktf.stringToTerraform(this._azureEnvironment),
-      azure_login_app_id: cdktf.stringToTerraform(this._azureLoginAppId),
-      azure_tenant_id: cdktf.stringToTerraform(this._azureTenantId),
-      azure_use_msi: cdktf.booleanToTerraform(this._azureUseMsi),
-      azure_workspace_resource_id: cdktf.stringToTerraform(this._azureWorkspaceResourceId),
-      client_id: cdktf.stringToTerraform(this._clientId),
-      client_secret: cdktf.stringToTerraform(this._clientSecret),
-      cluster_id: cdktf.stringToTerraform(this._clusterId),
-      config_file: cdktf.stringToTerraform(this._configFile),
-      databricks_cli_path: cdktf.stringToTerraform(this._databricksCliPath),
-      debug_headers: cdktf.booleanToTerraform(this._debugHeaders),
-      debug_truncate_bytes: cdktf.numberToTerraform(this._debugTruncateBytes),
-      google_credentials: cdktf.stringToTerraform(this._googleCredentials),
-      google_service_account: cdktf.stringToTerraform(this._googleServiceAccount),
-      host: cdktf.stringToTerraform(this._host),
-      http_timeout_seconds: cdktf.numberToTerraform(this._httpTimeoutSeconds),
-      metadata_service_url: cdktf.stringToTerraform(this._metadataServiceUrl),
-      password: cdktf.stringToTerraform(this._password),
-      profile: cdktf.stringToTerraform(this._profile),
-      rate_limit: cdktf.numberToTerraform(this._rateLimit),
-      retry_timeout_seconds: cdktf.numberToTerraform(this._retryTimeoutSeconds),
-      skip_verify: cdktf.booleanToTerraform(this._skipVerify),
-      token: cdktf.stringToTerraform(this._token),
-      username: cdktf.stringToTerraform(this._username),
-      warehouse_id: cdktf.stringToTerraform(this._warehouseId),
+      ca_chain: cdktf.stringToTerraform(this._caChain),
+      http_client_retry_max: cdktf.numberToTerraform(this._httpClientRetryMax),
+      http_client_retry_wait_max: cdktf.numberToTerraform(this._httpClientRetryWaitMax),
+      http_client_retry_wait_min: cdktf.numberToTerraform(this._httpClientRetryWaitMin),
+      proxy: cdktf.booleanToTerraform(this._proxy),
+      proxy_server: cdktf.stringToTerraform(this._proxyServer),
+      wiz_auth_audience: cdktf.stringToTerraform(this._wizAuthAudience),
+      wiz_auth_client_id: cdktf.stringToTerraform(this._wizAuthClientId),
+      wiz_auth_client_secret: cdktf.stringToTerraform(this._wizAuthClientSecret),
+      wiz_auth_grant_type: cdktf.stringToTerraform(this._wizAuthGrantType),
+      wiz_auth_url: cdktf.stringToTerraform(this._wizAuthUrl),
+      wiz_url: cdktf.stringToTerraform(this._wizUrl),
       alias: cdktf.stringToTerraform(this._alias),
     };
   }

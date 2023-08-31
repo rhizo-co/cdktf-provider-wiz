@@ -1,32 +1,32 @@
 # `provider`
 
-Refer to the Terraform Registory for docs: [`databricks`](https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs).
+Refer to the Terraform Registory for docs: [`wiz`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs).
 
-# `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-databricks.provider"></a>
+# `provider` Submodule <a name="`provider` Submodule" id="rhizo-co-terraform-provider-wiz.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### DatabricksProvider <a name="DatabricksProvider" id="@cdktf/provider-databricks.provider.DatabricksProvider"></a>
+### WizProvider <a name="WizProvider" id="rhizo-co-terraform-provider-wiz.provider.WizProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs databricks}.
+Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs wiz}.
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-databricks.provider.DatabricksProvider.Initializer"></a>
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-databricks-go/databricks/v10/provider"
+import "github.com/rhizo-co/cdktf-provider-wiz-go/wiz/provider"
 
-provider.NewDatabricksProvider(scope Construct, id *string, config DatabricksProviderConfig) DatabricksProvider
+provider.NewWizProvider(scope Construct, id *string, config WizProviderConfig) WizProvider
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | The scope in which to define this construct. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.Initializer.parameter.id">id</a></code> | <code>*string</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig">DatabricksProviderConfig</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.id">id</a></code> | <code>*string</code> | The scoped construct ID. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.config">config</a></code> | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig">WizProviderConfig</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-databricks.provider.DatabricksProvider.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.scope"></a>
 
 - *Type:* github.com/aws/constructs-go/constructs/v10.Construct
 
@@ -34,7 +34,7 @@ The scope in which to define this construct.
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-databricks.provider.DatabricksProvider.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.id"></a>
 
 - *Type:* *string
 
@@ -44,9 +44,9 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `config`<sup>Optional</sup> <a name="config" id="@cdktf/provider-databricks.provider.DatabricksProvider.Initializer.parameter.config"></a>
+##### `config`<sup>Required</sup> <a name="config" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.config"></a>
 
-- *Type:* <a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig">DatabricksProviderConfig</a>
+- *Type:* <a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig">WizProviderConfig</a>
 
 ---
 
@@ -54,46 +54,26 @@ Must be unique amongst siblings in the same scope
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.toString">ToString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.addOverride">AddOverride</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.toMetadata">ToMetadata</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAccountId">ResetAccountId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAlias">ResetAlias</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAuthType">ResetAuthType</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureClientId">ResetAzureClientId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureClientSecret">ResetAzureClientSecret</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureEnvironment">ResetAzureEnvironment</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureLoginAppId">ResetAzureLoginAppId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureTenantId">ResetAzureTenantId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureUseMsi">ResetAzureUseMsi</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureWorkspaceResourceId">ResetAzureWorkspaceResourceId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetClientId">ResetClientId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetClientSecret">ResetClientSecret</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetClusterId">ResetClusterId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetConfigFile">ResetConfigFile</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetDatabricksCliPath">ResetDatabricksCliPath</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetDebugHeaders">ResetDebugHeaders</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetDebugTruncateBytes">ResetDebugTruncateBytes</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetGoogleCredentials">ResetGoogleCredentials</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetGoogleServiceAccount">ResetGoogleServiceAccount</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetHost">ResetHost</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetHttpTimeoutSeconds">ResetHttpTimeoutSeconds</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetMetadataServiceUrl">ResetMetadataServiceUrl</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetPassword">ResetPassword</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetProfile">ResetProfile</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetRateLimit">ResetRateLimit</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetRetryTimeoutSeconds">ResetRetryTimeoutSeconds</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetSkipVerify">ResetSkipVerify</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetToken">ResetToken</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetUsername">ResetUsername</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.resetWarehouseId">ResetWarehouseId</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.toMetadata">ToMetadata</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetAlias">ResetAlias</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetCaChain">ResetCaChain</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetHttpClientRetryMax">ResetHttpClientRetryMax</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetHttpClientRetryWaitMax">ResetHttpClientRetryWaitMax</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetHttpClientRetryWaitMin">ResetHttpClientRetryWaitMin</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetProxy">ResetProxy</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetProxyServer">ResetProxyServer</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetWizAuthAudience">ResetWizAuthAudience</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetWizAuthGrantType">ResetWizAuthGrantType</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetWizAuthUrl">ResetWizAuthUrl</a></code> | *No description.* |
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-databricks.provider.DatabricksProvider.toString"></a>
+##### `ToString` <a name="ToString" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.toString"></a>
 
 ```go
 func ToString() *string
@@ -101,25 +81,25 @@ func ToString() *string
 
 Returns a string representation of this construct.
 
-##### `AddOverride` <a name="AddOverride" id="@cdktf/provider-databricks.provider.DatabricksProvider.addOverride"></a>
+##### `AddOverride` <a name="AddOverride" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.addOverride"></a>
 
 ```go
 func AddOverride(path *string, value interface{})
 ```
 
-###### `path`<sup>Required</sup> <a name="path" id="@cdktf/provider-databricks.provider.DatabricksProvider.addOverride.parameter.path"></a>
+###### `path`<sup>Required</sup> <a name="path" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.addOverride.parameter.path"></a>
 
 - *Type:* *string
 
 ---
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-databricks.provider.DatabricksProvider.addOverride.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.addOverride.parameter.value"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `OverrideLogicalId` <a name="OverrideLogicalId" id="@cdktf/provider-databricks.provider.DatabricksProvider.overrideLogicalId"></a>
+##### `OverrideLogicalId` <a name="OverrideLogicalId" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.overrideLogicalId"></a>
 
 ```go
 func OverrideLogicalId(newLogicalId *string)
@@ -127,7 +107,7 @@ func OverrideLogicalId(newLogicalId *string)
 
 Overrides the auto-generated logical ID with a specific ID.
 
-###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="@cdktf/provider-databricks.provider.DatabricksProvider.overrideLogicalId.parameter.newLogicalId"></a>
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.overrideLogicalId.parameter.newLogicalId"></a>
 
 - *Type:* *string
 
@@ -135,7 +115,7 @@ The new logical ID to use for this stack element.
 
 ---
 
-##### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetOverrideLogicalId"></a>
+##### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetOverrideLogicalId"></a>
 
 ```go
 func ResetOverrideLogicalId()
@@ -143,13 +123,13 @@ func ResetOverrideLogicalId()
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
-##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-databricks.provider.DatabricksProvider.toMetadata"></a>
+##### `ToMetadata` <a name="ToMetadata" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.toMetadata"></a>
 
 ```go
 func ToMetadata() interface{}
 ```
 
-##### `ToTerraform` <a name="ToTerraform" id="@cdktf/provider-databricks.provider.DatabricksProvider.toTerraform"></a>
+##### `ToTerraform` <a name="ToTerraform" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.toTerraform"></a>
 
 ```go
 func ToTerraform() interface{}
@@ -157,202 +137,82 @@ func ToTerraform() interface{}
 
 Adds this resource to the terraform JSON output.
 
-##### `ResetAccountId` <a name="ResetAccountId" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAccountId"></a>
-
-```go
-func ResetAccountId()
-```
-
-##### `ResetAlias` <a name="ResetAlias" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAlias"></a>
+##### `ResetAlias` <a name="ResetAlias" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetAlias"></a>
 
 ```go
 func ResetAlias()
 ```
 
-##### `ResetAuthType` <a name="ResetAuthType" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAuthType"></a>
+##### `ResetCaChain` <a name="ResetCaChain" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetCaChain"></a>
 
 ```go
-func ResetAuthType()
+func ResetCaChain()
 ```
 
-##### `ResetAzureClientId` <a name="ResetAzureClientId" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureClientId"></a>
+##### `ResetHttpClientRetryMax` <a name="ResetHttpClientRetryMax" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetHttpClientRetryMax"></a>
 
 ```go
-func ResetAzureClientId()
+func ResetHttpClientRetryMax()
 ```
 
-##### `ResetAzureClientSecret` <a name="ResetAzureClientSecret" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureClientSecret"></a>
+##### `ResetHttpClientRetryWaitMax` <a name="ResetHttpClientRetryWaitMax" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetHttpClientRetryWaitMax"></a>
 
 ```go
-func ResetAzureClientSecret()
+func ResetHttpClientRetryWaitMax()
 ```
 
-##### `ResetAzureEnvironment` <a name="ResetAzureEnvironment" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureEnvironment"></a>
+##### `ResetHttpClientRetryWaitMin` <a name="ResetHttpClientRetryWaitMin" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetHttpClientRetryWaitMin"></a>
 
 ```go
-func ResetAzureEnvironment()
+func ResetHttpClientRetryWaitMin()
 ```
 
-##### `ResetAzureLoginAppId` <a name="ResetAzureLoginAppId" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureLoginAppId"></a>
+##### `ResetProxy` <a name="ResetProxy" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetProxy"></a>
 
 ```go
-func ResetAzureLoginAppId()
+func ResetProxy()
 ```
 
-##### `ResetAzureTenantId` <a name="ResetAzureTenantId" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureTenantId"></a>
+##### `ResetProxyServer` <a name="ResetProxyServer" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetProxyServer"></a>
 
 ```go
-func ResetAzureTenantId()
+func ResetProxyServer()
 ```
 
-##### `ResetAzureUseMsi` <a name="ResetAzureUseMsi" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureUseMsi"></a>
+##### `ResetWizAuthAudience` <a name="ResetWizAuthAudience" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetWizAuthAudience"></a>
 
 ```go
-func ResetAzureUseMsi()
+func ResetWizAuthAudience()
 ```
 
-##### `ResetAzureWorkspaceResourceId` <a name="ResetAzureWorkspaceResourceId" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetAzureWorkspaceResourceId"></a>
+##### `ResetWizAuthGrantType` <a name="ResetWizAuthGrantType" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetWizAuthGrantType"></a>
 
 ```go
-func ResetAzureWorkspaceResourceId()
+func ResetWizAuthGrantType()
 ```
 
-##### `ResetClientId` <a name="ResetClientId" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetClientId"></a>
+##### `ResetWizAuthUrl` <a name="ResetWizAuthUrl" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.resetWizAuthUrl"></a>
 
 ```go
-func ResetClientId()
-```
-
-##### `ResetClientSecret` <a name="ResetClientSecret" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetClientSecret"></a>
-
-```go
-func ResetClientSecret()
-```
-
-##### `ResetClusterId` <a name="ResetClusterId" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetClusterId"></a>
-
-```go
-func ResetClusterId()
-```
-
-##### `ResetConfigFile` <a name="ResetConfigFile" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetConfigFile"></a>
-
-```go
-func ResetConfigFile()
-```
-
-##### `ResetDatabricksCliPath` <a name="ResetDatabricksCliPath" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetDatabricksCliPath"></a>
-
-```go
-func ResetDatabricksCliPath()
-```
-
-##### `ResetDebugHeaders` <a name="ResetDebugHeaders" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetDebugHeaders"></a>
-
-```go
-func ResetDebugHeaders()
-```
-
-##### `ResetDebugTruncateBytes` <a name="ResetDebugTruncateBytes" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetDebugTruncateBytes"></a>
-
-```go
-func ResetDebugTruncateBytes()
-```
-
-##### `ResetGoogleCredentials` <a name="ResetGoogleCredentials" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetGoogleCredentials"></a>
-
-```go
-func ResetGoogleCredentials()
-```
-
-##### `ResetGoogleServiceAccount` <a name="ResetGoogleServiceAccount" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetGoogleServiceAccount"></a>
-
-```go
-func ResetGoogleServiceAccount()
-```
-
-##### `ResetHost` <a name="ResetHost" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetHost"></a>
-
-```go
-func ResetHost()
-```
-
-##### `ResetHttpTimeoutSeconds` <a name="ResetHttpTimeoutSeconds" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetHttpTimeoutSeconds"></a>
-
-```go
-func ResetHttpTimeoutSeconds()
-```
-
-##### `ResetMetadataServiceUrl` <a name="ResetMetadataServiceUrl" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetMetadataServiceUrl"></a>
-
-```go
-func ResetMetadataServiceUrl()
-```
-
-##### `ResetPassword` <a name="ResetPassword" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetPassword"></a>
-
-```go
-func ResetPassword()
-```
-
-##### `ResetProfile` <a name="ResetProfile" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetProfile"></a>
-
-```go
-func ResetProfile()
-```
-
-##### `ResetRateLimit` <a name="ResetRateLimit" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetRateLimit"></a>
-
-```go
-func ResetRateLimit()
-```
-
-##### `ResetRetryTimeoutSeconds` <a name="ResetRetryTimeoutSeconds" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetRetryTimeoutSeconds"></a>
-
-```go
-func ResetRetryTimeoutSeconds()
-```
-
-##### `ResetSkipVerify` <a name="ResetSkipVerify" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetSkipVerify"></a>
-
-```go
-func ResetSkipVerify()
-```
-
-##### `ResetToken` <a name="ResetToken" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetToken"></a>
-
-```go
-func ResetToken()
-```
-
-##### `ResetUsername` <a name="ResetUsername" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetUsername"></a>
-
-```go
-func ResetUsername()
-```
-
-##### `ResetWarehouseId` <a name="ResetWarehouseId" id="@cdktf/provider-databricks.provider.DatabricksProvider.resetWarehouseId"></a>
-
-```go
-func ResetWarehouseId()
+func ResetWizAuthUrl()
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.isTerraformProvider">IsTerraformProvider</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.isTerraformProvider">IsTerraformProvider</a></code> | *No description.* |
 
 ---
 
-##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-databricks.provider.DatabricksProvider.isConstruct"></a>
+##### `IsConstruct` <a name="IsConstruct" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-databricks-go/databricks/v10/provider"
+import "github.com/rhizo-co/cdktf-provider-wiz-go/wiz/provider"
 
-provider.DatabricksProvider_IsConstruct(x interface{}) *bool
+provider.WizProvider_IsConstruct(x interface{}) *bool
 ```
 
 Checks if `x` is a construct.
@@ -371,7 +231,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-databricks.provider.DatabricksProvider.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.isConstruct.parameter.x"></a>
 
 - *Type:* interface{}
 
@@ -379,29 +239,29 @@ Any object.
 
 ---
 
-##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-databricks.provider.DatabricksProvider.isTerraformElement"></a>
+##### `IsTerraformElement` <a name="IsTerraformElement" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-databricks-go/databricks/v10/provider"
+import "github.com/rhizo-co/cdktf-provider-wiz-go/wiz/provider"
 
-provider.DatabricksProvider_IsTerraformElement(x interface{}) *bool
+provider.WizProvider_IsTerraformElement(x interface{}) *bool
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-databricks.provider.DatabricksProvider.isTerraformElement.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.isTerraformElement.parameter.x"></a>
 
 - *Type:* interface{}
 
 ---
 
-##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-databricks.provider.DatabricksProvider.isTerraformProvider"></a>
+##### `IsTerraformProvider` <a name="IsTerraformProvider" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-databricks-go/databricks/v10/provider"
+import "github.com/rhizo-co/cdktf-provider-wiz-go/wiz/provider"
 
-provider.DatabricksProvider_IsTerraformProvider(x interface{}) *bool
+provider.WizProvider_IsTerraformProvider(x interface{}) *bool
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-databricks.provider.DatabricksProvider.isTerraformProvider.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.isTerraformProvider.parameter.x"></a>
 
 - *Type:* interface{}
 
@@ -411,78 +271,44 @@ provider.DatabricksProvider_IsTerraformProvider(x interface{}) *bool
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.cdktfStack">CdktfStack</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.metaAttributes">MetaAttributes</a></code> | <code>*map[string]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.terraformProviderSource">TerraformProviderSource</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.alias">Alias</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.accountIdInput">AccountIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.aliasInput">AliasInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.authTypeInput">AuthTypeInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureClientIdInput">AzureClientIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureClientSecretInput">AzureClientSecretInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureEnvironmentInput">AzureEnvironmentInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureLoginAppIdInput">AzureLoginAppIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureTenantIdInput">AzureTenantIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureUseMsiInput">AzureUseMsiInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureWorkspaceResourceIdInput">AzureWorkspaceResourceIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.clientIdInput">ClientIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.clientSecretInput">ClientSecretInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.clusterIdInput">ClusterIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.configFileInput">ConfigFileInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.databricksCliPathInput">DatabricksCliPathInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.debugHeadersInput">DebugHeadersInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.debugTruncateBytesInput">DebugTruncateBytesInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.googleCredentialsInput">GoogleCredentialsInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.googleServiceAccountInput">GoogleServiceAccountInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.hostInput">HostInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.httpTimeoutSecondsInput">HttpTimeoutSecondsInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.metadataServiceUrlInput">MetadataServiceUrlInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.passwordInput">PasswordInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.profileInput">ProfileInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.rateLimitInput">RateLimitInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.retryTimeoutSecondsInput">RetryTimeoutSecondsInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.skipVerifyInput">SkipVerifyInput</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.tokenInput">TokenInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.usernameInput">UsernameInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.warehouseIdInput">WarehouseIdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.accountId">AccountId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.authType">AuthType</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureClientId">AzureClientId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureClientSecret">AzureClientSecret</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureEnvironment">AzureEnvironment</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureLoginAppId">AzureLoginAppId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureTenantId">AzureTenantId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureUseMsi">AzureUseMsi</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.azureWorkspaceResourceId">AzureWorkspaceResourceId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.clientId">ClientId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.clientSecret">ClientSecret</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.clusterId">ClusterId</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.configFile">ConfigFile</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.databricksCliPath">DatabricksCliPath</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.debugHeaders">DebugHeaders</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.debugTruncateBytes">DebugTruncateBytes</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.googleCredentials">GoogleCredentials</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.googleServiceAccount">GoogleServiceAccount</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.host">Host</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.httpTimeoutSeconds">HttpTimeoutSeconds</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.metadataServiceUrl">MetadataServiceUrl</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.password">Password</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.profile">Profile</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.rateLimit">RateLimit</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.retryTimeoutSeconds">RetryTimeoutSeconds</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.skipVerify">SkipVerify</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.token">Token</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.username">Username</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.warehouseId">WarehouseId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.cdktfStack">CdktfStack</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.metaAttributes">MetaAttributes</a></code> | <code>*map[string]interface{}</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.terraformProviderSource">TerraformProviderSource</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.alias">Alias</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.aliasInput">AliasInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.caChainInput">CaChainInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryMaxInput">HttpClientRetryMaxInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryWaitMaxInput">HttpClientRetryWaitMaxInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryWaitMinInput">HttpClientRetryWaitMinInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.proxyInput">ProxyInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.proxyServerInput">ProxyServerInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthAudienceInput">WizAuthAudienceInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthClientIdInput">WizAuthClientIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthClientSecretInput">WizAuthClientSecretInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthGrantTypeInput">WizAuthGrantTypeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthUrlInput">WizAuthUrlInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizUrlInput">WizUrlInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.caChain">CaChain</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryMax">HttpClientRetryMax</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryWaitMax">HttpClientRetryWaitMax</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryWaitMin">HttpClientRetryWaitMin</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.proxy">Proxy</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.proxyServer">ProxyServer</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthAudience">WizAuthAudience</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthClientId">WizAuthClientId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthClientSecret">WizAuthClientSecret</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthGrantType">WizAuthGrantType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthUrl">WizAuthUrl</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizUrl">WizUrl</a></code> | <code>*string</code> | *No description.* |
 
 ---
 
-##### `Node`<sup>Required</sup> <a name="Node" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.node"></a>
+##### `Node`<sup>Required</sup> <a name="Node" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.node"></a>
 
 ```go
 func Node() Node
@@ -494,7 +320,7 @@ The tree node.
 
 ---
 
-##### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.cdktfStack"></a>
+##### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.cdktfStack"></a>
 
 ```go
 func CdktfStack() TerraformStack
@@ -504,7 +330,7 @@ func CdktfStack() TerraformStack
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -514,7 +340,7 @@ func Fqn() *string
 
 ---
 
-##### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.friendlyUniqueId"></a>
+##### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.friendlyUniqueId"></a>
 
 ```go
 func FriendlyUniqueId() *string
@@ -524,7 +350,7 @@ func FriendlyUniqueId() *string
 
 ---
 
-##### `MetaAttributes`<sup>Required</sup> <a name="MetaAttributes" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.metaAttributes"></a>
+##### `MetaAttributes`<sup>Required</sup> <a name="MetaAttributes" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.metaAttributes"></a>
 
 ```go
 func MetaAttributes() *map[string]interface{}
@@ -534,7 +360,7 @@ func MetaAttributes() *map[string]interface{}
 
 ---
 
-##### `TerraformResourceType`<sup>Required</sup> <a name="TerraformResourceType" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.terraformResourceType"></a>
+##### `TerraformResourceType`<sup>Required</sup> <a name="TerraformResourceType" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.terraformResourceType"></a>
 
 ```go
 func TerraformResourceType() *string
@@ -544,7 +370,7 @@ func TerraformResourceType() *string
 
 ---
 
-##### `TerraformGeneratorMetadata`<sup>Optional</sup> <a name="TerraformGeneratorMetadata" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.terraformGeneratorMetadata"></a>
+##### `TerraformGeneratorMetadata`<sup>Optional</sup> <a name="TerraformGeneratorMetadata" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.terraformGeneratorMetadata"></a>
 
 ```go
 func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
@@ -554,7 +380,7 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 
 ---
 
-##### `TerraformProviderSource`<sup>Optional</sup> <a name="TerraformProviderSource" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.terraformProviderSource"></a>
+##### `TerraformProviderSource`<sup>Optional</sup> <a name="TerraformProviderSource" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.terraformProviderSource"></a>
 
 ```go
 func TerraformProviderSource() *string
@@ -564,7 +390,7 @@ func TerraformProviderSource() *string
 
 ---
 
-##### `Alias`<sup>Optional</sup> <a name="Alias" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.alias"></a>
+##### `Alias`<sup>Optional</sup> <a name="Alias" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.alias"></a>
 
 ```go
 func Alias() *string
@@ -574,17 +400,7 @@ func Alias() *string
 
 ---
 
-##### `AccountIdInput`<sup>Optional</sup> <a name="AccountIdInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.accountIdInput"></a>
-
-```go
-func AccountIdInput() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AliasInput`<sup>Optional</sup> <a name="AliasInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.aliasInput"></a>
+##### `AliasInput`<sup>Optional</sup> <a name="AliasInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.aliasInput"></a>
 
 ```go
 func AliasInput() *string
@@ -594,570 +410,240 @@ func AliasInput() *string
 
 ---
 
-##### `AuthTypeInput`<sup>Optional</sup> <a name="AuthTypeInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.authTypeInput"></a>
+##### `CaChainInput`<sup>Optional</sup> <a name="CaChainInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.caChainInput"></a>
 
 ```go
-func AuthTypeInput() *string
+func CaChainInput() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `AzureClientIdInput`<sup>Optional</sup> <a name="AzureClientIdInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureClientIdInput"></a>
+##### `HttpClientRetryMaxInput`<sup>Optional</sup> <a name="HttpClientRetryMaxInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryMaxInput"></a>
 
 ```go
-func AzureClientIdInput() *string
+func HttpClientRetryMaxInput() *f64
 ```
 
-- *Type:* *string
+- *Type:* *f64
 
 ---
 
-##### `AzureClientSecretInput`<sup>Optional</sup> <a name="AzureClientSecretInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureClientSecretInput"></a>
+##### `HttpClientRetryWaitMaxInput`<sup>Optional</sup> <a name="HttpClientRetryWaitMaxInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryWaitMaxInput"></a>
 
 ```go
-func AzureClientSecretInput() *string
+func HttpClientRetryWaitMaxInput() *f64
 ```
 
-- *Type:* *string
+- *Type:* *f64
 
 ---
 
-##### `AzureEnvironmentInput`<sup>Optional</sup> <a name="AzureEnvironmentInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureEnvironmentInput"></a>
+##### `HttpClientRetryWaitMinInput`<sup>Optional</sup> <a name="HttpClientRetryWaitMinInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryWaitMinInput"></a>
 
 ```go
-func AzureEnvironmentInput() *string
+func HttpClientRetryWaitMinInput() *f64
 ```
 
-- *Type:* *string
+- *Type:* *f64
 
 ---
 
-##### `AzureLoginAppIdInput`<sup>Optional</sup> <a name="AzureLoginAppIdInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureLoginAppIdInput"></a>
+##### `ProxyInput`<sup>Optional</sup> <a name="ProxyInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.proxyInput"></a>
 
 ```go
-func AzureLoginAppIdInput() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AzureTenantIdInput`<sup>Optional</sup> <a name="AzureTenantIdInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureTenantIdInput"></a>
-
-```go
-func AzureTenantIdInput() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AzureUseMsiInput`<sup>Optional</sup> <a name="AzureUseMsiInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureUseMsiInput"></a>
-
-```go
-func AzureUseMsiInput() interface{}
+func ProxyInput() interface{}
 ```
 
 - *Type:* interface{}
 
 ---
 
-##### `AzureWorkspaceResourceIdInput`<sup>Optional</sup> <a name="AzureWorkspaceResourceIdInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureWorkspaceResourceIdInput"></a>
+##### `ProxyServerInput`<sup>Optional</sup> <a name="ProxyServerInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.proxyServerInput"></a>
 
 ```go
-func AzureWorkspaceResourceIdInput() *string
+func ProxyServerInput() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.clientIdInput"></a>
+##### `WizAuthAudienceInput`<sup>Optional</sup> <a name="WizAuthAudienceInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthAudienceInput"></a>
 
 ```go
-func ClientIdInput() *string
+func WizAuthAudienceInput() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `ClientSecretInput`<sup>Optional</sup> <a name="ClientSecretInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.clientSecretInput"></a>
+##### `WizAuthClientIdInput`<sup>Optional</sup> <a name="WizAuthClientIdInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthClientIdInput"></a>
 
 ```go
-func ClientSecretInput() *string
+func WizAuthClientIdInput() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `ClusterIdInput`<sup>Optional</sup> <a name="ClusterIdInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.clusterIdInput"></a>
+##### `WizAuthClientSecretInput`<sup>Optional</sup> <a name="WizAuthClientSecretInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthClientSecretInput"></a>
 
 ```go
-func ClusterIdInput() *string
+func WizAuthClientSecretInput() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `ConfigFileInput`<sup>Optional</sup> <a name="ConfigFileInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.configFileInput"></a>
+##### `WizAuthGrantTypeInput`<sup>Optional</sup> <a name="WizAuthGrantTypeInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthGrantTypeInput"></a>
 
 ```go
-func ConfigFileInput() *string
+func WizAuthGrantTypeInput() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `DatabricksCliPathInput`<sup>Optional</sup> <a name="DatabricksCliPathInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.databricksCliPathInput"></a>
+##### `WizAuthUrlInput`<sup>Optional</sup> <a name="WizAuthUrlInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthUrlInput"></a>
 
 ```go
-func DatabricksCliPathInput() *string
+func WizAuthUrlInput() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `DebugHeadersInput`<sup>Optional</sup> <a name="DebugHeadersInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.debugHeadersInput"></a>
+##### `WizUrlInput`<sup>Optional</sup> <a name="WizUrlInput" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizUrlInput"></a>
 
 ```go
-func DebugHeadersInput() interface{}
+func WizUrlInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `CaChain`<sup>Optional</sup> <a name="CaChain" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.caChain"></a>
+
+```go
+func CaChain() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `HttpClientRetryMax`<sup>Optional</sup> <a name="HttpClientRetryMax" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryMax"></a>
+
+```go
+func HttpClientRetryMax() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `HttpClientRetryWaitMax`<sup>Optional</sup> <a name="HttpClientRetryWaitMax" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryWaitMax"></a>
+
+```go
+func HttpClientRetryWaitMax() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `HttpClientRetryWaitMin`<sup>Optional</sup> <a name="HttpClientRetryWaitMin" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.httpClientRetryWaitMin"></a>
+
+```go
+func HttpClientRetryWaitMin() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `Proxy`<sup>Optional</sup> <a name="Proxy" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.proxy"></a>
+
+```go
+func Proxy() interface{}
 ```
 
 - *Type:* interface{}
 
 ---
 
-##### `DebugTruncateBytesInput`<sup>Optional</sup> <a name="DebugTruncateBytesInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.debugTruncateBytesInput"></a>
+##### `ProxyServer`<sup>Optional</sup> <a name="ProxyServer" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.proxyServer"></a>
 
 ```go
-func DebugTruncateBytesInput() *f64
-```
-
-- *Type:* *f64
-
----
-
-##### `GoogleCredentialsInput`<sup>Optional</sup> <a name="GoogleCredentialsInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.googleCredentialsInput"></a>
-
-```go
-func GoogleCredentialsInput() *string
+func ProxyServer() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `GoogleServiceAccountInput`<sup>Optional</sup> <a name="GoogleServiceAccountInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.googleServiceAccountInput"></a>
+##### `WizAuthAudience`<sup>Optional</sup> <a name="WizAuthAudience" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthAudience"></a>
 
 ```go
-func GoogleServiceAccountInput() *string
+func WizAuthAudience() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `HostInput`<sup>Optional</sup> <a name="HostInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.hostInput"></a>
+##### `WizAuthClientId`<sup>Optional</sup> <a name="WizAuthClientId" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthClientId"></a>
 
 ```go
-func HostInput() *string
+func WizAuthClientId() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `HttpTimeoutSecondsInput`<sup>Optional</sup> <a name="HttpTimeoutSecondsInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.httpTimeoutSecondsInput"></a>
+##### `WizAuthClientSecret`<sup>Optional</sup> <a name="WizAuthClientSecret" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthClientSecret"></a>
 
 ```go
-func HttpTimeoutSecondsInput() *f64
-```
-
-- *Type:* *f64
-
----
-
-##### `MetadataServiceUrlInput`<sup>Optional</sup> <a name="MetadataServiceUrlInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.metadataServiceUrlInput"></a>
-
-```go
-func MetadataServiceUrlInput() *string
+func WizAuthClientSecret() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `PasswordInput`<sup>Optional</sup> <a name="PasswordInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.passwordInput"></a>
+##### `WizAuthGrantType`<sup>Optional</sup> <a name="WizAuthGrantType" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthGrantType"></a>
 
 ```go
-func PasswordInput() *string
+func WizAuthGrantType() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `ProfileInput`<sup>Optional</sup> <a name="ProfileInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.profileInput"></a>
+##### `WizAuthUrl`<sup>Optional</sup> <a name="WizAuthUrl" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizAuthUrl"></a>
 
 ```go
-func ProfileInput() *string
+func WizAuthUrl() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `RateLimitInput`<sup>Optional</sup> <a name="RateLimitInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.rateLimitInput"></a>
+##### `WizUrl`<sup>Optional</sup> <a name="WizUrl" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.wizUrl"></a>
 
 ```go
-func RateLimitInput() *f64
-```
-
-- *Type:* *f64
-
----
-
-##### `RetryTimeoutSecondsInput`<sup>Optional</sup> <a name="RetryTimeoutSecondsInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.retryTimeoutSecondsInput"></a>
-
-```go
-func RetryTimeoutSecondsInput() *f64
-```
-
-- *Type:* *f64
-
----
-
-##### `SkipVerifyInput`<sup>Optional</sup> <a name="SkipVerifyInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.skipVerifyInput"></a>
-
-```go
-func SkipVerifyInput() interface{}
-```
-
-- *Type:* interface{}
-
----
-
-##### `TokenInput`<sup>Optional</sup> <a name="TokenInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.tokenInput"></a>
-
-```go
-func TokenInput() *string
-```
-
-- *Type:* *string
-
----
-
-##### `UsernameInput`<sup>Optional</sup> <a name="UsernameInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.usernameInput"></a>
-
-```go
-func UsernameInput() *string
-```
-
-- *Type:* *string
-
----
-
-##### `WarehouseIdInput`<sup>Optional</sup> <a name="WarehouseIdInput" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.warehouseIdInput"></a>
-
-```go
-func WarehouseIdInput() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AccountId`<sup>Optional</sup> <a name="AccountId" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.accountId"></a>
-
-```go
-func AccountId() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AuthType`<sup>Optional</sup> <a name="AuthType" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.authType"></a>
-
-```go
-func AuthType() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AzureClientId`<sup>Optional</sup> <a name="AzureClientId" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureClientId"></a>
-
-```go
-func AzureClientId() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AzureClientSecret`<sup>Optional</sup> <a name="AzureClientSecret" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureClientSecret"></a>
-
-```go
-func AzureClientSecret() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AzureEnvironment`<sup>Optional</sup> <a name="AzureEnvironment" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureEnvironment"></a>
-
-```go
-func AzureEnvironment() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AzureLoginAppId`<sup>Optional</sup> <a name="AzureLoginAppId" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureLoginAppId"></a>
-
-```go
-func AzureLoginAppId() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AzureTenantId`<sup>Optional</sup> <a name="AzureTenantId" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureTenantId"></a>
-
-```go
-func AzureTenantId() *string
-```
-
-- *Type:* *string
-
----
-
-##### `AzureUseMsi`<sup>Optional</sup> <a name="AzureUseMsi" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureUseMsi"></a>
-
-```go
-func AzureUseMsi() interface{}
-```
-
-- *Type:* interface{}
-
----
-
-##### `AzureWorkspaceResourceId`<sup>Optional</sup> <a name="AzureWorkspaceResourceId" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.azureWorkspaceResourceId"></a>
-
-```go
-func AzureWorkspaceResourceId() *string
-```
-
-- *Type:* *string
-
----
-
-##### `ClientId`<sup>Optional</sup> <a name="ClientId" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.clientId"></a>
-
-```go
-func ClientId() *string
-```
-
-- *Type:* *string
-
----
-
-##### `ClientSecret`<sup>Optional</sup> <a name="ClientSecret" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.clientSecret"></a>
-
-```go
-func ClientSecret() *string
-```
-
-- *Type:* *string
-
----
-
-##### `ClusterId`<sup>Optional</sup> <a name="ClusterId" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.clusterId"></a>
-
-```go
-func ClusterId() *string
-```
-
-- *Type:* *string
-
----
-
-##### `ConfigFile`<sup>Optional</sup> <a name="ConfigFile" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.configFile"></a>
-
-```go
-func ConfigFile() *string
-```
-
-- *Type:* *string
-
----
-
-##### `DatabricksCliPath`<sup>Optional</sup> <a name="DatabricksCliPath" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.databricksCliPath"></a>
-
-```go
-func DatabricksCliPath() *string
-```
-
-- *Type:* *string
-
----
-
-##### `DebugHeaders`<sup>Optional</sup> <a name="DebugHeaders" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.debugHeaders"></a>
-
-```go
-func DebugHeaders() interface{}
-```
-
-- *Type:* interface{}
-
----
-
-##### `DebugTruncateBytes`<sup>Optional</sup> <a name="DebugTruncateBytes" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.debugTruncateBytes"></a>
-
-```go
-func DebugTruncateBytes() *f64
-```
-
-- *Type:* *f64
-
----
-
-##### `GoogleCredentials`<sup>Optional</sup> <a name="GoogleCredentials" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.googleCredentials"></a>
-
-```go
-func GoogleCredentials() *string
-```
-
-- *Type:* *string
-
----
-
-##### `GoogleServiceAccount`<sup>Optional</sup> <a name="GoogleServiceAccount" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.googleServiceAccount"></a>
-
-```go
-func GoogleServiceAccount() *string
-```
-
-- *Type:* *string
-
----
-
-##### `Host`<sup>Optional</sup> <a name="Host" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.host"></a>
-
-```go
-func Host() *string
-```
-
-- *Type:* *string
-
----
-
-##### `HttpTimeoutSeconds`<sup>Optional</sup> <a name="HttpTimeoutSeconds" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.httpTimeoutSeconds"></a>
-
-```go
-func HttpTimeoutSeconds() *f64
-```
-
-- *Type:* *f64
-
----
-
-##### `MetadataServiceUrl`<sup>Optional</sup> <a name="MetadataServiceUrl" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.metadataServiceUrl"></a>
-
-```go
-func MetadataServiceUrl() *string
-```
-
-- *Type:* *string
-
----
-
-##### `Password`<sup>Optional</sup> <a name="Password" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.password"></a>
-
-```go
-func Password() *string
-```
-
-- *Type:* *string
-
----
-
-##### `Profile`<sup>Optional</sup> <a name="Profile" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.profile"></a>
-
-```go
-func Profile() *string
-```
-
-- *Type:* *string
-
----
-
-##### `RateLimit`<sup>Optional</sup> <a name="RateLimit" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.rateLimit"></a>
-
-```go
-func RateLimit() *f64
-```
-
-- *Type:* *f64
-
----
-
-##### `RetryTimeoutSeconds`<sup>Optional</sup> <a name="RetryTimeoutSeconds" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.retryTimeoutSeconds"></a>
-
-```go
-func RetryTimeoutSeconds() *f64
-```
-
-- *Type:* *f64
-
----
-
-##### `SkipVerify`<sup>Optional</sup> <a name="SkipVerify" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.skipVerify"></a>
-
-```go
-func SkipVerify() interface{}
-```
-
-- *Type:* interface{}
-
----
-
-##### `Token`<sup>Optional</sup> <a name="Token" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.token"></a>
-
-```go
-func Token() *string
-```
-
-- *Type:* *string
-
----
-
-##### `Username`<sup>Optional</sup> <a name="Username" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.username"></a>
-
-```go
-func Username() *string
-```
-
-- *Type:* *string
-
----
-
-##### `WarehouseId`<sup>Optional</sup> <a name="WarehouseId" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.warehouseId"></a>
-
-```go
-func WarehouseId() *string
+func WizUrl() *string
 ```
 
 - *Type:* *string
@@ -1168,11 +654,11 @@ func WarehouseId() *string
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProvider.property.tfResourceType">TfResourceType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.property.tfResourceType">TfResourceType</a></code> | <code>*string</code> | *No description.* |
 
 ---
 
-##### `TfResourceType`<sup>Required</sup> <a name="TfResourceType" id="@cdktf/provider-databricks.provider.DatabricksProvider.property.tfResourceType"></a>
+##### `TfResourceType`<sup>Required</sup> <a name="TfResourceType" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.property.tfResourceType"></a>
 
 ```go
 func TfResourceType() *string
@@ -1184,44 +670,27 @@ func TfResourceType() *string
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### DatabricksProviderConfig <a name="DatabricksProviderConfig" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig"></a>
+### WizProviderConfig <a name="WizProviderConfig" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-databricks-go/databricks/v10/provider"
+import "github.com/rhizo-co/cdktf-provider-wiz-go/wiz/provider"
 
-&provider.DatabricksProviderConfig {
-	AccountId: *string,
+&provider.WizProviderConfig {
+	WizAuthClientId: *string,
+	WizAuthClientSecret: *string,
+	WizUrl: *string,
 	Alias: *string,
-	AuthType: *string,
-	AzureClientId: *string,
-	AzureClientSecret: *string,
-	AzureEnvironment: *string,
-	AzureLoginAppId: *string,
-	AzureTenantId: *string,
-	AzureUseMsi: interface{},
-	AzureWorkspaceResourceId: *string,
-	ClientId: *string,
-	ClientSecret: *string,
-	ClusterId: *string,
-	ConfigFile: *string,
-	DatabricksCliPath: *string,
-	DebugHeaders: interface{},
-	DebugTruncateBytes: *f64,
-	GoogleCredentials: *string,
-	GoogleServiceAccount: *string,
-	Host: *string,
-	HttpTimeoutSeconds: *f64,
-	MetadataServiceUrl: *string,
-	Password: *string,
-	Profile: *string,
-	RateLimit: *f64,
-	RetryTimeoutSeconds: *f64,
-	SkipVerify: interface{},
-	Token: *string,
-	Username: *string,
-	WarehouseId: *string,
+	CaChain: *string,
+	HttpClientRetryMax: *f64,
+	HttpClientRetryWaitMax: *f64,
+	HttpClientRetryWaitMin: *f64,
+	Proxy: interface{},
+	ProxyServer: *string,
+	WizAuthAudience: *string,
+	WizAuthGrantType: *string,
+	WizAuthUrl: *string,
 }
 ```
 
@@ -1229,52 +698,69 @@ import "github.com/cdktf/cdktf-provider-databricks-go/databricks/v10/provider"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.accountId">AccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#account_id DatabricksProvider#account_id}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.alias">Alias</a></code> | <code>*string</code> | Alias name. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.authType">AuthType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#auth_type DatabricksProvider#auth_type}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureClientId">AzureClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_client_id DatabricksProvider#azure_client_id}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureClientSecret">AzureClientSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_client_secret DatabricksProvider#azure_client_secret}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureEnvironment">AzureEnvironment</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_environment DatabricksProvider#azure_environment}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureLoginAppId">AzureLoginAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_login_app_id DatabricksProvider#azure_login_app_id}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureTenantId">AzureTenantId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_tenant_id DatabricksProvider#azure_tenant_id}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureUseMsi">AzureUseMsi</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_use_msi DatabricksProvider#azure_use_msi}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureWorkspaceResourceId">AzureWorkspaceResourceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_workspace_resource_id DatabricksProvider#azure_workspace_resource_id}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.clientId">ClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#client_id DatabricksProvider#client_id}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.clientSecret">ClientSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#client_secret DatabricksProvider#client_secret}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.clusterId">ClusterId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#cluster_id DatabricksProvider#cluster_id}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.configFile">ConfigFile</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#config_file DatabricksProvider#config_file}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.databricksCliPath">DatabricksCliPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#databricks_cli_path DatabricksProvider#databricks_cli_path}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.debugHeaders">DebugHeaders</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#debug_headers DatabricksProvider#debug_headers}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.debugTruncateBytes">DebugTruncateBytes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#debug_truncate_bytes DatabricksProvider#debug_truncate_bytes}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.googleCredentials">GoogleCredentials</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#google_credentials DatabricksProvider#google_credentials}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.googleServiceAccount">GoogleServiceAccount</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#google_service_account DatabricksProvider#google_service_account}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.host">Host</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#host DatabricksProvider#host}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.httpTimeoutSeconds">HttpTimeoutSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#http_timeout_seconds DatabricksProvider#http_timeout_seconds}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.metadataServiceUrl">MetadataServiceUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#metadata_service_url DatabricksProvider#metadata_service_url}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#password DatabricksProvider#password}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.profile">Profile</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#profile DatabricksProvider#profile}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.rateLimit">RateLimit</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#rate_limit DatabricksProvider#rate_limit}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.retryTimeoutSeconds">RetryTimeoutSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#retry_timeout_seconds DatabricksProvider#retry_timeout_seconds}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.skipVerify">SkipVerify</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#skip_verify DatabricksProvider#skip_verify}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.token">Token</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#token DatabricksProvider#token}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.username">Username</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#username DatabricksProvider#username}. |
-| <code><a href="#@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.warehouseId">WarehouseId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#warehouse_id DatabricksProvider#warehouse_id}. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthClientId">WizAuthClientId</a></code> | <code>*string</code> | Your application's Client ID. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthClientSecret">WizAuthClientSecret</a></code> | <code>*string</code> | Your application's Client Secret. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizUrl">WizUrl</a></code> | <code>*string</code> | Wiz api endpoint.  This varies for each Wiz deployment.  See https://docs.wiz.io/wiz-docs/docs/using-the-wiz-api#the-graphql-endpoint. (default: none, environment variable: WIZ_URL). |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.alias">Alias</a></code> | <code>*string</code> | Alias name. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.caChain">CaChain</a></code> | <code>*string</code> | Base64 encoded PEM of the CA chain used when communicating with Wiz. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryMax">HttpClientRetryMax</a></code> | <code>*f64</code> | Maximum retry attempts. - Defaults to `10`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryWaitMax">HttpClientRetryWaitMax</a></code> | <code>*f64</code> | Maximum time to wait before retrying, in seconds. - Defaults to `10`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryWaitMin">HttpClientRetryWaitMin</a></code> | <code>*f64</code> | Minimum time to wait before retrying, in seconds. - Defaults to `1`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.proxy">Proxy</a></code> | <code>interface{}</code> | Use an http proxy server? (default: false, environment variable: PROXY). |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.proxyServer">ProxyServer</a></code> | <code>*string</code> | Proxy server address.  Syntax: http[s]://[host]:[port]. (default: none, environment variable: PROXY_SERVER). |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthAudience">WizAuthAudience</a></code> | <code>*string</code> | Set this to 'beyond-api' if using auth0 and 'wiz-api' if using Cognito. (default: wiz-api, environment variable: WIZ_AUTH_AUDIENCE). |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthGrantType">WizAuthGrantType</a></code> | <code>*string</code> | Set this to 'client_credentials'. (default: client_credentials, environment variable: WIZ_AUTH_GRANT_TYPE). |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthUrl">WizAuthUrl</a></code> | <code>*string</code> | The authentication endpoint. (default: https://auth.app.wiz.io/oauth/token, environment variable: WIZ_AUTH_URL). |
 
 ---
 
-##### `AccountId`<sup>Optional</sup> <a name="AccountId" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.accountId"></a>
+##### `WizAuthClientId`<sup>Required</sup> <a name="WizAuthClientId" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthClientId"></a>
 
 ```go
-AccountId *string
+WizAuthClientId *string
 ```
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#account_id DatabricksProvider#account_id}.
+Your application's Client ID.
+
+You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_ID)
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_id WizProvider#wiz_auth_client_id}
 
 ---
 
-##### `Alias`<sup>Optional</sup> <a name="Alias" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.alias"></a>
+##### `WizAuthClientSecret`<sup>Required</sup> <a name="WizAuthClientSecret" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthClientSecret"></a>
+
+```go
+WizAuthClientSecret *string
+```
+
+- *Type:* *string
+
+Your application's Client Secret.
+
+You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_SECRET)
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_secret WizProvider#wiz_auth_client_secret}
+
+---
+
+##### `WizUrl`<sup>Required</sup> <a name="WizUrl" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizUrl"></a>
+
+```go
+WizUrl *string
+```
+
+- *Type:* *string
+
+Wiz api endpoint.  This varies for each Wiz deployment.  See https://docs.wiz.io/wiz-docs/docs/using-the-wiz-api#the-graphql-endpoint. (default: none, environment variable: WIZ_URL).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_url WizProvider#wiz_url}
+
+---
+
+##### `Alias`<sup>Optional</sup> <a name="Alias" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.alias"></a>
 
 ```go
 Alias *string
@@ -1284,343 +770,135 @@ Alias *string
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#alias DatabricksProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#alias WizProvider#alias}
 
 ---
 
-##### `AuthType`<sup>Optional</sup> <a name="AuthType" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.authType"></a>
+##### `CaChain`<sup>Optional</sup> <a name="CaChain" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.caChain"></a>
 
 ```go
-AuthType *string
+CaChain *string
 ```
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#auth_type DatabricksProvider#auth_type}.
+Base64 encoded PEM of the CA chain used when communicating with Wiz.
+
+If a proxy performs TLS interception/inspection, this will be the CA chain for the certificate used by the proxy. The default includes the CAs known to be used by Wiz: `C=IE, O=Baltimore, OU=CyberTrust, CN=Baltimore CyberTrust Root`, `C=US, O=Cloudflare, Inc., CN=Cloudflare Inc ECC CA-3`, `C=US, ST=Arizona, L=Scottsdale, O=Starfield Technologies, Inc., CN=Starfield Services Root Certificate Authority - G2`, `C=US, O=Amazon, CN=Amazon Root CA 1`, `C=US, O=Amazon, OU=Server CA 1B, CN=Amazon`. (environment variable: CA_CHAIN)
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#ca_chain WizProvider#ca_chain}
 
 ---
 
-##### `AzureClientId`<sup>Optional</sup> <a name="AzureClientId" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureClientId"></a>
+##### `HttpClientRetryMax`<sup>Optional</sup> <a name="HttpClientRetryMax" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryMax"></a>
 
 ```go
-AzureClientId *string
+HttpClientRetryMax *f64
 ```
 
-- *Type:* *string
+- *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_client_id DatabricksProvider#azure_client_id}.
+Maximum retry attempts. - Defaults to `10`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_max WizProvider#http_client_retry_max}
 
 ---
 
-##### `AzureClientSecret`<sup>Optional</sup> <a name="AzureClientSecret" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureClientSecret"></a>
+##### `HttpClientRetryWaitMax`<sup>Optional</sup> <a name="HttpClientRetryWaitMax" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryWaitMax"></a>
 
 ```go
-AzureClientSecret *string
+HttpClientRetryWaitMax *f64
 ```
 
-- *Type:* *string
+- *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_client_secret DatabricksProvider#azure_client_secret}.
+Maximum time to wait before retrying, in seconds. - Defaults to `10`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_max WizProvider#http_client_retry_wait_max}
 
 ---
 
-##### `AzureEnvironment`<sup>Optional</sup> <a name="AzureEnvironment" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureEnvironment"></a>
+##### `HttpClientRetryWaitMin`<sup>Optional</sup> <a name="HttpClientRetryWaitMin" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryWaitMin"></a>
 
 ```go
-AzureEnvironment *string
+HttpClientRetryWaitMin *f64
 ```
 
-- *Type:* *string
+- *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_environment DatabricksProvider#azure_environment}.
+Minimum time to wait before retrying, in seconds. - Defaults to `1`.
 
----
-
-##### `AzureLoginAppId`<sup>Optional</sup> <a name="AzureLoginAppId" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureLoginAppId"></a>
-
-```go
-AzureLoginAppId *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_login_app_id DatabricksProvider#azure_login_app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_min WizProvider#http_client_retry_wait_min}
 
 ---
 
-##### `AzureTenantId`<sup>Optional</sup> <a name="AzureTenantId" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureTenantId"></a>
+##### `Proxy`<sup>Optional</sup> <a name="Proxy" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.proxy"></a>
 
 ```go
-AzureTenantId *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_tenant_id DatabricksProvider#azure_tenant_id}.
-
----
-
-##### `AzureUseMsi`<sup>Optional</sup> <a name="AzureUseMsi" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureUseMsi"></a>
-
-```go
-AzureUseMsi interface{}
+Proxy interface{}
 ```
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_use_msi DatabricksProvider#azure_use_msi}.
+Use an http proxy server? (default: false, environment variable: PROXY).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy WizProvider#proxy}
 
 ---
 
-##### `AzureWorkspaceResourceId`<sup>Optional</sup> <a name="AzureWorkspaceResourceId" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.azureWorkspaceResourceId"></a>
+##### `ProxyServer`<sup>Optional</sup> <a name="ProxyServer" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.proxyServer"></a>
 
 ```go
-AzureWorkspaceResourceId *string
+ProxyServer *string
 ```
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#azure_workspace_resource_id DatabricksProvider#azure_workspace_resource_id}.
+Proxy server address.  Syntax: http[s]://[host]:[port]. (default: none, environment variable: PROXY_SERVER).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy_server WizProvider#proxy_server}
 
 ---
 
-##### `ClientId`<sup>Optional</sup> <a name="ClientId" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.clientId"></a>
+##### `WizAuthAudience`<sup>Optional</sup> <a name="WizAuthAudience" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthAudience"></a>
 
 ```go
-ClientId *string
+WizAuthAudience *string
 ```
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#client_id DatabricksProvider#client_id}.
+Set this to 'beyond-api' if using auth0 and 'wiz-api' if using Cognito. (default: wiz-api, environment variable: WIZ_AUTH_AUDIENCE).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_audience WizProvider#wiz_auth_audience}
 
 ---
 
-##### `ClientSecret`<sup>Optional</sup> <a name="ClientSecret" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.clientSecret"></a>
+##### `WizAuthGrantType`<sup>Optional</sup> <a name="WizAuthGrantType" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthGrantType"></a>
 
 ```go
-ClientSecret *string
+WizAuthGrantType *string
 ```
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#client_secret DatabricksProvider#client_secret}.
+Set this to 'client_credentials'. (default: client_credentials, environment variable: WIZ_AUTH_GRANT_TYPE).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_grant_type WizProvider#wiz_auth_grant_type}
 
 ---
 
-##### `ClusterId`<sup>Optional</sup> <a name="ClusterId" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.clusterId"></a>
+##### `WizAuthUrl`<sup>Optional</sup> <a name="WizAuthUrl" id="rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthUrl"></a>
 
 ```go
-ClusterId *string
+WizAuthUrl *string
 ```
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#cluster_id DatabricksProvider#cluster_id}.
+The authentication endpoint. (default: https://auth.app.wiz.io/oauth/token, environment variable: WIZ_AUTH_URL).
 
----
-
-##### `ConfigFile`<sup>Optional</sup> <a name="ConfigFile" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.configFile"></a>
-
-```go
-ConfigFile *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#config_file DatabricksProvider#config_file}.
-
----
-
-##### `DatabricksCliPath`<sup>Optional</sup> <a name="DatabricksCliPath" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.databricksCliPath"></a>
-
-```go
-DatabricksCliPath *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#databricks_cli_path DatabricksProvider#databricks_cli_path}.
-
----
-
-##### `DebugHeaders`<sup>Optional</sup> <a name="DebugHeaders" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.debugHeaders"></a>
-
-```go
-DebugHeaders interface{}
-```
-
-- *Type:* interface{}
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#debug_headers DatabricksProvider#debug_headers}.
-
----
-
-##### `DebugTruncateBytes`<sup>Optional</sup> <a name="DebugTruncateBytes" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.debugTruncateBytes"></a>
-
-```go
-DebugTruncateBytes *f64
-```
-
-- *Type:* *f64
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#debug_truncate_bytes DatabricksProvider#debug_truncate_bytes}.
-
----
-
-##### `GoogleCredentials`<sup>Optional</sup> <a name="GoogleCredentials" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.googleCredentials"></a>
-
-```go
-GoogleCredentials *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#google_credentials DatabricksProvider#google_credentials}.
-
----
-
-##### `GoogleServiceAccount`<sup>Optional</sup> <a name="GoogleServiceAccount" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.googleServiceAccount"></a>
-
-```go
-GoogleServiceAccount *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#google_service_account DatabricksProvider#google_service_account}.
-
----
-
-##### `Host`<sup>Optional</sup> <a name="Host" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.host"></a>
-
-```go
-Host *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#host DatabricksProvider#host}.
-
----
-
-##### `HttpTimeoutSeconds`<sup>Optional</sup> <a name="HttpTimeoutSeconds" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.httpTimeoutSeconds"></a>
-
-```go
-HttpTimeoutSeconds *f64
-```
-
-- *Type:* *f64
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#http_timeout_seconds DatabricksProvider#http_timeout_seconds}.
-
----
-
-##### `MetadataServiceUrl`<sup>Optional</sup> <a name="MetadataServiceUrl" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.metadataServiceUrl"></a>
-
-```go
-MetadataServiceUrl *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#metadata_service_url DatabricksProvider#metadata_service_url}.
-
----
-
-##### `Password`<sup>Optional</sup> <a name="Password" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.password"></a>
-
-```go
-Password *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#password DatabricksProvider#password}.
-
----
-
-##### `Profile`<sup>Optional</sup> <a name="Profile" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.profile"></a>
-
-```go
-Profile *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#profile DatabricksProvider#profile}.
-
----
-
-##### `RateLimit`<sup>Optional</sup> <a name="RateLimit" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.rateLimit"></a>
-
-```go
-RateLimit *f64
-```
-
-- *Type:* *f64
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#rate_limit DatabricksProvider#rate_limit}.
-
----
-
-##### `RetryTimeoutSeconds`<sup>Optional</sup> <a name="RetryTimeoutSeconds" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.retryTimeoutSeconds"></a>
-
-```go
-RetryTimeoutSeconds *f64
-```
-
-- *Type:* *f64
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#retry_timeout_seconds DatabricksProvider#retry_timeout_seconds}.
-
----
-
-##### `SkipVerify`<sup>Optional</sup> <a name="SkipVerify" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.skipVerify"></a>
-
-```go
-SkipVerify interface{}
-```
-
-- *Type:* interface{}
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#skip_verify DatabricksProvider#skip_verify}.
-
----
-
-##### `Token`<sup>Optional</sup> <a name="Token" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.token"></a>
-
-```go
-Token *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#token DatabricksProvider#token}.
-
----
-
-##### `Username`<sup>Optional</sup> <a name="Username" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.username"></a>
-
-```go
-Username *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#username DatabricksProvider#username}.
-
----
-
-##### `WarehouseId`<sup>Optional</sup> <a name="WarehouseId" id="@cdktf/provider-databricks.provider.DatabricksProviderConfig.property.warehouseId"></a>
-
-```go
-WarehouseId *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.24.1/docs#warehouse_id DatabricksProvider#warehouse_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_url WizProvider#wiz_auth_url}
 
 ---
 
