@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control_associations
 // generated from terraform resource schema
 
