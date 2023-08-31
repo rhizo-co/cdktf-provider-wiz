@@ -39,7 +39,7 @@
     "build-provider": "yarn fetch && yarn compile && yarn docgen"
   },
   "author": {
-    "name": "HashiCorp",
+    "name": "rhizo-co",
     "url": "https://hashicorp.com",
     "organization": true
   },
