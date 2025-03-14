@@ -1,14 +1,10 @@
-# `wiz_user`
-
-Refer to the Terraform Registory for docs: [`wiz_user`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user).
-
 # `user` Submodule <a name="`user` Submodule" id="rhizo-co-terraform-provider-wiz.user"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### User <a name="User" id="rhizo-co-terraform-provider-wiz.user.User"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user wiz_user}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/user wiz_user}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.user.User.Initializer"></a>
 
@@ -58,8 +54,10 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +67,12 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.hasResourceMove">HasResourceMove</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.moveFromId">MoveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.resetAssignedProjectIds">ResetAssignedProjectIds</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.resetSendEmailInvite">ResetSendEmailInvite</a></code> | *No description.* |
 
@@ -125,6 +128,12 @@ private void ResetOverrideLogicalId()
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `ToHclTerraform` <a name="ToHclTerraform" id="rhizo-co-terraform-provider-wiz.user.User.toHclTerraform"></a>
+
+```csharp
+private object ToHclTerraform()
+```
+
 ##### `ToMetadata` <a name="ToMetadata" id="rhizo-co-terraform-provider-wiz.user.User.toMetadata"></a>
 
 ```csharp
@@ -138,6 +147,22 @@ private object ToTerraform()
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="rhizo-co-terraform-provider-wiz.user.User.addMoveTarget"></a>
+
+```csharp
+private void AddMoveTarget(string MoveTarget)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `MoveTarget`<sup>Required</sup> <a name="MoveTarget" id="rhizo-co-terraform-provider-wiz.user.User.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="rhizo-co-terraform-provider-wiz.user.User.getAnyMapAttribute"></a>
 
@@ -247,6 +272,30 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 
 ---
 
+##### `HasResourceMove` <a name="HasResourceMove" id="rhizo-co-terraform-provider-wiz.user.User.hasResourceMove"></a>
+
+```csharp
+private object HasResourceMove()
+```
+
+##### `ImportFrom` <a name="ImportFrom" id="rhizo-co-terraform-provider-wiz.user.User.importFrom"></a>
+
+```csharp
+private void ImportFrom(string Id, TerraformProvider Provider = null)
+```
+
+###### `Id`<sup>Required</sup> <a name="Id" id="rhizo-co-terraform-provider-wiz.user.User.importFrom.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+###### `Provider`<sup>Optional</sup> <a name="Provider" id="rhizo-co-terraform-provider-wiz.user.User.importFrom.parameter.provider"></a>
+
+- *Type:* HashiCorp.Cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="rhizo-co-terraform-provider-wiz.user.User.interpolationForAttribute"></a>
 
 ```csharp
@@ -256,6 +305,64 @@ private IResolvable InterpolationForAttribute(string TerraformAttribute)
 ###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="rhizo-co-terraform-provider-wiz.user.User.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
+
+---
+
+##### `MoveFromId` <a name="MoveFromId" id="rhizo-co-terraform-provider-wiz.user.User.moveFromId"></a>
+
+```csharp
+private void MoveFromId(string Id)
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `Id`<sup>Required</sup> <a name="Id" id="rhizo-co-terraform-provider-wiz.user.User.moveFromId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="rhizo-co-terraform-provider-wiz.user.User.moveTo"></a>
+
+```csharp
+private void MoveTo(string MoveTarget, object Index = null)
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `MoveTarget`<sup>Required</sup> <a name="MoveTarget" id="rhizo-co-terraform-provider-wiz.user.User.moveTo.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `Index`<sup>Optional</sup> <a name="Index" id="rhizo-co-terraform-provider-wiz.user.User.moveTo.parameter.index"></a>
+
+- *Type:* object
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `MoveToId` <a name="MoveToId" id="rhizo-co-terraform-provider-wiz.user.User.moveToId"></a>
+
+```csharp
+private void MoveToId(string Id)
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `Id`<sup>Required</sup> <a name="Id" id="rhizo-co-terraform-provider-wiz.user.User.moveToId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
@@ -278,6 +385,7 @@ private void ResetSendEmailInvite()
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.User.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.User.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a User resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -338,6 +446,50 @@ User.IsTerraformResource(object X);
 ###### `X`<sup>Required</sup> <a name="X" id="rhizo-co-terraform-provider-wiz.user.User.isTerraformResource.parameter.x"></a>
 
 - *Type:* object
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="rhizo-co-terraform-provider-wiz.user.User.generateConfigForImport"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Wiz;
+
+User.GenerateConfigForImport(Construct Scope, string ImportToId, string ImportFromId, TerraformProvider Provider = null);
+```
+
+Generates CDKTF code for importing a User resource upon running "cdktf plan <stack-name>".
+
+###### `Scope`<sup>Required</sup> <a name="Scope" id="rhizo-co-terraform-provider-wiz.user.User.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* Constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `ImportToId`<sup>Required</sup> <a name="ImportToId" id="rhizo-co-terraform-provider-wiz.user.User.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* string
+
+The construct id used in the generated config for the User to import.
+
+---
+
+###### `ImportFromId`<sup>Required</sup> <a name="ImportFromId" id="rhizo-co-terraform-provider-wiz.user.User.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* string
+
+The id of the existing User that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/user#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `Provider`<sup>Optional</sup> <a name="Provider" id="rhizo-co-terraform-provider-wiz.user.User.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* HashiCorp.Cdktf.TerraformProvider
+
+? Optional instance of the provider where the User to import is found.
 
 ---
 
@@ -683,7 +835,7 @@ new UserConfig {
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.name">Name</a></code> | <code>string</code> | The user name. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.role">Role</a></code> | <code>string</code> | Whether the project is archived/inactive. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.assignedProjectIds">AssignedProjectIds</a></code> | <code>string[]</code> | Assigned Project Identifiers. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.sendEmailInvite">SendEmailInvite</a></code> | <code>object</code> | Send email invite? - Defaults to `true`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.user.UserConfig.property.sendEmailInvite">SendEmailInvite</a></code> | <code>object</code> | Send email invite?     - Defaults to `true`. |
 
 ---
 
@@ -767,7 +919,7 @@ public string Email { get; set; }
 
 The user email address.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#email User#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/user#email User#email}
 
 ---
 
@@ -781,7 +933,7 @@ public string Name { get; set; }
 
 The user name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#name User#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/user#name User#name}
 
 ---
 
@@ -795,7 +947,7 @@ public string Role { get; set; }
 
 Whether the project is archived/inactive.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#role User#role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/user#role User#role}
 
 ---
 
@@ -809,7 +961,7 @@ public string[] AssignedProjectIds { get; set; }
 
 Assigned Project Identifiers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#assigned_project_ids User#assigned_project_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/user#assigned_project_ids User#assigned_project_ids}
 
 ---
 
@@ -821,9 +973,9 @@ public object SendEmailInvite { get; set; }
 
 - *Type:* object
 
-Send email invite? - Defaults to `true`.
+Send email invite?     - Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/user#send_email_invite User#send_email_invite}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/user#send_email_invite User#send_email_invite}
 
 ---
 

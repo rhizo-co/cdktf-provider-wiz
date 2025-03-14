@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,153 +9,153 @@ import * as cdktf from 'cdktf';
 export interface DataWizCloudConfigRulesConfig extends cdktf.TerraformMetaArguments {
   /**
   * Find CSPM rules related to cloud provider.
-    - Allowed values: 
-        - GCP
-        - AWS
-        - Azure
-        - OCI
-        - Alibaba
-        - vSphere
-        - OpenShift
-        - Kubernetes
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#cloud_provider DataWizCloudConfigRules#cloud_provider}
+  *     - Allowed values: 
+  *         - GCP
+  *         - AWS
+  *         - Azure
+  *         - OCI
+  *         - Alibaba
+  *         - vSphere
+  *         - OpenShift
+  *         - Kubernetes
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#cloud_provider DataWizCloudConfigRules#cloud_provider}
   */
   readonly cloudProvider?: string[];
   /**
   * Search rules by user.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#created_by DataWizCloudConfigRules#created_by}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#created_by DataWizCloudConfigRules#created_by}
   */
   readonly createdBy?: string[];
   /**
   * CSPM Rule enabled status.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#enabled DataWizCloudConfigRules#enabled}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#enabled DataWizCloudConfigRules#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * How many results to return
-    - Defaults to `500`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#first DataWizCloudConfigRules#first}
+  *     - Defaults to `500`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#first DataWizCloudConfigRules#first}
   */
   readonly first?: number;
   /**
   * Search rules by any of securityFramework | securitySubCategory | securityCategory.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#framework_category DataWizCloudConfigRules#framework_category}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#framework_category DataWizCloudConfigRules#framework_category}
   */
   readonly frameworkCategory?: string[];
   /**
   * Search by function as control.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#function_as_control DataWizCloudConfigRules#function_as_control}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#function_as_control DataWizCloudConfigRules#function_as_control}
   */
   readonly functionAsControl?: boolean | cdktf.IResolvable;
   /**
   * Rule has auto remediation.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#has_auto_remediation DataWizCloudConfigRules#has_auto_remediation}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#has_auto_remediation DataWizCloudConfigRules#has_auto_remediation}
   */
   readonly hasAutoRemediation?: boolean | cdktf.IResolvable;
   /**
   * Rule has remediation.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#has_remediation DataWizCloudConfigRules#has_remediation}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#has_remediation DataWizCloudConfigRules#has_remediation}
   */
   readonly hasRemediation?: boolean | cdktf.IResolvable;
   /**
   * GetSearch by IDs.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#ids DataWizCloudConfigRules#ids}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#ids DataWizCloudConfigRules#ids}
   */
   readonly ids?: string[];
   /**
   * Search by opaPolicy presence.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#is_opa_policy DataWizCloudConfigRules#is_opa_policy}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#is_opa_policy DataWizCloudConfigRules#is_opa_policy}
   */
   readonly isOpaPolicy?: boolean | cdktf.IResolvable;
   /**
   * Search rules by target native type.
-    - Allowed values: 
-        - CLOUD
-        - TERRAFORM
-        - CLOUD_FORMATION
-        - KUBERNETES
-        - AZURE_RESOURCE_MANAGER
-        - DOCKER_FILE
-        - ADMISSION_CONTROLLER
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#matcher_type DataWizCloudConfigRules#matcher_type}
+  *     - Allowed values: 
+  *         - CLOUD
+  *         - TERRAFORM
+  *         - CLOUD_FORMATION
+  *         - KUBERNETES
+  *         - AZURE_RESOURCE_MANAGER
+  *         - DOCKER_FILE
+  *         - ADMISSION_CONTROLLER
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#matcher_type DataWizCloudConfigRules#matcher_type}
   */
   readonly matcherType?: string[];
   /**
   * Search by project.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#project DataWizCloudConfigRules#project}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#project DataWizCloudConfigRules#project}
   */
   readonly project?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#risk_equals_all DataWizCloudConfigRules#risk_equals_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#risk_equals_all DataWizCloudConfigRules#risk_equals_all}
   */
   readonly riskEqualsAll?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#risk_equals_any DataWizCloudConfigRules#risk_equals_any}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#risk_equals_any DataWizCloudConfigRules#risk_equals_any}
   */
   readonly riskEqualsAny?: string[];
   /**
   * Find CSPM rules applied on cloud account IDs.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#scope_account_ids DataWizCloudConfigRules#scope_account_ids}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#scope_account_ids DataWizCloudConfigRules#scope_account_ids}
   */
   readonly scopeAccountIds?: string[];
   /**
   * Free text search on CSPM name or resource ID.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#search DataWizCloudConfigRules#search}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#search DataWizCloudConfigRules#search}
   */
   readonly search?: string;
   /**
   * Find CSPM rules related to the service.
-    - Allowed values: 
-        - AWS
-        - Azure
-        - GCP
-        - OCI
-        - Alibaba
-        - AKS
-        - EKS
-        - GKE
-        - Kubernetes
-        - OKE
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#service_type DataWizCloudConfigRules#service_type}
+  *     - Allowed values: 
+  *         - AWS
+  *         - Azure
+  *         - GCP
+  *         - OCI
+  *         - Alibaba
+  *         - AKS
+  *         - EKS
+  *         - GKE
+  *         - Kubernetes
+  *         - OKE
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#service_type DataWizCloudConfigRules#service_type}
   */
   readonly serviceType?: string[];
   /**
   * CSPM Rule severity.
-    - Allowed values: 
-        - INFORMATIONAL
-        - LOW
-        - MEDIUM
-        - HIGH
-        - CRITICAL
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#severity DataWizCloudConfigRules#severity}
+  *     - Allowed values: 
+  *         - INFORMATIONAL
+  *         - LOW
+  *         - MEDIUM
+  *         - HIGH
+  *         - CRITICAL
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#severity DataWizCloudConfigRules#severity}
   */
   readonly severity?: string[];
   /**
   * Find rules by their entity type subject.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#subject_entity_type DataWizCloudConfigRules#subject_entity_type}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#subject_entity_type DataWizCloudConfigRules#subject_entity_type}
   */
   readonly subjectEntityType?: string[];
   /**
   * Search rules by target native type.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules#target_native_type DataWizCloudConfigRules#target_native_type}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#target_native_type DataWizCloudConfigRules#target_native_type}
   */
   readonly targetNativeType?: string[];
 }
@@ -174,6 +169,17 @@ export function dataWizCloudConfigRulesCloudConfigurationRulesExternalReferences
   }
   return {
   }
+}
+
+
+export function dataWizCloudConfigRulesCloudConfigurationRulesExternalReferencesToHclTerraform(struct?: DataWizCloudConfigRulesCloudConfigurationRulesExternalReferences): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataWizCloudConfigRulesCloudConfigurationRulesExternalReferencesOutputReference extends cdktf.ComplexObject {
@@ -243,6 +249,17 @@ export function dataWizCloudConfigRulesCloudConfigurationRulesToTerraform(struct
   }
   return {
   }
+}
+
+
+export function dataWizCloudConfigRulesCloudConfigurationRulesToHclTerraform(struct?: DataWizCloudConfigRulesCloudConfigurationRules): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataWizCloudConfigRulesCloudConfigurationRulesOutputReference extends cdktf.ComplexObject {
@@ -405,7 +422,7 @@ export class DataWizCloudConfigRulesCloudConfigurationRulesList extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules wiz_cloud_config_rules}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules wiz_cloud_config_rules}
 */
 export class DataWizCloudConfigRules extends cdktf.TerraformDataSource {
 
@@ -414,12 +431,26 @@ export class DataWizCloudConfigRules extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "wiz_cloud_config_rules";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataWizCloudConfigRules resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataWizCloudConfigRules to import
+  * @param importFromId The id of the existing DataWizCloudConfigRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataWizCloudConfigRules to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_cloud_config_rules", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_config_rules wiz_cloud_config_rules} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_config_rules wiz_cloud_config_rules} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -430,8 +461,8 @@ export class DataWizCloudConfigRules extends cdktf.TerraformDataSource {
       terraformResourceType: 'wiz_cloud_config_rules',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -825,5 +856,133 @@ export class DataWizCloudConfigRules extends cdktf.TerraformDataSource {
       subject_entity_type: cdktf.listMapper(cdktf.stringToTerraform, false)(this._subjectEntityType),
       target_native_type: cdktf.listMapper(cdktf.stringToTerraform, false)(this._targetNativeType),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cloud_provider: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._cloudProvider),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      created_by: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._createdBy),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      first: {
+        value: cdktf.numberToHclTerraform(this._first),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      framework_category: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._frameworkCategory),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      function_as_control: {
+        value: cdktf.booleanToHclTerraform(this._functionAsControl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      has_auto_remediation: {
+        value: cdktf.booleanToHclTerraform(this._hasAutoRemediation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      has_remediation: {
+        value: cdktf.booleanToHclTerraform(this._hasRemediation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._ids),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      is_opa_policy: {
+        value: cdktf.booleanToHclTerraform(this._isOpaPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      matcher_type: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._matcherType),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      project: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._project),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      risk_equals_all: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._riskEqualsAll),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      risk_equals_any: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._riskEqualsAny),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      scope_account_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._scopeAccountIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      search: {
+        value: cdktf.stringToHclTerraform(this._search),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_type: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._serviceType),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      severity: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._severity),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      subject_entity_type: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._subjectEntityType),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      target_native_type: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._targetNativeType),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

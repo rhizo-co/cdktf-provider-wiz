@@ -1,14 +1,10 @@
-# `wiz_saml_idp`
-
-Refer to the Terraform Registory for docs: [`wiz_saml_idp`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp).
-
 # `samlIdp` Submodule <a name="`samlIdp` Submodule" id="rhizo-co-terraform-provider-wiz.samlIdp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### SamlIdp <a name="SamlIdp" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp wiz_saml_idp}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp wiz_saml_idp}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.Initializer"></a>
 
@@ -58,8 +54,10 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.addMoveTarget">addMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +67,12 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.getStringAttribute">getStringAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.hasResourceMove">hasResourceMove</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.importFrom">importFrom</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.putGroupMapping">putGroupMapping</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.resetAllowManualRoleOverride">resetAllowManualRoleOverride</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.resetDomains">resetDomains</a></code> | *No description.* |
@@ -131,6 +134,12 @@ public resetOverrideLogicalId(): void
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `toHclTerraform` <a name="toHclTerraform" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.toHclTerraform"></a>
+
+```typescript
+public toHclTerraform(): any
+```
+
 ##### `toMetadata` <a name="toMetadata" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.toMetadata"></a>
 
 ```typescript
@@ -144,6 +153,22 @@ public toTerraform(): any
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `addMoveTarget` <a name="addMoveTarget" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.addMoveTarget"></a>
+
+```typescript
+public addMoveTarget(moveTarget: string): void
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.getAnyMapAttribute"></a>
 
@@ -253,6 +278,30 @@ public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: stri
 
 ---
 
+##### `hasResourceMove` <a name="hasResourceMove" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.hasResourceMove"></a>
+
+```typescript
+public hasResourceMove(): TerraformResourceMoveByTarget | TerraformResourceMoveById
+```
+
+##### `importFrom` <a name="importFrom" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.importFrom"></a>
+
+```typescript
+public importFrom(id: string, provider?: TerraformProvider): void
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.importFrom.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.importFrom.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
 ##### `interpolationForAttribute` <a name="interpolationForAttribute" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.interpolationForAttribute"></a>
 
 ```typescript
@@ -262,6 +311,64 @@ public interpolationForAttribute(terraformAttribute: string): IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
+
+---
+
+##### `moveFromId` <a name="moveFromId" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveFromId"></a>
+
+```typescript
+public moveFromId(id: string): void
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveFromId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `moveTo` <a name="moveTo" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveTo"></a>
+
+```typescript
+public moveTo(moveTarget: string, index?: string | number): void
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveTo.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveTo.parameter.index"></a>
+
+- *Type:* string | number
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `moveToId` <a name="moveToId" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveToId"></a>
+
+```typescript
+public moveToId(id: string): void
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.moveToId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
@@ -326,6 +433,7 @@ public resetUseProviderManagedRoles(): void
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.isTerraformResource">isTerraformResource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a SamlIdp resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -386,6 +494,50 @@ samlIdp.SamlIdp.isTerraformResource(x: any)
 ###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.isTerraformResource.parameter.x"></a>
 
 - *Type:* any
+
+---
+
+##### `generateConfigForImport` <a name="generateConfigForImport" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.generateConfigForImport"></a>
+
+```typescript
+import { samlIdp } from 'rhizo-co-terraform-provider-wiz'
+
+samlIdp.SamlIdp.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
+```
+
+Generates CDKTF code for importing a SamlIdp resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* string
+
+The construct id used in the generated config for the SamlIdp to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* string
+
+The id of the existing SamlIdp that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdp.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the SamlIdp to import is found.
 
 ---
 
@@ -917,7 +1069,7 @@ public readonly certificate: string;
 
 PEM certificate from IdP.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#certificate SamlIdp#certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#certificate SamlIdp#certificate}
 
 ---
 
@@ -931,7 +1083,7 @@ public readonly loginUrl: string;
 
 IdP Login URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#login_url SamlIdp#login_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#login_url SamlIdp#login_url}
 
 ---
 
@@ -945,7 +1097,7 @@ public readonly name: string;
 
 IdP name to display in Wiz.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#name SamlIdp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#name SamlIdp#name}
 
 ---
 
@@ -960,9 +1112,9 @@ public readonly allowManualRoleOverride: boolean | IResolvable;
 When set to true, allow overriding the mapped SSO role for specific users.
 
 Must be set `true` if `use_provided_roles` is false.
-- Defaults to `true`.
+    - Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#allow_manual_role_override SamlIdp#allow_manual_role_override}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#allow_manual_role_override SamlIdp#allow_manual_role_override}
 
 ---
 
@@ -976,7 +1128,7 @@ public readonly domains: string[];
 
 A list of domains the IdP handles.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#domains SamlIdp#domains}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#domains SamlIdp#domains}
 
 ---
 
@@ -990,7 +1142,7 @@ public readonly groupMapping: IResolvable | SamlIdpGroupMapping[];
 
 group_mapping block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#group_mapping SamlIdp#group_mapping}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#group_mapping SamlIdp#group_mapping}
 
 ---
 
@@ -1006,7 +1158,7 @@ If undefined, this will default to the login_url value.
 
 Set to the same value as login_url if unsure what value to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#issuer_url SamlIdp#issuer_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#issuer_url SamlIdp#issuer_url}
 
 ---
 
@@ -1020,7 +1172,7 @@ public readonly logoutUrl: string;
 
 IdP Logout URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#logout_url SamlIdp#logout_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#logout_url SamlIdp#logout_url}
 
 ---
 
@@ -1034,7 +1186,7 @@ public readonly mergeGroupsMappingByRole: boolean | IResolvable;
 
 Manage group mapping by role?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#merge_groups_mapping_by_role SamlIdp#merge_groups_mapping_by_role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#merge_groups_mapping_by_role SamlIdp#merge_groups_mapping_by_role}
 
 ---
 
@@ -1049,9 +1201,9 @@ public readonly useProviderManagedRoles: boolean | IResolvable;
 When set to true, roles will be provided by the SSO provider.
 
 Manage the roles via Wiz portal otherwise.
-- Defaults to `false`.
+    - Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#use_provider_managed_roles SamlIdp#use_provider_managed_roles}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#use_provider_managed_roles SamlIdp#use_provider_managed_roles}
 
 ---
 
@@ -1085,7 +1237,7 @@ public readonly providerGroupId: string;
 
 Provider group ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#provider_group_id SamlIdp#provider_group_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#provider_group_id SamlIdp#provider_group_id}
 
 ---
 
@@ -1099,7 +1251,7 @@ public readonly role: string;
 
 Wiz Role name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#role SamlIdp#role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#role SamlIdp#role}
 
 ---
 
@@ -1113,7 +1265,7 @@ public readonly projects: string[];
 
 Project mapping.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#projects SamlIdp#projects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#projects SamlIdp#projects}
 
 ---
 
@@ -1165,10 +1317,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdpGroupMappingList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdpGroupMappingList.computeFqn">computeFqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdpGroupMappingList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdpGroupMappingList.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.samlIdp.SamlIdpGroupMappingList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdpGroupMappingList.allWithMapKey"></a>
+
+```typescript
+public allWithMapKey(mapKeyAttributeName: string): DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="rhizo-co-terraform-provider-wiz.samlIdp.SamlIdpGroupMappingList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* string
 
 ---
 

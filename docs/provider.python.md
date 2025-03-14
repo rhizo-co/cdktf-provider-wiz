@@ -1,14 +1,10 @@
-# `provider`
-
-Refer to the Terraform Registory for docs: [`wiz`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs).
-
 # `provider` Submodule <a name="`provider` Submodule" id="rhizo-co-terraform-provider-wiz.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### WizProvider <a name="WizProvider" id="rhizo-co-terraform-provider-wiz.provider.WizProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs wiz}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs wiz}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer"></a>
 
@@ -43,9 +39,9 @@ provider.WizProvider(
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.wizUrl">wiz_url</a></code> | <code>str</code> | Wiz api endpoint.  This varies for each Wiz deployment.  See https://docs.wiz.io/wiz-docs/docs/using-the-wiz-api#the-graphql-endpoint. (default: none, environment variable: WIZ_URL). |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.alias">alias</a></code> | <code>str</code> | Alias name. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.caChain">ca_chain</a></code> | <code>str</code> | Base64 encoded PEM of the CA chain used when communicating with Wiz. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.httpClientRetryMax">http_client_retry_max</a></code> | <code>typing.Union[int, float]</code> | Maximum retry attempts. - Defaults to `10`. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.httpClientRetryWaitMax">http_client_retry_wait_max</a></code> | <code>typing.Union[int, float]</code> | Maximum time to wait before retrying, in seconds. - Defaults to `10`. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.httpClientRetryWaitMin">http_client_retry_wait_min</a></code> | <code>typing.Union[int, float]</code> | Minimum time to wait before retrying, in seconds. - Defaults to `1`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.httpClientRetryMax">http_client_retry_max</a></code> | <code>typing.Union[int, float]</code> | Maximum retry attempts.     - Defaults to `10`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.httpClientRetryWaitMax">http_client_retry_wait_max</a></code> | <code>typing.Union[int, float]</code> | Maximum time to wait before retrying, in seconds.     - Defaults to `10`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.httpClientRetryWaitMin">http_client_retry_wait_min</a></code> | <code>typing.Union[int, float]</code> | Minimum time to wait before retrying, in seconds.     - Defaults to `1`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.proxy">proxy</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Use an http proxy server? (default: false, environment variable: PROXY). |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.proxyServer">proxy_server</a></code> | <code>str</code> | Proxy server address.  Syntax: http[s]://[host]:[port]. (default: none, environment variable: PROXY_SERVER). |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.Initializer.parameter.wizAuthAudience">wiz_auth_audience</a></code> | <code>str</code> | Set this to 'beyond-api' if using auth0 and 'wiz-api' if using Cognito. (default: wiz-api, environment variable: WIZ_AUTH_AUDIENCE). |
@@ -80,7 +76,7 @@ Your application's Client ID.
 
 You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_ID)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_id WizProvider#wiz_auth_client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_client_id WizProvider#wiz_auth_client_id}
 
 ---
 
@@ -92,7 +88,7 @@ Your application's Client Secret.
 
 You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_SECRET)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_secret WizProvider#wiz_auth_client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_client_secret WizProvider#wiz_auth_client_secret}
 
 ---
 
@@ -102,7 +98,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Wiz api endpoint.  This varies for each Wiz deployment.  See https://docs.wiz.io/wiz-docs/docs/using-the-wiz-api#the-graphql-endpoint. (default: none, environment variable: WIZ_URL).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_url WizProvider#wiz_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_url WizProvider#wiz_url}
 
 ---
 
@@ -112,7 +108,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#alias WizProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#alias WizProvider#alias}
 
 ---
 
@@ -124,7 +120,7 @@ Base64 encoded PEM of the CA chain used when communicating with Wiz.
 
 If a proxy performs TLS interception/inspection, this will be the CA chain for the certificate used by the proxy. The default includes the CAs known to be used by Wiz: `C=IE, O=Baltimore, OU=CyberTrust, CN=Baltimore CyberTrust Root`, `C=US, O=Cloudflare, Inc., CN=Cloudflare Inc ECC CA-3`, `C=US, ST=Arizona, L=Scottsdale, O=Starfield Technologies, Inc., CN=Starfield Services Root Certificate Authority - G2`, `C=US, O=Amazon, CN=Amazon Root CA 1`, `C=US, O=Amazon, OU=Server CA 1B, CN=Amazon`. (environment variable: CA_CHAIN)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#ca_chain WizProvider#ca_chain}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#ca_chain WizProvider#ca_chain}
 
 ---
 
@@ -132,9 +128,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* typing.Union[int, float]
 
-Maximum retry attempts. - Defaults to `10`.
+Maximum retry attempts.     - Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_max WizProvider#http_client_retry_max}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#http_client_retry_max WizProvider#http_client_retry_max}
 
 ---
 
@@ -142,9 +138,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* typing.Union[int, float]
 
-Maximum time to wait before retrying, in seconds. - Defaults to `10`.
+Maximum time to wait before retrying, in seconds.     - Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_max WizProvider#http_client_retry_wait_max}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#http_client_retry_wait_max WizProvider#http_client_retry_wait_max}
 
 ---
 
@@ -152,9 +148,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* typing.Union[int, float]
 
-Minimum time to wait before retrying, in seconds. - Defaults to `1`.
+Minimum time to wait before retrying, in seconds.     - Defaults to `1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_min WizProvider#http_client_retry_wait_min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#http_client_retry_wait_min WizProvider#http_client_retry_wait_min}
 
 ---
 
@@ -164,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Use an http proxy server? (default: false, environment variable: PROXY).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy WizProvider#proxy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#proxy WizProvider#proxy}
 
 ---
 
@@ -174,7 +170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Proxy server address.  Syntax: http[s]://[host]:[port]. (default: none, environment variable: PROXY_SERVER).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy_server WizProvider#proxy_server}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#proxy_server WizProvider#proxy_server}
 
 ---
 
@@ -184,7 +180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Set this to 'beyond-api' if using auth0 and 'wiz-api' if using Cognito. (default: wiz-api, environment variable: WIZ_AUTH_AUDIENCE).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_audience WizProvider#wiz_auth_audience}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_audience WizProvider#wiz_auth_audience}
 
 ---
 
@@ -194,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Set this to 'client_credentials'. (default: client_credentials, environment variable: WIZ_AUTH_GRANT_TYPE).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_grant_type WizProvider#wiz_auth_grant_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_grant_type WizProvider#wiz_auth_grant_type}
 
 ---
 
@@ -204,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 The authentication endpoint. (default: https://auth.app.wiz.io/oauth/token, environment variable: WIZ_AUTH_URL).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_url WizProvider#wiz_auth_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_url WizProvider#wiz_auth_url}
 
 ---
 
@@ -216,6 +212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.addOverride">add_override</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.toMetadata">to_metadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.resetAlias">reset_alias</a></code> | *No description.* |
@@ -285,6 +282,12 @@ def reset_override_logical_id() -> None
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
 
 ##### `to_metadata` <a name="to_metadata" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.toMetadata"></a>
 
@@ -367,6 +370,7 @@ def reset_wiz_auth_url() -> None
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.isTerraformProvider">is_terraform_provider</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProvider.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a WizProvider resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -433,6 +437,55 @@ provider.WizProvider.is_terraform_provider(
 ###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.isTerraformProvider.parameter.x"></a>
 
 - *Type:* typing.Any
+
+---
+
+##### `generate_config_for_import` <a name="generate_config_for_import" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.generateConfigForImport"></a>
+
+```python
+from rhizo-co_cdktf_provider_wiz import provider
+
+provider.WizProvider.generate_config_for_import(
+  scope: Construct,
+  import_to_id: str,
+  import_from_id: str,
+  provider: TerraformProvider = None
+)
+```
+
+Generates CDKTF code for importing a WizProvider resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `import_to_id`<sup>Required</sup> <a name="import_to_id" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* str
+
+The construct id used in the generated config for the WizProvider to import.
+
+---
+
+###### `import_from_id`<sup>Required</sup> <a name="import_from_id" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* str
+
+The id of the existing WizProvider that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.provider.WizProvider.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the WizProvider to import is found.
 
 ---
 
@@ -872,9 +925,9 @@ provider.WizProviderConfig(
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizUrl">wiz_url</a></code> | <code>str</code> | Wiz api endpoint.  This varies for each Wiz deployment.  See https://docs.wiz.io/wiz-docs/docs/using-the-wiz-api#the-graphql-endpoint. (default: none, environment variable: WIZ_URL). |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.alias">alias</a></code> | <code>str</code> | Alias name. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.caChain">ca_chain</a></code> | <code>str</code> | Base64 encoded PEM of the CA chain used when communicating with Wiz. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryMax">http_client_retry_max</a></code> | <code>typing.Union[int, float]</code> | Maximum retry attempts. - Defaults to `10`. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryWaitMax">http_client_retry_wait_max</a></code> | <code>typing.Union[int, float]</code> | Maximum time to wait before retrying, in seconds. - Defaults to `10`. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryWaitMin">http_client_retry_wait_min</a></code> | <code>typing.Union[int, float]</code> | Minimum time to wait before retrying, in seconds. - Defaults to `1`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryMax">http_client_retry_max</a></code> | <code>typing.Union[int, float]</code> | Maximum retry attempts.     - Defaults to `10`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryWaitMax">http_client_retry_wait_max</a></code> | <code>typing.Union[int, float]</code> | Maximum time to wait before retrying, in seconds.     - Defaults to `10`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.httpClientRetryWaitMin">http_client_retry_wait_min</a></code> | <code>typing.Union[int, float]</code> | Minimum time to wait before retrying, in seconds.     - Defaults to `1`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.proxy">proxy</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Use an http proxy server? (default: false, environment variable: PROXY). |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.proxyServer">proxy_server</a></code> | <code>str</code> | Proxy server address.  Syntax: http[s]://[host]:[port]. (default: none, environment variable: PROXY_SERVER). |
 | <code><a href="#rhizo-co-terraform-provider-wiz.provider.WizProviderConfig.property.wizAuthAudience">wiz_auth_audience</a></code> | <code>str</code> | Set this to 'beyond-api' if using auth0 and 'wiz-api' if using Cognito. (default: wiz-api, environment variable: WIZ_AUTH_AUDIENCE). |
@@ -895,7 +948,7 @@ Your application's Client ID.
 
 You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_ID)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_id WizProvider#wiz_auth_client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_client_id WizProvider#wiz_auth_client_id}
 
 ---
 
@@ -911,7 +964,7 @@ Your application's Client Secret.
 
 You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_SECRET)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_secret WizProvider#wiz_auth_client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_client_secret WizProvider#wiz_auth_client_secret}
 
 ---
 
@@ -925,7 +978,7 @@ wiz_url: str
 
 Wiz api endpoint.  This varies for each Wiz deployment.  See https://docs.wiz.io/wiz-docs/docs/using-the-wiz-api#the-graphql-endpoint. (default: none, environment variable: WIZ_URL).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_url WizProvider#wiz_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_url WizProvider#wiz_url}
 
 ---
 
@@ -939,7 +992,7 @@ alias: str
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#alias WizProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#alias WizProvider#alias}
 
 ---
 
@@ -955,7 +1008,7 @@ Base64 encoded PEM of the CA chain used when communicating with Wiz.
 
 If a proxy performs TLS interception/inspection, this will be the CA chain for the certificate used by the proxy. The default includes the CAs known to be used by Wiz: `C=IE, O=Baltimore, OU=CyberTrust, CN=Baltimore CyberTrust Root`, `C=US, O=Cloudflare, Inc., CN=Cloudflare Inc ECC CA-3`, `C=US, ST=Arizona, L=Scottsdale, O=Starfield Technologies, Inc., CN=Starfield Services Root Certificate Authority - G2`, `C=US, O=Amazon, CN=Amazon Root CA 1`, `C=US, O=Amazon, OU=Server CA 1B, CN=Amazon`. (environment variable: CA_CHAIN)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#ca_chain WizProvider#ca_chain}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#ca_chain WizProvider#ca_chain}
 
 ---
 
@@ -967,9 +1020,9 @@ http_client_retry_max: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Maximum retry attempts. - Defaults to `10`.
+Maximum retry attempts.     - Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_max WizProvider#http_client_retry_max}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#http_client_retry_max WizProvider#http_client_retry_max}
 
 ---
 
@@ -981,9 +1034,9 @@ http_client_retry_wait_max: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Maximum time to wait before retrying, in seconds. - Defaults to `10`.
+Maximum time to wait before retrying, in seconds.     - Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_max WizProvider#http_client_retry_wait_max}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#http_client_retry_wait_max WizProvider#http_client_retry_wait_max}
 
 ---
 
@@ -995,9 +1048,9 @@ http_client_retry_wait_min: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Minimum time to wait before retrying, in seconds. - Defaults to `1`.
+Minimum time to wait before retrying, in seconds.     - Defaults to `1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_min WizProvider#http_client_retry_wait_min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#http_client_retry_wait_min WizProvider#http_client_retry_wait_min}
 
 ---
 
@@ -1011,7 +1064,7 @@ proxy: typing.Union[bool, IResolvable]
 
 Use an http proxy server? (default: false, environment variable: PROXY).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy WizProvider#proxy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#proxy WizProvider#proxy}
 
 ---
 
@@ -1025,7 +1078,7 @@ proxy_server: str
 
 Proxy server address.  Syntax: http[s]://[host]:[port]. (default: none, environment variable: PROXY_SERVER).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy_server WizProvider#proxy_server}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#proxy_server WizProvider#proxy_server}
 
 ---
 
@@ -1039,7 +1092,7 @@ wiz_auth_audience: str
 
 Set this to 'beyond-api' if using auth0 and 'wiz-api' if using Cognito. (default: wiz-api, environment variable: WIZ_AUTH_AUDIENCE).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_audience WizProvider#wiz_auth_audience}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_audience WizProvider#wiz_auth_audience}
 
 ---
 
@@ -1053,7 +1106,7 @@ wiz_auth_grant_type: str
 
 Set this to 'client_credentials'. (default: client_credentials, environment variable: WIZ_AUTH_GRANT_TYPE).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_grant_type WizProvider#wiz_auth_grant_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_grant_type WizProvider#wiz_auth_grant_type}
 
 ---
 
@@ -1067,7 +1120,7 @@ wiz_auth_url: str
 
 The authentication endpoint. (default: https://auth.app.wiz.io/oauth/token, environment variable: WIZ_AUTH_URL).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_url WizProvider#wiz_auth_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_url WizProvider#wiz_auth_url}
 
 ---
 

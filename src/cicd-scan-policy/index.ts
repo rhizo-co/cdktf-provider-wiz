@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,42 +9,42 @@ import * as cdktf from 'cdktf';
 export interface CicdScanPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of the Scan Policy.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#description CicdScanPolicy#description}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#description CicdScanPolicy#description}
   */
   readonly description?: string;
   /**
   * Name of the Scan Policy.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#name CicdScanPolicy#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#name CicdScanPolicy#name}
   */
   readonly name: string;
   /**
   * disk_secrets_params block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#disk_secrets_params CicdScanPolicy#disk_secrets_params}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#disk_secrets_params CicdScanPolicy#disk_secrets_params}
   */
   readonly diskSecretsParams?: CicdScanPolicyDiskSecretsParams;
   /**
   * disk_vulnerabilities_params block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#disk_vulnerabilities_params CicdScanPolicy#disk_vulnerabilities_params}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#disk_vulnerabilities_params CicdScanPolicy#disk_vulnerabilities_params}
   */
   readonly diskVulnerabilitiesParams?: CicdScanPolicyDiskVulnerabilitiesParams;
   /**
   * iac_params block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#iac_params CicdScanPolicy#iac_params}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#iac_params CicdScanPolicy#iac_params}
   */
   readonly iacParams?: CicdScanPolicyIacParams;
 }
 export interface CicdScanPolicyDiskSecretsParams {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#count_threshold CicdScanPolicy#count_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#count_threshold CicdScanPolicy#count_threshold}
   */
   readonly countThreshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#path_allow_list CicdScanPolicy#path_allow_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#path_allow_list CicdScanPolicy#path_allow_list}
   */
   readonly pathAllowList?: string[];
 }
@@ -63,6 +58,31 @@ export function cicdScanPolicyDiskSecretsParamsToTerraform(struct?: CicdScanPoli
     count_threshold: cdktf.numberToTerraform(struct!.countThreshold),
     path_allow_list: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.pathAllowList),
   }
+}
+
+
+export function cicdScanPolicyDiskSecretsParamsToHclTerraform(struct?: CicdScanPolicyDiskSecretsParamsOutputReference | CicdScanPolicyDiskSecretsParams): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    count_threshold: {
+      value: cdktf.numberToHclTerraform(struct!.countThreshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    path_allow_list: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.pathAllowList),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CicdScanPolicyDiskSecretsParamsOutputReference extends cdktf.ComplexObject {
@@ -134,27 +154,27 @@ export class CicdScanPolicyDiskSecretsParamsOutputReference extends cdktf.Comple
 }
 export interface CicdScanPolicyDiskVulnerabilitiesParams {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#ignore_unfixed CicdScanPolicy#ignore_unfixed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#ignore_unfixed CicdScanPolicy#ignore_unfixed}
   */
   readonly ignoreUnfixed: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#package_allow_list CicdScanPolicy#package_allow_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#package_allow_list CicdScanPolicy#package_allow_list}
   */
   readonly packageAllowList: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#package_count_threshold CicdScanPolicy#package_count_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#package_count_threshold CicdScanPolicy#package_count_threshold}
   */
   readonly packageCountThreshold: number;
   /**
   * Severity.
-    - Allowed values: 
-        - INFORMATIONAL
-        - LOW
-        - MEDIUM
-        - HIGH
-        - CRITICAL
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#severity CicdScanPolicy#severity}
+  *     - Allowed values: 
+  *         - INFORMATIONAL
+  *         - LOW
+  *         - MEDIUM
+  *         - HIGH
+  *         - CRITICAL
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#severity CicdScanPolicy#severity}
   */
   readonly severity: string;
 }
@@ -170,6 +190,43 @@ export function cicdScanPolicyDiskVulnerabilitiesParamsToTerraform(struct?: Cicd
     package_count_threshold: cdktf.numberToTerraform(struct!.packageCountThreshold),
     severity: cdktf.stringToTerraform(struct!.severity),
   }
+}
+
+
+export function cicdScanPolicyDiskVulnerabilitiesParamsToHclTerraform(struct?: CicdScanPolicyDiskVulnerabilitiesParamsOutputReference | CicdScanPolicyDiskVulnerabilitiesParams): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ignore_unfixed: {
+      value: cdktf.booleanToHclTerraform(struct!.ignoreUnfixed),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    package_allow_list: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.packageAllowList),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    package_count_threshold: {
+      value: cdktf.numberToHclTerraform(struct!.packageCountThreshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    severity: {
+      value: cdktf.stringToHclTerraform(struct!.severity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CicdScanPolicyDiskVulnerabilitiesParamsOutputReference extends cdktf.ComplexObject {
@@ -276,19 +333,19 @@ export class CicdScanPolicyDiskVulnerabilitiesParamsOutputReference extends cdkt
 }
 export interface CicdScanPolicyIacParamsCustomIgnoreTags {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#ignore_all_rules CicdScanPolicy#ignore_all_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#ignore_all_rules CicdScanPolicy#ignore_all_rules}
   */
   readonly ignoreAllRules?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#key CicdScanPolicy#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#key CicdScanPolicy#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#rule_ids CicdScanPolicy#rule_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#rule_ids CicdScanPolicy#rule_ids}
   */
   readonly ruleIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#value CicdScanPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#value CicdScanPolicy#value}
   */
   readonly value: string;
 }
@@ -304,6 +361,43 @@ export function cicdScanPolicyIacParamsCustomIgnoreTagsToTerraform(struct?: Cicd
     rule_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ruleIds),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function cicdScanPolicyIacParamsCustomIgnoreTagsToHclTerraform(struct?: CicdScanPolicyIacParamsCustomIgnoreTags | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ignore_all_rules: {
+      value: cdktf.booleanToHclTerraform(struct!.ignoreAllRules),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rule_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ruleIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CicdScanPolicyIacParamsCustomIgnoreTagsOutputReference extends cdktf.ComplexObject {
@@ -448,37 +542,37 @@ export class CicdScanPolicyIacParamsCustomIgnoreTagsList extends cdktf.ComplexLi
 }
 export interface CicdScanPolicyIacParams {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#builtin_ignore_tags_enabled CicdScanPolicy#builtin_ignore_tags_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#builtin_ignore_tags_enabled CicdScanPolicy#builtin_ignore_tags_enabled}
   */
   readonly builtinIgnoreTagsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#count_threshold CicdScanPolicy#count_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#count_threshold CicdScanPolicy#count_threshold}
   */
   readonly countThreshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#ignored_rules CicdScanPolicy#ignored_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#ignored_rules CicdScanPolicy#ignored_rules}
   */
   readonly ignoredRules?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#security_frameworks CicdScanPolicy#security_frameworks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#security_frameworks CicdScanPolicy#security_frameworks}
   */
   readonly securityFrameworks?: string[];
   /**
   * Severity threshold.
-    - Allowed values: 
-        - INFORMATIONAL
-        - LOW
-        - MEDIUM
-        - HIGH
-        - CRITICAL
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#severity_threshold CicdScanPolicy#severity_threshold}
+  *     - Allowed values: 
+  *         - INFORMATIONAL
+  *         - LOW
+  *         - MEDIUM
+  *         - HIGH
+  *         - CRITICAL
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#severity_threshold CicdScanPolicy#severity_threshold}
   */
   readonly severityThreshold: string;
   /**
   * custom_ignore_tags block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy#custom_ignore_tags CicdScanPolicy#custom_ignore_tags}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#custom_ignore_tags CicdScanPolicy#custom_ignore_tags}
   */
   readonly customIgnoreTags?: CicdScanPolicyIacParamsCustomIgnoreTags[] | cdktf.IResolvable;
 }
@@ -496,6 +590,55 @@ export function cicdScanPolicyIacParamsToTerraform(struct?: CicdScanPolicyIacPar
     severity_threshold: cdktf.stringToTerraform(struct!.severityThreshold),
     custom_ignore_tags: cdktf.listMapper(cicdScanPolicyIacParamsCustomIgnoreTagsToTerraform, true)(struct!.customIgnoreTags),
   }
+}
+
+
+export function cicdScanPolicyIacParamsToHclTerraform(struct?: CicdScanPolicyIacParamsOutputReference | CicdScanPolicyIacParams): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    builtin_ignore_tags_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.builtinIgnoreTagsEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    count_threshold: {
+      value: cdktf.numberToHclTerraform(struct!.countThreshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ignored_rules: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ignoredRules),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    security_frameworks: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.securityFrameworks),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    severity_threshold: {
+      value: cdktf.stringToHclTerraform(struct!.severityThreshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    custom_ignore_tags: {
+      value: cdktf.listMapperHcl(cicdScanPolicyIacParamsCustomIgnoreTagsToHclTerraform, true)(struct!.customIgnoreTags),
+      isBlock: true,
+      type: "set",
+      storageClassType: "CicdScanPolicyIacParamsCustomIgnoreTagsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CicdScanPolicyIacParamsOutputReference extends cdktf.ComplexObject {
@@ -652,7 +795,7 @@ export class CicdScanPolicyIacParamsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy wiz_cicd_scan_policy}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy wiz_cicd_scan_policy}
 */
 export class CicdScanPolicy extends cdktf.TerraformResource {
 
@@ -661,12 +804,26 @@ export class CicdScanPolicy extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "wiz_cicd_scan_policy";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a CicdScanPolicy resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the CicdScanPolicy to import
+  * @param importFromId The id of the existing CicdScanPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the CicdScanPolicy to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_cicd_scan_policy", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cicd_scan_policy wiz_cicd_scan_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cicd_scan_policy wiz_cicd_scan_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -677,8 +834,8 @@ export class CicdScanPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'wiz_cicd_scan_policy',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -803,5 +960,43 @@ export class CicdScanPolicy extends cdktf.TerraformResource {
       disk_vulnerabilities_params: cicdScanPolicyDiskVulnerabilitiesParamsToTerraform(this._diskVulnerabilitiesParams.internalValue),
       iac_params: cicdScanPolicyIacParamsToTerraform(this._iacParams.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disk_secrets_params: {
+        value: cicdScanPolicyDiskSecretsParamsToHclTerraform(this._diskSecretsParams.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CicdScanPolicyDiskSecretsParamsList",
+      },
+      disk_vulnerabilities_params: {
+        value: cicdScanPolicyDiskVulnerabilitiesParamsToHclTerraform(this._diskVulnerabilitiesParams.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CicdScanPolicyDiskVulnerabilitiesParamsList",
+      },
+      iac_params: {
+        value: cicdScanPolicyIacParamsToHclTerraform(this._iacParams.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CicdScanPolicyIacParamsList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

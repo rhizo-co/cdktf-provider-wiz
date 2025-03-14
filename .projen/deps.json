@@ -1,13 +1,21 @@
 {
   "dependencies": [
     {
+      "name": "@action-validator/cli",
+      "type": "build"
+    },
+    {
+      "name": "@action-validator/core",
+      "type": "build"
+    },
+    {
       "name": "@actions/core",
       "version": "^1.1.0",
       "type": "build"
     },
     {
       "name": "@cdktf/provider-project",
-      "version": "^0.2.95",
+      "version": "^0.6.44",
       "type": "build"
     },
     {
@@ -17,17 +25,22 @@
     },
     {
       "name": "cdktf-cli",
-      "version": "0.16.0",
+      "version": "^0.20.0",
       "type": "build"
     },
     {
       "name": "cdktf",
-      "version": "0.16.0",
+      "version": "^0.20.0",
+      "type": "build"
+    },
+    {
+      "name": "commit-and-tag-version",
+      "version": "^12",
       "type": "build"
     },
     {
       "name": "constructs",
-      "version": "10.2.23",
+      "version": "^10.3.0",
       "type": "build"
     },
     {
@@ -41,7 +54,7 @@
     },
     {
       "name": "jsii-docgen",
-      "version": "~9.0.0",
+      "version": "^10.2.3",
       "type": "build"
     },
     {
@@ -50,22 +63,12 @@
     },
     {
       "name": "jsii-rosetta",
-      "version": "~5.1.2",
+      "version": "~5.5.0",
       "type": "build"
     },
     {
       "name": "jsii",
-      "version": "^5.0.1",
-      "type": "build"
-    },
-    {
-      "name": "node-fetch",
-      "version": "cjs",
-      "type": "build"
-    },
-    {
-      "name": "npm-check-updates",
-      "version": "^16",
+      "version": "~5.5.0",
       "type": "build"
     },
     {
@@ -73,12 +76,13 @@
       "type": "build"
     },
     {
-      "name": "standard-version",
-      "version": "^9",
+      "name": "semver",
+      "version": "^7.5.3",
       "type": "build"
     },
     {
       "name": "typescript",
+      "version": "~5.5.0",
       "type": "build"
     },
     {
@@ -87,13 +91,18 @@
       "type": "override"
     },
     {
+      "name": "cssstyle",
+      "version": "4.1.0",
+      "type": "override"
+    },
+    {
       "name": "cdktf",
-      "version": "0.16.0",
+      "version": "^0.20.0",
       "type": "peer"
     },
     {
       "name": "constructs",
-      "version": "10.2.23",
+      "version": "^10.3.0",
       "type": "peer"
     }
   ],

@@ -1,14 +1,10 @@
-# `data_wiz_kubernetes_clusters`
-
-Refer to the Terraform Registory for docs: [`data_wiz_kubernetes_clusters`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters).
-
 # `dataWizKubernetesClusters` Submodule <a name="`dataWizKubernetesClusters` Submodule" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### DataWizKubernetesClusters <a name="DataWizKubernetesClusters" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters wiz_kubernetes_clusters}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters wiz_kubernetes_clusters}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer"></a>
 
@@ -49,9 +45,9 @@ DataWizKubernetesClusters.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer.parameter.cloudProvider">cloudProvider</a></code> | <code>java.util.List<java.lang.String></code> | Query cloud accounts of specific cloud provider. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer.parameter.externalIds">externalIds</a></code> | <code>java.util.List<java.lang.String></code> | The ID(s) to search by. i.e `Azure Subscription ID` or `AWS account number`. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer.parameter.first">first</a></code> | <code>java.lang.Number</code> | How many matches to return, maximum is `500` per page. - Defaults to `50`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer.parameter.first">first</a></code> | <code>java.lang.Number</code> | How many matches to return, maximum is `500` per page.     - Defaults to `50`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer.parameter.kind">kind</a></code> | <code>java.util.List<java.lang.String></code> | Query Kubernetes Cluster of specific kind(s) or cloud provider(s). |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer.parameter.maxPages">maxPages</a></code> | <code>java.lang.Number</code> | How many pages to return. 0 means all pages. - Defaults to `0`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer.parameter.maxPages">maxPages</a></code> | <code>java.lang.Number</code> | How many pages to return. 0 means all pages.     - Defaults to `0`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.Initializer.parameter.search">search</a></code> | <code>java.lang.String</code> | Free text search. Specify empty string to return all kubernetes clusters. |
 
 ---
@@ -123,17 +119,16 @@ Must be unique amongst siblings in the same scope
 Query cloud accounts of specific cloud provider.
 
 * Allowed values:
+  - GCP
+  - AWS
+  - Azure
+  - OCI
+  - Alibaba
+  - vSphere
+  - OpenShift
+  - Kubernetes
 
-  * GCP
-  * AWS
-  * Azure
-  * OCI
-  * Alibaba
-  * vSphere
-  * OpenShift
-  * Kubernetes
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#cloud_provider DataWizKubernetesClusters#cloud_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#cloud_provider DataWizKubernetesClusters#cloud_provider}
 
 ---
 
@@ -143,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 The ID(s) to search by. i.e `Azure Subscription ID` or `AWS account number`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#external_ids DataWizKubernetesClusters#external_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#external_ids DataWizKubernetesClusters#external_ids}
 
 ---
 
@@ -151,9 +146,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* java.lang.Number
 
-How many matches to return, maximum is `500` per page. - Defaults to `50`.
+How many matches to return, maximum is `500` per page.     - Defaults to `50`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#first DataWizKubernetesClusters#first}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#first DataWizKubernetesClusters#first}
 
 ---
 
@@ -164,15 +159,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Query Kubernetes Cluster of specific kind(s) or cloud provider(s).
 
 * Allowed values:
+  - EKS
+  - GKE
+  - AKS
+  - OKE
+  - OPEN_SHIFT
+  - SELF_HOSTED
 
-  * EKS
-  * GKE
-  * AKS
-  * OKE
-  * OPEN_SHIFT
-  * SELF_HOSTED
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#kind DataWizKubernetesClusters#kind}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#kind DataWizKubernetesClusters#kind}
 
 ---
 
@@ -180,9 +174,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* java.lang.Number
 
-How many pages to return. 0 means all pages. - Defaults to `0`.
+How many pages to return. 0 means all pages.     - Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#max_pages DataWizKubernetesClusters#max_pages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#max_pages DataWizKubernetesClusters#max_pages}
 
 ---
 
@@ -192,7 +186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Free text search. Specify empty string to return all kubernetes clusters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#search DataWizKubernetesClusters#search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#search DataWizKubernetesClusters#search}
 
 ---
 
@@ -204,6 +198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.toHclTerraform">toHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
@@ -274,6 +269,14 @@ public void resetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `toMetadata` <a name="toMetadata" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.toMetadata"></a>
 
@@ -452,6 +455,7 @@ public void resetSearch()
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.isTerraformDataSource">isTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a DataWizKubernetesClusters resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -512,6 +516,50 @@ DataWizKubernetesClusters.isTerraformDataSource(java.lang.Object x)
 ###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* java.lang.Object
+
+---
+
+##### `generateConfigForImport` <a name="generateConfigForImport" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.generateConfigForImport"></a>
+
+```java
+import com.hashicorp.cdktf.providers.wiz.data_wiz_kubernetes_clusters.DataWizKubernetesClusters;
+
+DataWizKubernetesClusters.generateConfigForImport(Construct scope, java.lang.String importToId, java.lang.String importFromId),DataWizKubernetesClusters.generateConfigForImport(Construct scope, java.lang.String importToId, java.lang.String importFromId, TerraformProvider provider)
+```
+
+Generates CDKTF code for importing a DataWizKubernetesClusters resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* java.lang.String
+
+The construct id used in the generated config for the DataWizKubernetesClusters to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* java.lang.String
+
+The id of the existing DataWizKubernetesClusters that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClusters.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* com.hashicorp.cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataWizKubernetesClusters to import is found.
 
 ---
 
@@ -871,9 +919,9 @@ DataWizKubernetesClustersConfig.builder()
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersConfig.property.cloudProvider">cloudProvider</a></code> | <code>java.util.List<java.lang.String></code> | Query cloud accounts of specific cloud provider. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersConfig.property.externalIds">externalIds</a></code> | <code>java.util.List<java.lang.String></code> | The ID(s) to search by. i.e `Azure Subscription ID` or `AWS account number`. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersConfig.property.first">first</a></code> | <code>java.lang.Number</code> | How many matches to return, maximum is `500` per page. - Defaults to `50`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersConfig.property.first">first</a></code> | <code>java.lang.Number</code> | How many matches to return, maximum is `500` per page.     - Defaults to `50`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersConfig.property.kind">kind</a></code> | <code>java.util.List<java.lang.String></code> | Query Kubernetes Cluster of specific kind(s) or cloud provider(s). |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersConfig.property.maxPages">maxPages</a></code> | <code>java.lang.Number</code> | How many pages to return. 0 means all pages. - Defaults to `0`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersConfig.property.maxPages">maxPages</a></code> | <code>java.lang.Number</code> | How many pages to return. 0 means all pages.     - Defaults to `0`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersConfig.property.search">search</a></code> | <code>java.lang.String</code> | Free text search. Specify empty string to return all kubernetes clusters. |
 
 ---
@@ -959,17 +1007,16 @@ public java.util.List<java.lang.String> getCloudProvider();
 Query cloud accounts of specific cloud provider.
 
 * Allowed values:
+  - GCP
+  - AWS
+  - Azure
+  - OCI
+  - Alibaba
+  - vSphere
+  - OpenShift
+  - Kubernetes
 
-  * GCP
-  * AWS
-  * Azure
-  * OCI
-  * Alibaba
-  * vSphere
-  * OpenShift
-  * Kubernetes
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#cloud_provider DataWizKubernetesClusters#cloud_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#cloud_provider DataWizKubernetesClusters#cloud_provider}
 
 ---
 
@@ -983,7 +1030,7 @@ public java.util.List<java.lang.String> getExternalIds();
 
 The ID(s) to search by. i.e `Azure Subscription ID` or `AWS account number`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#external_ids DataWizKubernetesClusters#external_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#external_ids DataWizKubernetesClusters#external_ids}
 
 ---
 
@@ -995,9 +1042,9 @@ public java.lang.Number getFirst();
 
 - *Type:* java.lang.Number
 
-How many matches to return, maximum is `500` per page. - Defaults to `50`.
+How many matches to return, maximum is `500` per page.     - Defaults to `50`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#first DataWizKubernetesClusters#first}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#first DataWizKubernetesClusters#first}
 
 ---
 
@@ -1012,15 +1059,14 @@ public java.util.List<java.lang.String> getKind();
 Query Kubernetes Cluster of specific kind(s) or cloud provider(s).
 
 * Allowed values:
+  - EKS
+  - GKE
+  - AKS
+  - OKE
+  - OPEN_SHIFT
+  - SELF_HOSTED
 
-  * EKS
-  * GKE
-  * AKS
-  * OKE
-  * OPEN_SHIFT
-  * SELF_HOSTED
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#kind DataWizKubernetesClusters#kind}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#kind DataWizKubernetesClusters#kind}
 
 ---
 
@@ -1032,9 +1078,9 @@ public java.lang.Number getMaxPages();
 
 - *Type:* java.lang.Number
 
-How many pages to return. 0 means all pages. - Defaults to `0`.
+How many pages to return. 0 means all pages.     - Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#max_pages DataWizKubernetesClusters#max_pages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#max_pages DataWizKubernetesClusters#max_pages}
 
 ---
 
@@ -1048,7 +1094,7 @@ public java.lang.String getSearch();
 
 Free text search. Specify empty string to return all kubernetes clusters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#search DataWizKubernetesClusters#search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#search DataWizKubernetesClusters#search}
 
 ---
 
@@ -1124,10 +1170,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersCloudAccountList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersCloudAccountList.computeFqn">computeFqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersCloudAccountList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersCloudAccountList.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersCloudAccountList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersCloudAccountList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersCloudAccountList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
 
 ---
 
@@ -1567,10 +1630,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersList.computeFqn">computeFqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersList.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="rhizo-co-terraform-provider-wiz.dataWizKubernetesClusters.DataWizKubernetesClustersKubernetesClustersList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
 
 ---
 

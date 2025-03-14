@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,64 +9,64 @@ import * as cdktf from 'cdktf';
 export interface ControlConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of the Control.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#description Control#description}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#description Control#description}
   */
   readonly description?: string;
   /**
   * Whether to enable the Control. This has a known defect where if set to false, it will be created as true because the API to create Controls does not accept this parameter.
-    - Defaults to `true`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#enabled Control#enabled}
+  *     - Defaults to `true`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#enabled Control#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Name of the Control.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#name Control#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#name Control#name}
   */
   readonly name: string;
   /**
   * Project scope of the control. Use '*' for all projects.
-    - Defaults to `{{`*`}}`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#project_id Control#project_id}
+  *     - Defaults to `*`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#project_id Control#project_id}
   */
   readonly projectId?: string;
   /**
   * The query that the control runs.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#query Control#query}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#query Control#query}
   */
   readonly query: string;
   /**
   * Guidance on how the user should address an issue that was created by this control.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#resolution_recommendation Control#resolution_recommendation}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#resolution_recommendation Control#resolution_recommendation}
   */
   readonly resolutionRecommendation?: string;
   /**
   * The query that represents the control's scope.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#scope_query Control#scope_query}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#scope_query Control#scope_query}
   */
   readonly scopeQuery: string;
   /**
   * Severity that will be set for this control.
-    - Allowed values: 
-        - INFORMATIONAL
-        - LOW
-        - MEDIUM
-        - HIGH
-        - CRITICAL
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#severity Control#severity}
+  *     - Allowed values: 
+  *         - INFORMATIONAL
+  *         - LOW
+  *         - MEDIUM
+  *         - HIGH
+  *         - CRITICAL
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#severity Control#severity}
   */
   readonly severity: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control wiz_control}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control wiz_control}
 */
 export class Control extends cdktf.TerraformResource {
 
@@ -80,12 +75,26 @@ export class Control extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "wiz_control";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a Control resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the Control to import
+  * @param importFromId The id of the existing Control that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the Control to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_control", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control wiz_control} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control wiz_control} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -96,8 +105,8 @@ export class Control extends cdktf.TerraformResource {
       terraformResourceType: 'wiz_control',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -262,5 +271,61 @@ export class Control extends cdktf.TerraformResource {
       scope_query: cdktf.stringToTerraform(this._scopeQuery),
       severity: cdktf.stringToTerraform(this._severity),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project_id: {
+        value: cdktf.stringToHclTerraform(this._projectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query: {
+        value: cdktf.stringToHclTerraform(this._query),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resolution_recommendation: {
+        value: cdktf.stringToHclTerraform(this._resolutionRecommendation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope_query: {
+        value: cdktf.stringToHclTerraform(this._scopeQuery),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      severity: {
+        value: cdktf.stringToHclTerraform(this._severity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

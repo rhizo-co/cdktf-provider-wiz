@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,41 +9,41 @@ import * as cdktf from 'cdktf';
 export interface SecurityFrameworkConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of the security framework.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework#description SecurityFramework#description}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#description SecurityFramework#description}
   */
   readonly description?: string;
   /**
   * Whether to enable the security framework.
-    - Defaults to `true`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework#enabled SecurityFramework#enabled}
+  *     - Defaults to `true`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#enabled SecurityFramework#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Name of the security framework.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework#name SecurityFramework#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#name SecurityFramework#name}
   */
   readonly name: string;
   /**
   * category block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework#category SecurityFramework#category}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#category SecurityFramework#category}
   */
   readonly category: SecurityFrameworkCategory[] | cdktf.IResolvable;
 }
 export interface SecurityFrameworkCategorySubCategory {
   /**
   * Description of the security subcategory.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework#description SecurityFramework#description}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#description SecurityFramework#description}
   */
   readonly description?: string;
   /**
   * Title of the security subcategory.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework#title SecurityFramework#title}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#title SecurityFramework#title}
   */
   readonly title: string;
 }
@@ -62,6 +57,31 @@ export function securityFrameworkCategorySubCategoryToTerraform(struct?: Securit
     description: cdktf.stringToTerraform(struct!.description),
     title: cdktf.stringToTerraform(struct!.title),
   }
+}
+
+
+export function securityFrameworkCategorySubCategoryToHclTerraform(struct?: SecurityFrameworkCategorySubCategory | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    title: {
+      value: cdktf.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecurityFrameworkCategorySubCategoryOutputReference extends cdktf.ComplexObject {
@@ -171,20 +191,20 @@ export class SecurityFrameworkCategorySubCategoryList extends cdktf.ComplexList 
 export interface SecurityFrameworkCategory {
   /**
   * Description of the security category.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework#description SecurityFramework#description}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#description SecurityFramework#description}
   */
   readonly description?: string;
   /**
   * Name fo the security category.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework#name SecurityFramework#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#name SecurityFramework#name}
   */
   readonly name: string;
   /**
   * sub_category block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework#sub_category SecurityFramework#sub_category}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#sub_category SecurityFramework#sub_category}
   */
   readonly subCategory: SecurityFrameworkCategorySubCategory[] | cdktf.IResolvable;
 }
@@ -199,6 +219,37 @@ export function securityFrameworkCategoryToTerraform(struct?: SecurityFrameworkC
     name: cdktf.stringToTerraform(struct!.name),
     sub_category: cdktf.listMapper(securityFrameworkCategorySubCategoryToTerraform, true)(struct!.subCategory),
   }
+}
+
+
+export function securityFrameworkCategoryToHclTerraform(struct?: SecurityFrameworkCategory | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sub_category: {
+      value: cdktf.listMapperHcl(securityFrameworkCategorySubCategoryToHclTerraform, true)(struct!.subCategory),
+      isBlock: true,
+      type: "set",
+      storageClassType: "SecurityFrameworkCategorySubCategoryList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecurityFrameworkCategoryOutputReference extends cdktf.ComplexObject {
@@ -326,7 +377,7 @@ export class SecurityFrameworkCategoryList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework wiz_security_framework}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework wiz_security_framework}
 */
 export class SecurityFramework extends cdktf.TerraformResource {
 
@@ -335,12 +386,26 @@ export class SecurityFramework extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "wiz_security_framework";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a SecurityFramework resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the SecurityFramework to import
+  * @param importFromId The id of the existing SecurityFramework that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the SecurityFramework to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_security_framework", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/security_framework wiz_security_framework} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/security_framework wiz_security_framework} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -351,8 +416,8 @@ export class SecurityFramework extends cdktf.TerraformResource {
       terraformResourceType: 'wiz_security_framework',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -446,5 +511,37 @@ export class SecurityFramework extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       category: cdktf.listMapper(securityFrameworkCategoryToTerraform, true)(this._category.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      category: {
+        value: cdktf.listMapperHcl(securityFrameworkCategoryToHclTerraform, true)(this._category.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "SecurityFrameworkCategoryList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

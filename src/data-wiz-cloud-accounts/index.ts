@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,87 +9,87 @@ import * as cdktf from 'cdktf';
 export interface DataWizCloudAccountsConfig extends cdktf.TerraformMetaArguments {
   /**
   * QueryQuery cloud accounts by project assignment state.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#assigned_to_project DataWizCloudAccounts#assigned_to_project}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#assigned_to_project DataWizCloudAccounts#assigned_to_project}
   */
   readonly assignedToProject?: boolean | cdktf.IResolvable;
   /**
   * Query cloud accounts of specific cloud provider.
-    - Allowed values: 
-        - GCP
-        - AWS
-        - Azure
-        - OCI
-        - Alibaba
-        - vSphere
-        - OpenShift
-        - Kubernetes
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#cloud_provider DataWizCloudAccounts#cloud_provider}
+  *     - Allowed values: 
+  *         - GCP
+  *         - AWS
+  *         - Azure
+  *         - OCI
+  *         - Alibaba
+  *         - vSphere
+  *         - OpenShift
+  *         - Kubernetes
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#cloud_provider DataWizCloudAccounts#cloud_provider}
   */
   readonly cloudProvider?: string[];
   /**
   * Query cloud accounts by specific connector ID.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#connector_id DataWizCloudAccounts#connector_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#connector_id DataWizCloudAccounts#connector_id}
   */
   readonly connectorId?: string[];
   /**
   * Query cloud accounts by specific connector issue ID.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#connector_issue_id DataWizCloudAccounts#connector_issue_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#connector_issue_id DataWizCloudAccounts#connector_issue_id}
   */
   readonly connectorIssueId?: string[];
   /**
   * How many results to return, maximum is `500` is per page.
-    - Defaults to `500`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#first DataWizCloudAccounts#first}
+  *     - Defaults to `500`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#first DataWizCloudAccounts#first}
   */
   readonly first?: number;
   /**
   * QueryQuery cloud accounts by project assignment state.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#has_multiple_connector_sources DataWizCloudAccounts#has_multiple_connector_sources}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#has_multiple_connector_sources DataWizCloudAccounts#has_multiple_connector_sources}
   */
   readonly hasMultipleConnectorSources?: boolean | cdktf.IResolvable;
   /**
   * Get specific Cloud Accounts by their IDs.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#ids DataWizCloudAccounts#ids}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#ids DataWizCloudAccounts#ids}
   */
   readonly ids?: string[];
   /**
   * How many pages to return. 0 means all pages.
-    - Defaults to `0`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#max_pages DataWizCloudAccounts#max_pages}
+  *     - Defaults to `0`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#max_pages DataWizCloudAccounts#max_pages}
   */
   readonly maxPages?: number;
   /**
   * Query cloud accounts of a specific linked project, given its id.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#project_id DataWizCloudAccounts#project_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#project_id DataWizCloudAccounts#project_id}
   */
   readonly projectId?: string;
   /**
   * Free text search on cloud account name or tags or external-id. Specify list of empty string to return all cloud accounts.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#search DataWizCloudAccounts#search}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#search DataWizCloudAccounts#search}
   */
   readonly search?: string[];
   /**
   * Query cloud accounts by status.
-    - Allowed values: 
-        - CONNECTED
-        - ERROR
-        - DISABLED
-        - INITIAL_SCANNING
-        - PARTIALLY_CONNECTED
-        - DISCONNECTED
-        - DISCOVERED
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#status DataWizCloudAccounts#status}
+  *     - Allowed values: 
+  *         - CONNECTED
+  *         - ERROR
+  *         - DISABLED
+  *         - INITIAL_SCANNING
+  *         - PARTIALLY_CONNECTED
+  *         - DISCONNECTED
+  *         - DISCOVERED
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#status DataWizCloudAccounts#status}
   */
   readonly status?: string[];
 }
@@ -108,6 +103,17 @@ export function dataWizCloudAccountsCloudAccountsToTerraform(struct?: DataWizClo
   }
   return {
   }
+}
+
+
+export function dataWizCloudAccountsCloudAccountsToHclTerraform(struct?: DataWizCloudAccountsCloudAccounts): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataWizCloudAccountsCloudAccountsOutputReference extends cdktf.ComplexObject {
@@ -194,7 +200,7 @@ export class DataWizCloudAccountsCloudAccountsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts wiz_cloud_accounts}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts wiz_cloud_accounts}
 */
 export class DataWizCloudAccounts extends cdktf.TerraformDataSource {
 
@@ -203,12 +209,26 @@ export class DataWizCloudAccounts extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "wiz_cloud_accounts";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataWizCloudAccounts resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataWizCloudAccounts to import
+  * @param importFromId The id of the existing DataWizCloudAccounts that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataWizCloudAccounts to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_cloud_accounts", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts wiz_cloud_accounts} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts wiz_cloud_accounts} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -219,8 +239,8 @@ export class DataWizCloudAccounts extends cdktf.TerraformDataSource {
       terraformResourceType: 'wiz_cloud_accounts',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -452,5 +472,79 @@ export class DataWizCloudAccounts extends cdktf.TerraformDataSource {
       search: cdktf.listMapper(cdktf.stringToTerraform, false)(this._search),
       status: cdktf.listMapper(cdktf.stringToTerraform, false)(this._status),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      assigned_to_project: {
+        value: cdktf.booleanToHclTerraform(this._assignedToProject),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      cloud_provider: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._cloudProvider),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      connector_id: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._connectorId),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      connector_issue_id: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._connectorIssueId),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      first: {
+        value: cdktf.numberToHclTerraform(this._first),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      has_multiple_connector_sources: {
+        value: cdktf.booleanToHclTerraform(this._hasMultipleConnectorSources),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._ids),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      max_pages: {
+        value: cdktf.numberToHclTerraform(this._maxPages),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      project_id: {
+        value: cdktf.stringToHclTerraform(this._projectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      search: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._search),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      status: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._status),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

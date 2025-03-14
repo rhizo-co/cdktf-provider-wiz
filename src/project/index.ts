@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,92 +9,92 @@ import * as cdktf from 'cdktf';
 export interface ProjectConfig extends cdktf.TerraformMetaArguments {
   /**
   * Whether the project is archived/inactive
-    - Defaults to `false`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#archived Project#archived}
+  *     - Defaults to `false`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#archived Project#archived}
   */
   readonly archived?: boolean | cdktf.IResolvable;
   /**
   * The business unit to which the project belongs.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#business_unit Project#business_unit}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#business_unit Project#business_unit}
   */
   readonly businessUnit?: string;
   /**
   * The project description.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#description Project#description}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#description Project#description}
   */
   readonly description?: string;
   /**
   * Identifiers for the project.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#identifiers Project#identifiers}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#identifiers Project#identifiers}
   */
   readonly identifiers?: string[];
   /**
   * Whether the project is a folder.
-    - Defaults to `false`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_folder Project#is_folder}
+  *     - Defaults to `false`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_folder Project#is_folder}
   */
   readonly isFolder?: boolean | cdktf.IResolvable;
   /**
   * The project name to display in Wiz.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#name Project#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#name Project#name}
   */
   readonly name: string;
   /**
   * The parent project ID.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#parent_project_id Project#parent_project_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#parent_project_id Project#parent_project_id}
   */
   readonly parentProjectId?: string;
   /**
   * A list of project owner IDs.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#project_owners Project#project_owners}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#project_owners Project#project_owners}
   */
   readonly projectOwners?: string[];
   /**
   * A list of security champions IDs.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#security_champions Project#security_champions}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#security_champions Project#security_champions}
   */
   readonly securityChampions?: string[];
   /**
   * cloud_account_link block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_account_link Project#cloud_account_link}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_account_link Project#cloud_account_link}
   */
   readonly cloudAccountLink?: ProjectCloudAccountLink[] | cdktf.IResolvable;
   /**
   * cloud_organization_link block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_organization_link Project#cloud_organization_link}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_organization_link Project#cloud_organization_link}
   */
   readonly cloudOrganizationLink?: ProjectCloudOrganizationLink[] | cdktf.IResolvable;
   /**
   * kubernetes_cluster_link block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#kubernetes_cluster_link Project#kubernetes_cluster_link}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#kubernetes_cluster_link Project#kubernetes_cluster_link}
   */
   readonly kubernetesClusterLink?: ProjectKubernetesClusterLink[] | cdktf.IResolvable;
   /**
   * risk_profile block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#risk_profile Project#risk_profile}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#risk_profile Project#risk_profile}
   */
   readonly riskProfile?: ProjectRiskProfile;
 }
 export interface ProjectCloudAccountLinkResourceTags {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#key Project#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#key Project#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#value Project#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#value Project#value}
   */
   readonly value: string;
 }
@@ -113,6 +108,31 @@ export function projectCloudAccountLinkResourceTagsToTerraform(struct?: ProjectC
     key: cdktf.stringToTerraform(struct!.key),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function projectCloudAccountLinkResourceTagsToHclTerraform(struct?: ProjectCloudAccountLinkResourceTags | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ProjectCloudAccountLinkResourceTagsOutputReference extends cdktf.ComplexObject {
@@ -214,40 +234,40 @@ export class ProjectCloudAccountLinkResourceTagsList extends cdktf.ComplexList {
 export interface ProjectCloudAccountLink {
   /**
   * The Wiz internal identifier for the Cloud Account Subscription.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_account_id Project#cloud_account_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_account_id Project#cloud_account_id}
   */
   readonly cloudAccountId: string;
   /**
   * The environment.
-    - Allowed values: 
-        - PRODUCTION
-        - STAGING
-        - DEVELOPMENT
-        - TESTING
-        - OTHER
-
-    - Defaults to `{{`PRODUCTION`}}`.
+  *     - Allowed values: 
+  *         - PRODUCTION
+  *         - STAGING
+  *         - DEVELOPMENT
+  *         - TESTING
+  *         - OTHER
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#environment Project#environment}
+  *     - Defaults to `PRODUCTION`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#environment Project#environment}
   */
   readonly environment?: string;
   /**
   * Please provide a list of resource group identifiers for filtering by resource groups. `shared` must be true to define resource_groups.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#resource_groups Project#resource_groups}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#resource_groups Project#resource_groups}
   */
   readonly resourceGroups?: string[];
   /**
   * Subscriptions that host a few projects can be marked as ‘shared subscriptions’ and resources can be filtered by tags.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#shared Project#shared}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#shared Project#shared}
   */
   readonly shared?: boolean | cdktf.IResolvable;
   /**
   * resource_tags block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#resource_tags Project#resource_tags}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#resource_tags Project#resource_tags}
   */
   readonly resourceTags?: ProjectCloudAccountLinkResourceTags[] | cdktf.IResolvable;
 }
@@ -264,6 +284,49 @@ export function projectCloudAccountLinkToTerraform(struct?: ProjectCloudAccountL
     shared: cdktf.booleanToTerraform(struct!.shared),
     resource_tags: cdktf.listMapper(projectCloudAccountLinkResourceTagsToTerraform, true)(struct!.resourceTags),
   }
+}
+
+
+export function projectCloudAccountLinkToHclTerraform(struct?: ProjectCloudAccountLink | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cloud_account_id: {
+      value: cdktf.stringToHclTerraform(struct!.cloudAccountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    environment: {
+      value: cdktf.stringToHclTerraform(struct!.environment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_groups: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.resourceGroups),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    shared: {
+      value: cdktf.booleanToHclTerraform(struct!.shared),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    resource_tags: {
+      value: cdktf.listMapperHcl(projectCloudAccountLinkResourceTagsToHclTerraform, true)(struct!.resourceTags),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ProjectCloudAccountLinkResourceTagsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ProjectCloudAccountLinkOutputReference extends cdktf.ComplexObject {
@@ -433,11 +496,11 @@ export class ProjectCloudAccountLinkList extends cdktf.ComplexList {
 }
 export interface ProjectCloudOrganizationLinkResourceTags {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#key Project#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#key Project#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#value Project#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#value Project#value}
   */
   readonly value: string;
 }
@@ -451,6 +514,31 @@ export function projectCloudOrganizationLinkResourceTagsToTerraform(struct?: Pro
     key: cdktf.stringToTerraform(struct!.key),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function projectCloudOrganizationLinkResourceTagsToHclTerraform(struct?: ProjectCloudOrganizationLinkResourceTags | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ProjectCloudOrganizationLinkResourceTagsOutputReference extends cdktf.ComplexObject {
@@ -552,41 +640,41 @@ export class ProjectCloudOrganizationLinkResourceTagsList extends cdktf.ComplexL
 export interface ProjectCloudOrganizationLink {
   /**
   * The Wiz internal identifier for the Organizational Unit.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_organization Project#cloud_organization}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_organization Project#cloud_organization}
   */
   readonly cloudOrganization: string;
   /**
   * The environment.
-    - Allowed values: 
-        - PRODUCTION
-        - STAGING
-        - DEVELOPMENT
-        - TESTING
-        - OTHER
-
-    - Defaults to `{{`PRODUCTION`}}`.
+  *     - Allowed values: 
+  *         - PRODUCTION
+  *         - STAGING
+  *         - DEVELOPMENT
+  *         - TESTING
+  *         - OTHER
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#environment Project#environment}
+  *     - Defaults to `PRODUCTION`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#environment Project#environment}
   */
   readonly environment?: string;
   /**
   * Please provide a list of strings for filtering by resource groups. `shared` must be true to define resource_groups.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#resource_groups Project#resource_groups}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#resource_groups Project#resource_groups}
   */
   readonly resourceGroups?: string[];
   /**
   * Subscriptions that host a few projects can be marked as ‘shared subscriptions’ and resources can be filtered by tags.
-    - Defaults to `true`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#shared Project#shared}
+  *     - Defaults to `true`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#shared Project#shared}
   */
   readonly shared?: boolean | cdktf.IResolvable;
   /**
   * resource_tags block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#resource_tags Project#resource_tags}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#resource_tags Project#resource_tags}
   */
   readonly resourceTags?: ProjectCloudOrganizationLinkResourceTags[] | cdktf.IResolvable;
 }
@@ -603,6 +691,49 @@ export function projectCloudOrganizationLinkToTerraform(struct?: ProjectCloudOrg
     shared: cdktf.booleanToTerraform(struct!.shared),
     resource_tags: cdktf.listMapper(projectCloudOrganizationLinkResourceTagsToTerraform, true)(struct!.resourceTags),
   }
+}
+
+
+export function projectCloudOrganizationLinkToHclTerraform(struct?: ProjectCloudOrganizationLink | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cloud_organization: {
+      value: cdktf.stringToHclTerraform(struct!.cloudOrganization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    environment: {
+      value: cdktf.stringToHclTerraform(struct!.environment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_groups: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.resourceGroups),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    shared: {
+      value: cdktf.booleanToHclTerraform(struct!.shared),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    resource_tags: {
+      value: cdktf.listMapperHcl(projectCloudOrganizationLinkResourceTagsToHclTerraform, true)(struct!.resourceTags),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ProjectCloudOrganizationLinkResourceTagsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ProjectCloudOrganizationLinkOutputReference extends cdktf.ComplexObject {
@@ -773,35 +904,35 @@ export class ProjectCloudOrganizationLinkList extends cdktf.ComplexList {
 export interface ProjectKubernetesClusterLink {
   /**
   * The environment.
-    - Allowed values: 
-        - PRODUCTION
-        - STAGING
-        - DEVELOPMENT
-        - TESTING
-        - OTHER
-
-    - Defaults to `{{`PRODUCTION`}}`.
+  *     - Allowed values: 
+  *         - PRODUCTION
+  *         - STAGING
+  *         - DEVELOPMENT
+  *         - TESTING
+  *         - OTHER
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#environment Project#environment}
+  *     - Defaults to `PRODUCTION`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#environment Project#environment}
   */
   readonly environment?: string;
   /**
   * The Wiz internal identifier for the kubernetes cluster.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#kubernetes_cluster Project#kubernetes_cluster}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#kubernetes_cluster Project#kubernetes_cluster}
   */
   readonly kubernetesCluster: string;
   /**
   * The kubernetes namespaces to link. `shared` must be set to `true` if namespaces are set.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#namespaces Project#namespaces}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#namespaces Project#namespaces}
   */
   readonly namespaces?: string[];
   /**
   * Mark the kubernetes cluster as shared, in which case, specific namespaces can be linked. This needs to be set to `true` if `namespaces` are set.
-    - Defaults to `true`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#shared Project#shared}
+  *     - Defaults to `true`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#shared Project#shared}
   */
   readonly shared?: boolean | cdktf.IResolvable;
 }
@@ -817,6 +948,43 @@ export function projectKubernetesClusterLinkToTerraform(struct?: ProjectKubernet
     namespaces: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.namespaces),
     shared: cdktf.booleanToTerraform(struct!.shared),
   }
+}
+
+
+export function projectKubernetesClusterLinkToHclTerraform(struct?: ProjectKubernetesClusterLink | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    environment: {
+      value: cdktf.stringToHclTerraform(struct!.environment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kubernetes_cluster: {
+      value: cdktf.stringToHclTerraform(struct!.kubernetesCluster),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    namespaces: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.namespaces),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    shared: {
+      value: cdktf.booleanToHclTerraform(struct!.shared),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ProjectKubernetesClusterLinkOutputReference extends cdktf.ComplexObject {
@@ -965,134 +1133,134 @@ export class ProjectKubernetesClusterLinkList extends cdktf.ComplexList {
 export interface ProjectRiskProfile {
   /**
   * Business impact.
-    - Allowed values: 
-        - LBI
-        - MBI
-        - HBI
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#business_impact Project#business_impact}
+  *     - Allowed values: 
+  *         - LBI
+  *         - MBI
+  *         - HBI
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#business_impact Project#business_impact}
   */
   readonly businessImpact?: string;
   /**
   * Does the project require authentication?
-    - Allowed values: 
-        - YES
-        - NO
-        - UNKNOWN
-
-    - Defaults to `{{`UNKNOWN`}}`.
+  *     - Allowed values: 
+  *         - YES
+  *         - NO
+  *         - UNKNOWN
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#has_authentication Project#has_authentication}
+  *     - Defaults to `UNKNOWN`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#has_authentication Project#has_authentication}
   */
   readonly hasAuthentication?: string;
   /**
   * Does the project expose an API?
-    - Allowed values: 
-        - YES
-        - NO
-        - UNKNOWN
-
-    - Defaults to `{{`UNKNOWN`}}`.
+  *     - Allowed values: 
+  *         - YES
+  *         - NO
+  *         - UNKNOWN
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#has_exposed_api Project#has_exposed_api}
+  *     - Defaults to `UNKNOWN`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#has_exposed_api Project#has_exposed_api}
   */
   readonly hasExposedApi?: string;
   /**
   * Is the project under active development?
-    - Allowed values: 
-        - YES
-        - NO
-        - UNKNOWN
-
-    - Defaults to `{{`UNKNOWN`}}`.
+  *     - Allowed values: 
+  *         - YES
+  *         - NO
+  *         - UNKNOWN
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_actively_developed Project#is_actively_developed}
+  *     - Defaults to `UNKNOWN`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_actively_developed Project#is_actively_developed}
   */
   readonly isActivelyDeveloped?: string;
   /**
   * Is the project customer facing?
-    - Allowed values: 
-        - YES
-        - NO
-        - UNKNOWN
-
-    - Defaults to `{{`UNKNOWN`}}`.
+  *     - Allowed values: 
+  *         - YES
+  *         - NO
+  *         - UNKNOWN
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_customer_facing Project#is_customer_facing}
+  *     - Defaults to `UNKNOWN`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_customer_facing Project#is_customer_facing}
   */
   readonly isCustomerFacing?: string;
   /**
   * Is the project Internet facing?
-    - Allowed values: 
-        - YES
-        - NO
-        - UNKNOWN
-
-    - Defaults to `{{`UNKNOWN`}}`.
+  *     - Allowed values: 
+  *         - YES
+  *         - NO
+  *         - UNKNOWN
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_internet_facing Project#is_internet_facing}
+  *     - Defaults to `UNKNOWN`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_internet_facing Project#is_internet_facing}
   */
   readonly isInternetFacing?: string;
   /**
   * Is the project regulated?
-    - Allowed values: 
-        - YES
-        - NO
-        - UNKNOWN
-
-    - Defaults to `{{`UNKNOWN`}}`.
+  *     - Allowed values: 
+  *         - YES
+  *         - NO
+  *         - UNKNOWN
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_regulated Project#is_regulated}
+  *     - Defaults to `UNKNOWN`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_regulated Project#is_regulated}
   */
   readonly isRegulated?: string;
   /**
   * Regulatory Standards.
-    - Allowed values: 
-        - ISO_20000_1_2011
-        - ISO_22301
-        - ISO_27001
-        - ISO_27017
-        - ISO_27018
-        - ISO_27701
-        - ISO_9001
-        - SOC
-        - FEDRAMP
-        - NIST_800_171
-        - NIST_CSF
-        - HIPPA_HITECH
-        - HITRUST
-        - PCI_DSS
-        - SEC_17A_4
-        - SEC_REGULATION_SCI
-        - SOX
-        - GDPR
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#regulatory_standards Project#regulatory_standards}
+  *     - Allowed values: 
+  *         - ISO_20000_1_2011
+  *         - ISO_22301
+  *         - ISO_27001
+  *         - ISO_27017
+  *         - ISO_27018
+  *         - ISO_27701
+  *         - ISO_9001
+  *         - SOC
+  *         - FEDRAMP
+  *         - NIST_800_171
+  *         - NIST_CSF
+  *         - HIPPA_HITECH
+  *         - HITRUST
+  *         - PCI_DSS
+  *         - SEC_17A_4
+  *         - SEC_REGULATION_SCI
+  *         - SOX
+  *         - GDPR
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#regulatory_standards Project#regulatory_standards}
   */
   readonly regulatoryStandards?: string[];
   /**
   * Sensitive Data Types.
-    - Allowed values: 
-        - CLASSIFIED
-        - HEALTH
-        - PII
-        - PCI
-        - FINANCIAL
-        - CUSTOMER
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#sensitive_data_types Project#sensitive_data_types}
+  *     - Allowed values: 
+  *         - CLASSIFIED
+  *         - HEALTH
+  *         - PII
+  *         - PCI
+  *         - FINANCIAL
+  *         - CUSTOMER
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#sensitive_data_types Project#sensitive_data_types}
   */
   readonly sensitiveDataTypes?: string[];
   /**
   * Does the project store data?
-    - Allowed values: 
-        - YES
-        - NO
-        - UNKNOWN
-
-    - Defaults to `{{`UNKNOWN`}}`.
+  *     - Allowed values: 
+  *         - YES
+  *         - NO
+  *         - UNKNOWN
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#stores_data Project#stores_data}
+  *     - Defaults to `UNKNOWN`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#stores_data Project#stores_data}
   */
   readonly storesData?: string;
 }
@@ -1114,6 +1282,79 @@ export function projectRiskProfileToTerraform(struct?: ProjectRiskProfileOutputR
     sensitive_data_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sensitiveDataTypes),
     stores_data: cdktf.stringToTerraform(struct!.storesData),
   }
+}
+
+
+export function projectRiskProfileToHclTerraform(struct?: ProjectRiskProfileOutputReference | ProjectRiskProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    business_impact: {
+      value: cdktf.stringToHclTerraform(struct!.businessImpact),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    has_authentication: {
+      value: cdktf.stringToHclTerraform(struct!.hasAuthentication),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    has_exposed_api: {
+      value: cdktf.stringToHclTerraform(struct!.hasExposedApi),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_actively_developed: {
+      value: cdktf.stringToHclTerraform(struct!.isActivelyDeveloped),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_customer_facing: {
+      value: cdktf.stringToHclTerraform(struct!.isCustomerFacing),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_internet_facing: {
+      value: cdktf.stringToHclTerraform(struct!.isInternetFacing),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_regulated: {
+      value: cdktf.stringToHclTerraform(struct!.isRegulated),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    regulatory_standards: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.regulatoryStandards),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    sensitive_data_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sensitiveDataTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    stores_data: {
+      value: cdktf.stringToHclTerraform(struct!.storesData),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ProjectRiskProfileOutputReference extends cdktf.ComplexObject {
@@ -1364,7 +1605,7 @@ export class ProjectRiskProfileOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project wiz_project}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project wiz_project}
 */
 export class Project extends cdktf.TerraformResource {
 
@@ -1373,12 +1614,26 @@ export class Project extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "wiz_project";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a Project resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the Project to import
+  * @param importFromId The id of the existing Project that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the Project to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_project", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project wiz_project} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project wiz_project} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1389,8 +1644,8 @@ export class Project extends cdktf.TerraformResource {
       terraformResourceType: 'wiz_project',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1654,5 +1909,91 @@ export class Project extends cdktf.TerraformResource {
       kubernetes_cluster_link: cdktf.listMapper(projectKubernetesClusterLinkToTerraform, true)(this._kubernetesClusterLink.internalValue),
       risk_profile: projectRiskProfileToTerraform(this._riskProfile.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      archived: {
+        value: cdktf.booleanToHclTerraform(this._archived),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      business_unit: {
+        value: cdktf.stringToHclTerraform(this._businessUnit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      identifiers: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._identifiers),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      is_folder: {
+        value: cdktf.booleanToHclTerraform(this._isFolder),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent_project_id: {
+        value: cdktf.stringToHclTerraform(this._parentProjectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project_owners: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._projectOwners),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      security_champions: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._securityChampions),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      cloud_account_link: {
+        value: cdktf.listMapperHcl(projectCloudAccountLinkToHclTerraform, true)(this._cloudAccountLink.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ProjectCloudAccountLinkList",
+      },
+      cloud_organization_link: {
+        value: cdktf.listMapperHcl(projectCloudOrganizationLinkToHclTerraform, true)(this._cloudOrganizationLink.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ProjectCloudOrganizationLinkList",
+      },
+      kubernetes_cluster_link: {
+        value: cdktf.listMapperHcl(projectKubernetesClusterLinkToHclTerraform, true)(this._kubernetesClusterLink.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ProjectKubernetesClusterLinkList",
+      },
+      risk_profile: {
+        value: projectRiskProfileToHclTerraform(this._riskProfile.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ProjectRiskProfileList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

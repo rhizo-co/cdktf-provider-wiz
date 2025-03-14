@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,99 +9,99 @@ import * as cdktf from 'cdktf';
 export interface DataWizSubscriptionResourceGroupsConfig extends cdktf.TerraformMetaArguments {
   /**
   * How many matches to return.
-    - Defaults to `50`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups#first DataWizSubscriptionResourceGroups#first}
+  *     - Defaults to `50`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#first DataWizSubscriptionResourceGroups#first}
   */
   readonly first?: number;
   /**
   * Relationship type, will default to `CONTAINS` if not specified.
-    - Allowed values: 
-        - ANY
-        - ANY_OUTGOING
-        - ACTING_AS
-        - ADMINISTRATE
-        - ALERTED_ON
-        - ALLOWS
-        - ALLOWS_ACCESS_TO
-        - APPLIES_TO
-        - ASSIGNED_TO
-        - ATTACHED_TO
-        - BEHIND
-        - BOOTS
-        - BUILT_FROM
-        - CAUSES
-        - COLLABORATES
-        - CONNECTED_TO
-        - CONTAINS
-        - CONTAINS_DST_IP_RANGE
-        - CONTAINS_DST_PORT_RANGE
-        - CONTAINS_SRC_IP_RANGE
-        - CONTAINS_SRC_PORT_RANGE
-        - DENIES
-        - DEPENDS_ON
-        - DEPLOYED_TO
-        - ENCRYPTS
-        - ENCRYPTS_PARTITION
-        - ENTITLES
-        - EXCLUDES
-        - EXPOSES
-        - GOVERNS
-        - HAS
-        - HAS_BOUNDARY_POLICY
-        - HAS_DATA_FINDING
-        - HAS_DATA_INVENTORY
-        - HAS_DATA_SCHEMA
-        - HAS_DATA_STORE
-        - HAS_ORGANIZATION_POLICY
-        - HAS_PRINCIPAL_POLICY
-        - HAS_RESOURCE_POLICY
-        - HAS_SNAPSHOT
-        - HAS_SOURCE
-        - HAS_STANDARD_WEB_ACCESS_FROM
-        - HAS_TECH
-        - HOSTS
-        - IGNORES
-        - IMPLEMENTS
-        - INCLUDES
-        - INFECTS
-        - INSIDE
-        - INSTANCE_OF
-        - INVOKES
-        - LOGS_DATA_FOR
-        - MANAGES
-        - MOUNTS
-        - OWNS
-        - PART_OF
-        - PEERED_TO
-        - PERFORMED
-        - PERFORMED_IMPERSONATED
-        - PERMITS
-        - POINTS_TO
-        - PROTECTS
-        - READS_DATA_FROM
-        - REFERENCED_BY
-        - REPLICA_OF
-        - ROUTES_TRAFFIC_FROM
-        - ROUTES_TRAFFIC_TO
-        - RUNS
-        - SCANNED
-        - SEND_MESSAGES_TO
-        - SERVES
-        - STORES_DATA_IN
-        - TRANSIT_PEERED_TO
-        - USES
-        - VALIDATES
-
-    - Defaults to `{{`CONTAINS`}}`.
+  *     - Allowed values: 
+  *         - ANY
+  *         - ANY_OUTGOING
+  *         - ACTING_AS
+  *         - ADMINISTRATE
+  *         - ALERTED_ON
+  *         - ALLOWS
+  *         - ALLOWS_ACCESS_TO
+  *         - APPLIES_TO
+  *         - ASSIGNED_TO
+  *         - ATTACHED_TO
+  *         - BEHIND
+  *         - BOOTS
+  *         - BUILT_FROM
+  *         - CAUSES
+  *         - COLLABORATES
+  *         - CONNECTED_TO
+  *         - CONTAINS
+  *         - CONTAINS_DST_IP_RANGE
+  *         - CONTAINS_DST_PORT_RANGE
+  *         - CONTAINS_SRC_IP_RANGE
+  *         - CONTAINS_SRC_PORT_RANGE
+  *         - DENIES
+  *         - DEPENDS_ON
+  *         - DEPLOYED_TO
+  *         - ENCRYPTS
+  *         - ENCRYPTS_PARTITION
+  *         - ENTITLES
+  *         - EXCLUDES
+  *         - EXPOSES
+  *         - GOVERNS
+  *         - HAS
+  *         - HAS_BOUNDARY_POLICY
+  *         - HAS_DATA_FINDING
+  *         - HAS_DATA_INVENTORY
+  *         - HAS_DATA_SCHEMA
+  *         - HAS_DATA_STORE
+  *         - HAS_ORGANIZATION_POLICY
+  *         - HAS_PRINCIPAL_POLICY
+  *         - HAS_RESOURCE_POLICY
+  *         - HAS_SNAPSHOT
+  *         - HAS_SOURCE
+  *         - HAS_STANDARD_WEB_ACCESS_FROM
+  *         - HAS_TECH
+  *         - HOSTS
+  *         - IGNORES
+  *         - IMPLEMENTS
+  *         - INCLUDES
+  *         - INFECTS
+  *         - INSIDE
+  *         - INSTANCE_OF
+  *         - INVOKES
+  *         - LOGS_DATA_FOR
+  *         - MANAGES
+  *         - MOUNTS
+  *         - OWNS
+  *         - PART_OF
+  *         - PEERED_TO
+  *         - PERFORMED
+  *         - PERFORMED_IMPERSONATED
+  *         - PERMITS
+  *         - POINTS_TO
+  *         - PROTECTS
+  *         - READS_DATA_FROM
+  *         - REFERENCED_BY
+  *         - REPLICA_OF
+  *         - ROUTES_TRAFFIC_FROM
+  *         - ROUTES_TRAFFIC_TO
+  *         - RUNS
+  *         - SCANNED
+  *         - SEND_MESSAGES_TO
+  *         - SERVES
+  *         - STORES_DATA_IN
+  *         - TRANSIT_PEERED_TO
+  *         - USES
+  *         - VALIDATES
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups#relationship_type DataWizSubscriptionResourceGroups#relationship_type}
+  *     - Defaults to `CONTAINS`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#relationship_type DataWizSubscriptionResourceGroups#relationship_type}
   */
   readonly relationshipType?: string;
   /**
   * The Wiz subscription ID to search by.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups#subscription_id DataWizSubscriptionResourceGroups#subscription_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#subscription_id DataWizSubscriptionResourceGroups#subscription_id}
   */
   readonly subscriptionId?: string;
 }
@@ -120,6 +115,17 @@ export function dataWizSubscriptionResourceGroupsResourceGroupsToTerraform(struc
   }
   return {
   }
+}
+
+
+export function dataWizSubscriptionResourceGroupsResourceGroupsToHclTerraform(struct?: DataWizSubscriptionResourceGroupsResourceGroups): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataWizSubscriptionResourceGroupsResourceGroupsOutputReference extends cdktf.ComplexObject {
@@ -181,7 +187,7 @@ export class DataWizSubscriptionResourceGroupsResourceGroupsList extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups wiz_subscription_resource_groups}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups wiz_subscription_resource_groups}
 */
 export class DataWizSubscriptionResourceGroups extends cdktf.TerraformDataSource {
 
@@ -190,12 +196,26 @@ export class DataWizSubscriptionResourceGroups extends cdktf.TerraformDataSource
   // =================
   public static readonly tfResourceType = "wiz_subscription_resource_groups";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataWizSubscriptionResourceGroups resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataWizSubscriptionResourceGroups to import
+  * @param importFromId The id of the existing DataWizSubscriptionResourceGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataWizSubscriptionResourceGroups to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_subscription_resource_groups", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups wiz_subscription_resource_groups} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups wiz_subscription_resource_groups} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -206,8 +226,8 @@ export class DataWizSubscriptionResourceGroups extends cdktf.TerraformDataSource
       terraformResourceType: 'wiz_subscription_resource_groups',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -295,5 +315,31 @@ export class DataWizSubscriptionResourceGroups extends cdktf.TerraformDataSource
       relationship_type: cdktf.stringToTerraform(this._relationshipType),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      first: {
+        value: cdktf.numberToHclTerraform(this._first),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      relationship_type: {
+        value: cdktf.stringToHclTerraform(this._relationshipType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subscription_id: {
+        value: cdktf.stringToHclTerraform(this._subscriptionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

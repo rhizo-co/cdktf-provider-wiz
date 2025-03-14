@@ -1,14 +1,10 @@
-# `wiz_integration_servicenow`
-
-Refer to the Terraform Registory for docs: [`wiz_integration_servicenow`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow).
-
 # `integrationServicenow` Submodule <a name="`integrationServicenow` Submodule" id="rhizo-co-terraform-provider-wiz.integrationServicenow"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### IntegrationServicenow <a name="IntegrationServicenow" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow wiz_integration_servicenow}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow wiz_integration_servicenow}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.Initializer"></a>
 
@@ -124,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the integration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#name IntegrationServicenow#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#name IntegrationServicenow#name}
 
 ---
 
@@ -134,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 ServiceNow password. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_PASSWORD).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_password IntegrationServicenow#servicenow_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_password IntegrationServicenow#servicenow_password}
 
 ---
 
@@ -144,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 ServiceNow URL. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_URL).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_url IntegrationServicenow#servicenow_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_url IntegrationServicenow#servicenow_url}
 
 ---
 
@@ -154,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Email of a ServiceNow user with permissions to create tickets. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_USERNAME).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_username IntegrationServicenow#servicenow_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_username IntegrationServicenow#servicenow_username}
 
 ---
 
@@ -164,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 The project this action is scoped to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#project_id IntegrationServicenow#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#project_id IntegrationServicenow#project_id}
 
 ---
 
@@ -175,15 +171,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Scoping to a selected Project makes this Integration accessible only to users with global roles or Project-scoped access to the selected Project.
 
 Other users will not be able to see it, use it, or view its results. Integrations restricted to global roles cannot be seen or used by users with Project-scoped roles.
+- Allowed values:
+- Selected Project
+- All Resources
+- All Resources, Restrict this Integration to global roles only
 
-* Allowed values:
+```
+- Defaults to `All Resources, Restrict this Integration to global roles only`.
+```
 
-  * Selected Project
-  * All Resources
-  * All Resources, Restrict this Integration to global roles only
-* Defaults to `{{`All Resources, Restrict this Integration to global roles only`}}`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#scope IntegrationServicenow#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#scope IntegrationServicenow#scope}
 
 ---
 
@@ -193,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 ServiceNow OAuth Client ID. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_CLIENT_ID).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_client_id IntegrationServicenow#servicenow_client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_client_id IntegrationServicenow#servicenow_client_id}
 
 ---
 
@@ -203,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 ServiceNow OAuth Client Secret. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_CLIENT_SECRET).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_client_secret IntegrationServicenow#servicenow_client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_client_secret IntegrationServicenow#servicenow_client_secret}
 
 ---
 
@@ -215,8 +212,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.addOverride">add_override</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.toMetadata">to_metadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.addMoveTarget">add_move_target</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
@@ -226,7 +225,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.getStringAttribute">get_string_attribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.hasResourceMove">has_resource_move</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.importFrom">import_from</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveFromId">move_from_id</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.resetProjectId">reset_project_id</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.resetScope">reset_scope</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.resetServicenowClientId">reset_servicenow_client_id</a></code> | *No description.* |
@@ -289,6 +293,12 @@ def reset_override_logical_id() -> None
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
 ##### `to_metadata` <a name="to_metadata" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.toMetadata"></a>
 
 ```python
@@ -302,6 +312,24 @@ def to_terraform() -> typing.Any
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `add_move_target` <a name="add_move_target" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.addMoveTarget"></a>
+
+```python
+def add_move_target(
+  move_target: str
+) -> None
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `move_target`<sup>Required</sup> <a name="move_target" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `get_any_map_attribute` <a name="get_any_map_attribute" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.getAnyMapAttribute"></a>
 
@@ -429,6 +457,33 @@ def get_string_map_attribute(
 
 ---
 
+##### `has_resource_move` <a name="has_resource_move" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.hasResourceMove"></a>
+
+```python
+def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+```
+
+##### `import_from` <a name="import_from" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.importFrom"></a>
+
+```python
+def import_from(
+  id: str,
+  provider: TerraformProvider = None
+) -> None
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.importFrom.parameter.id"></a>
+
+- *Type:* str
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.importFrom.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
 ##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.interpolationForAttribute"></a>
 
 ```python
@@ -440,6 +495,71 @@ def interpolation_for_attribute(
 ###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
+
+---
+
+##### `move_from_id` <a name="move_from_id" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveFromId"></a>
+
+```python
+def move_from_id(
+  id: str
+) -> None
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveFromId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `move_to` <a name="move_to" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveTo"></a>
+
+```python
+def move_to(
+  move_target: str,
+  index: typing.Union[str, typing.Union[int, float]] = None
+) -> None
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `move_target`<sup>Required</sup> <a name="move_target" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveTo.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveTo.parameter.index"></a>
+
+- *Type:* typing.Union[str, typing.Union[int, float]]
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `move_to_id` <a name="move_to_id" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveToId"></a>
+
+```python
+def move_to_id(
+  id: str
+) -> None
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.moveToId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
@@ -474,6 +594,7 @@ def reset_servicenow_client_secret() -> None
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a IntegrationServicenow resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -540,6 +661,55 @@ integrationServicenow.IntegrationServicenow.is_terraform_resource(
 ###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.isTerraformResource.parameter.x"></a>
 
 - *Type:* typing.Any
+
+---
+
+##### `generate_config_for_import` <a name="generate_config_for_import" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.generateConfigForImport"></a>
+
+```python
+from rhizo-co_cdktf_provider_wiz import integration_servicenow
+
+integrationServicenow.IntegrationServicenow.generate_config_for_import(
+  scope: Construct,
+  import_to_id: str,
+  import_from_id: str,
+  provider: TerraformProvider = None
+)
+```
+
+Generates CDKTF code for importing a IntegrationServicenow resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `import_to_id`<sup>Required</sup> <a name="import_to_id" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* str
+
+The construct id used in the generated config for the IntegrationServicenow to import.
+
+---
+
+###### `import_from_id`<sup>Required</sup> <a name="import_from_id" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* str
+
+The id of the existing IntegrationServicenow that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.integrationServicenow.IntegrationServicenow.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the IntegrationServicenow to import is found.
 
 ---
 
@@ -1052,7 +1222,7 @@ name: str
 
 The name of the integration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#name IntegrationServicenow#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#name IntegrationServicenow#name}
 
 ---
 
@@ -1066,7 +1236,7 @@ servicenow_password: str
 
 ServiceNow password. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_PASSWORD).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_password IntegrationServicenow#servicenow_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_password IntegrationServicenow#servicenow_password}
 
 ---
 
@@ -1080,7 +1250,7 @@ servicenow_url: str
 
 ServiceNow URL. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_URL).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_url IntegrationServicenow#servicenow_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_url IntegrationServicenow#servicenow_url}
 
 ---
 
@@ -1094,7 +1264,7 @@ servicenow_username: str
 
 Email of a ServiceNow user with permissions to create tickets. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_USERNAME).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_username IntegrationServicenow#servicenow_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_username IntegrationServicenow#servicenow_username}
 
 ---
 
@@ -1108,7 +1278,7 @@ project_id: str
 
 The project this action is scoped to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#project_id IntegrationServicenow#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#project_id IntegrationServicenow#project_id}
 
 ---
 
@@ -1123,15 +1293,16 @@ scope: str
 Scoping to a selected Project makes this Integration accessible only to users with global roles or Project-scoped access to the selected Project.
 
 Other users will not be able to see it, use it, or view its results. Integrations restricted to global roles cannot be seen or used by users with Project-scoped roles.
+- Allowed values:
+- Selected Project
+- All Resources
+- All Resources, Restrict this Integration to global roles only
 
-* Allowed values:
+```
+- Defaults to `All Resources, Restrict this Integration to global roles only`.
+```
 
-  * Selected Project
-  * All Resources
-  * All Resources, Restrict this Integration to global roles only
-* Defaults to `{{`All Resources, Restrict this Integration to global roles only`}}`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#scope IntegrationServicenow#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#scope IntegrationServicenow#scope}
 
 ---
 
@@ -1145,7 +1316,7 @@ servicenow_client_id: str
 
 ServiceNow OAuth Client ID. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_CLIENT_ID).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_client_id IntegrationServicenow#servicenow_client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_client_id IntegrationServicenow#servicenow_client_id}
 
 ---
 
@@ -1159,7 +1330,7 @@ servicenow_client_secret: str
 
 ServiceNow OAuth Client Secret. (default: none, environment variable: WIZ_INTEGRATION_SERVICENOW_CLIENT_SECRET).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_servicenow#servicenow_client_secret IntegrationServicenow#servicenow_client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_servicenow#servicenow_client_secret IntegrationServicenow#servicenow_client_secret}
 
 ---
 

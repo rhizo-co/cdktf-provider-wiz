@@ -1,14 +1,10 @@
-# `wiz_project`
-
-Refer to the Terraform Registory for docs: [`wiz_project`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project).
-
 # `project` Submodule <a name="`project` Submodule" id="rhizo-co-terraform-provider-wiz.project"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### Project <a name="Project" id="rhizo-co-terraform-provider-wiz.project.Project"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project wiz_project}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project wiz_project}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.project.Project.Initializer"></a>
 
@@ -53,13 +49,13 @@ project.Project(
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.name">name</a></code> | <code>str</code> | The project name to display in Wiz. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.archived">archived</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether the project is archived/inactive - Defaults to `false`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.archived">archived</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether the project is archived/inactive     - Defaults to `false`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.businessUnit">business_unit</a></code> | <code>str</code> | The business unit to which the project belongs. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.cloudAccountLink">cloud_account_link</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLink">ProjectCloudAccountLink</a>]]</code> | cloud_account_link block. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.cloudOrganizationLink">cloud_organization_link</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLink">ProjectCloudOrganizationLink</a>]]</code> | cloud_organization_link block. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.description">description</a></code> | <code>str</code> | The project description. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.identifiers">identifiers</a></code> | <code>typing.List[str]</code> | Identifiers for the project. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.isFolder">is_folder</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether the project is a folder. - Defaults to `false`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.isFolder">is_folder</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether the project is a folder.     - Defaults to `false`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.kubernetesClusterLink">kubernetes_cluster_link</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#rhizo-co-terraform-provider-wiz.project.ProjectKubernetesClusterLink">ProjectKubernetesClusterLink</a>]]</code> | kubernetes_cluster_link block. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.parentProjectId">parent_project_id</a></code> | <code>str</code> | The parent project ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.Initializer.parameter.projectOwners">project_owners</a></code> | <code>typing.List[str]</code> | A list of project owner IDs. |
@@ -134,7 +130,7 @@ Must be unique amongst siblings in the same scope
 
 The project name to display in Wiz.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#name Project#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#name Project#name}
 
 ---
 
@@ -142,9 +138,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Whether the project is archived/inactive - Defaults to `false`.
+Whether the project is archived/inactive     - Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#archived Project#archived}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#archived Project#archived}
 
 ---
 
@@ -154,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 The business unit to which the project belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#business_unit Project#business_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#business_unit Project#business_unit}
 
 ---
 
@@ -164,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 cloud_account_link block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_account_link Project#cloud_account_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_account_link Project#cloud_account_link}
 
 ---
 
@@ -174,7 +170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 cloud_organization_link block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_organization_link Project#cloud_organization_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_organization_link Project#cloud_organization_link}
 
 ---
 
@@ -184,7 +180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 The project description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#description Project#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#description Project#description}
 
 ---
 
@@ -194,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Identifiers for the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#identifiers Project#identifiers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#identifiers Project#identifiers}
 
 ---
 
@@ -202,9 +198,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Whether the project is a folder. - Defaults to `false`.
+Whether the project is a folder.     - Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_folder Project#is_folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_folder Project#is_folder}
 
 ---
 
@@ -214,7 +210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 kubernetes_cluster_link block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#kubernetes_cluster_link Project#kubernetes_cluster_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#kubernetes_cluster_link Project#kubernetes_cluster_link}
 
 ---
 
@@ -224,7 +220,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 The parent project ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#parent_project_id Project#parent_project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#parent_project_id Project#parent_project_id}
 
 ---
 
@@ -234,7 +230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 A list of project owner IDs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#project_owners Project#project_owners}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#project_owners Project#project_owners}
 
 ---
 
@@ -244,7 +240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 risk_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#risk_profile Project#risk_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#risk_profile Project#risk_profile}
 
 ---
 
@@ -254,7 +250,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 A list of security champions IDs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#security_champions Project#security_champions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#security_champions Project#security_champions}
 
 ---
 
@@ -266,8 +262,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.addOverride">add_override</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.toMetadata">to_metadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.addMoveTarget">add_move_target</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
@@ -277,7 +275,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.getStringAttribute">get_string_attribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.hasResourceMove">has_resource_move</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.importFrom">import_from</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.moveFromId">move_from_id</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.putCloudAccountLink">put_cloud_account_link</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.putCloudOrganizationLink">put_cloud_organization_link</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.putKubernetesClusterLink">put_kubernetes_cluster_link</a></code> | *No description.* |
@@ -352,6 +355,12 @@ def reset_override_logical_id() -> None
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="rhizo-co-terraform-provider-wiz.project.Project.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
 ##### `to_metadata` <a name="to_metadata" id="rhizo-co-terraform-provider-wiz.project.Project.toMetadata"></a>
 
 ```python
@@ -365,6 +374,24 @@ def to_terraform() -> typing.Any
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `add_move_target` <a name="add_move_target" id="rhizo-co-terraform-provider-wiz.project.Project.addMoveTarget"></a>
+
+```python
+def add_move_target(
+  move_target: str
+) -> None
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `move_target`<sup>Required</sup> <a name="move_target" id="rhizo-co-terraform-provider-wiz.project.Project.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `get_any_map_attribute` <a name="get_any_map_attribute" id="rhizo-co-terraform-provider-wiz.project.Project.getAnyMapAttribute"></a>
 
@@ -492,6 +519,33 @@ def get_string_map_attribute(
 
 ---
 
+##### `has_resource_move` <a name="has_resource_move" id="rhizo-co-terraform-provider-wiz.project.Project.hasResourceMove"></a>
+
+```python
+def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+```
+
+##### `import_from` <a name="import_from" id="rhizo-co-terraform-provider-wiz.project.Project.importFrom"></a>
+
+```python
+def import_from(
+  id: str,
+  provider: TerraformProvider = None
+) -> None
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.project.Project.importFrom.parameter.id"></a>
+
+- *Type:* str
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.project.Project.importFrom.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
 ##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="rhizo-co-terraform-provider-wiz.project.Project.interpolationForAttribute"></a>
 
 ```python
@@ -503,6 +557,71 @@ def interpolation_for_attribute(
 ###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-wiz.project.Project.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
+
+---
+
+##### `move_from_id` <a name="move_from_id" id="rhizo-co-terraform-provider-wiz.project.Project.moveFromId"></a>
+
+```python
+def move_from_id(
+  id: str
+) -> None
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.project.Project.moveFromId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `move_to` <a name="move_to" id="rhizo-co-terraform-provider-wiz.project.Project.moveTo"></a>
+
+```python
+def move_to(
+  move_target: str,
+  index: typing.Union[str, typing.Union[int, float]] = None
+) -> None
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `move_target`<sup>Required</sup> <a name="move_target" id="rhizo-co-terraform-provider-wiz.project.Project.moveTo.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="rhizo-co-terraform-provider-wiz.project.Project.moveTo.parameter.index"></a>
+
+- *Type:* typing.Union[str, typing.Union[int, float]]
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `move_to_id` <a name="move_to_id" id="rhizo-co-terraform-provider-wiz.project.Project.moveToId"></a>
+
+```python
+def move_to_id(
+  id: str
+) -> None
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.project.Project.moveToId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
@@ -572,12 +691,11 @@ def put_risk_profile(
 Business impact.
 
 * Allowed values:
+  - LBI
+  - MBI
+  - HBI
 
-  * LBI
-  * MBI
-  * HBI
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#business_impact Project#business_impact}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#business_impact Project#business_impact}
 
 ---
 
@@ -588,13 +706,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Does the project require authentication?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#has_authentication Project#has_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#has_authentication Project#has_authentication}
 
 ---
 
@@ -605,13 +723,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Does the project expose an API?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#has_exposed_api Project#has_exposed_api}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#has_exposed_api Project#has_exposed_api}
 
 ---
 
@@ -622,13 +740,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Is the project under active development?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_actively_developed Project#is_actively_developed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_actively_developed Project#is_actively_developed}
 
 ---
 
@@ -639,13 +757,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Is the project customer facing?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_customer_facing Project#is_customer_facing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_customer_facing Project#is_customer_facing}
 
 ---
 
@@ -656,13 +774,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Is the project Internet facing?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_internet_facing Project#is_internet_facing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_internet_facing Project#is_internet_facing}
 
 ---
 
@@ -673,13 +791,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Is the project regulated?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_regulated Project#is_regulated}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_regulated Project#is_regulated}
 
 ---
 
@@ -690,27 +808,26 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Regulatory Standards.
 
 * Allowed values:
+  - ISO_20000_1_2011
+  - ISO_22301
+  - ISO_27001
+  - ISO_27017
+  - ISO_27018
+  - ISO_27701
+  - ISO_9001
+  - SOC
+  - FEDRAMP
+  - NIST_800_171
+  - NIST_CSF
+  - HIPPA_HITECH
+  - HITRUST
+  - PCI_DSS
+  - SEC_17A_4
+  - SEC_REGULATION_SCI
+  - SOX
+  - GDPR
 
-  * ISO_20000_1_2011
-  * ISO_22301
-  * ISO_27001
-  * ISO_27017
-  * ISO_27018
-  * ISO_27701
-  * ISO_9001
-  * SOC
-  * FEDRAMP
-  * NIST_800_171
-  * NIST_CSF
-  * HIPPA_HITECH
-  * HITRUST
-  * PCI_DSS
-  * SEC_17A_4
-  * SEC_REGULATION_SCI
-  * SOX
-  * GDPR
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#regulatory_standards Project#regulatory_standards}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#regulatory_standards Project#regulatory_standards}
 
 ---
 
@@ -721,15 +838,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Sensitive Data Types.
 
 * Allowed values:
+  - CLASSIFIED
+  - HEALTH
+  - PII
+  - PCI
+  - FINANCIAL
+  - CUSTOMER
 
-  * CLASSIFIED
-  * HEALTH
-  * PII
-  * PCI
-  * FINANCIAL
-  * CUSTOMER
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#sensitive_data_types Project#sensitive_data_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#sensitive_data_types Project#sensitive_data_types}
 
 ---
 
@@ -740,13 +856,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Does the project store data?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#stores_data Project#stores_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#stores_data Project#stores_data}
 
 ---
 
@@ -829,6 +945,7 @@ def reset_security_champions() -> None
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.Project.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a Project resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -895,6 +1012,55 @@ project.Project.is_terraform_resource(
 ###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.project.Project.isTerraformResource.parameter.x"></a>
 
 - *Type:* typing.Any
+
+---
+
+##### `generate_config_for_import` <a name="generate_config_for_import" id="rhizo-co-terraform-provider-wiz.project.Project.generateConfigForImport"></a>
+
+```python
+from rhizo-co_cdktf_provider_wiz import project
+
+project.Project.generate_config_for_import(
+  scope: Construct,
+  import_to_id: str,
+  import_from_id: str,
+  provider: TerraformProvider = None
+)
+```
+
+Generates CDKTF code for importing a Project resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.project.Project.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `import_to_id`<sup>Required</sup> <a name="import_to_id" id="rhizo-co-terraform-provider-wiz.project.Project.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* str
+
+The construct id used in the generated config for the Project to import.
+
+---
+
+###### `import_from_id`<sup>Required</sup> <a name="import_from_id" id="rhizo-co-terraform-provider-wiz.project.Project.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* str
+
+The id of the existing Project that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.project.Project.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the Project to import is found.
 
 ---
 
@@ -1427,7 +1593,7 @@ cloud_account_id: str
 
 The Wiz internal identifier for the Cloud Account Subscription.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_account_id Project#cloud_account_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_account_id Project#cloud_account_id}
 
 ---
 
@@ -1442,15 +1608,15 @@ environment: str
 The environment.
 
 * Allowed values:
+  - PRODUCTION
+  - STAGING
+  - DEVELOPMENT
+  - TESTING
+  - OTHER
 
-  * PRODUCTION
-  * STAGING
-  * DEVELOPMENT
-  * TESTING
-  * OTHER
-* Defaults to `{{`PRODUCTION`}}`.
+  * Defaults to `PRODUCTION`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#environment Project#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#environment Project#environment}
 
 ---
 
@@ -1466,7 +1632,7 @@ Please provide a list of resource group identifiers for filtering by resource gr
 
 `shared` must be true to define resource_groups.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#resource_groups Project#resource_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#resource_groups Project#resource_groups}
 
 ---
 
@@ -1480,7 +1646,7 @@ resource_tags: typing.Union[IResolvable, typing.List[ProjectCloudAccountLinkReso
 
 resource_tags block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#resource_tags Project#resource_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#resource_tags Project#resource_tags}
 
 ---
 
@@ -1494,7 +1660,7 @@ shared: typing.Union[bool, IResolvable]
 
 Subscriptions that host a few projects can be marked as ‘shared subscriptions’ and resources can be filtered by tags.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#shared Project#shared}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#shared Project#shared}
 
 ---
 
@@ -1515,8 +1681,8 @@ project.ProjectCloudAccountLinkResourceTags(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTags.property.key">key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#key Project#key}. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTags.property.value">value</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#value Project#value}. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTags.property.key">key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#key Project#key}. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTags.property.value">value</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#value Project#value}. |
 
 ---
 
@@ -1528,7 +1694,7 @@ key: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#key Project#key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#key Project#key}.
 
 ---
 
@@ -1540,7 +1706,7 @@ value: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#value Project#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#value Project#value}.
 
 ---
 
@@ -1582,7 +1748,7 @@ cloud_organization: str
 
 The Wiz internal identifier for the Organizational Unit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_organization Project#cloud_organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_organization Project#cloud_organization}
 
 ---
 
@@ -1597,15 +1763,15 @@ environment: str
 The environment.
 
 * Allowed values:
+  - PRODUCTION
+  - STAGING
+  - DEVELOPMENT
+  - TESTING
+  - OTHER
 
-  * PRODUCTION
-  * STAGING
-  * DEVELOPMENT
-  * TESTING
-  * OTHER
-* Defaults to `{{`PRODUCTION`}}`.
+  * Defaults to `PRODUCTION`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#environment Project#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#environment Project#environment}
 
 ---
 
@@ -1619,7 +1785,7 @@ resource_groups: typing.List[str]
 
 Please provide a list of strings for filtering by resource groups. `shared` must be true to define resource_groups.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#resource_groups Project#resource_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#resource_groups Project#resource_groups}
 
 ---
 
@@ -1633,7 +1799,7 @@ resource_tags: typing.Union[IResolvable, typing.List[ProjectCloudOrganizationLin
 
 resource_tags block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#resource_tags Project#resource_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#resource_tags Project#resource_tags}
 
 ---
 
@@ -1649,7 +1815,7 @@ Subscriptions that host a few projects can be marked as ‘shared subscriptions�
 
 * Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#shared Project#shared}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#shared Project#shared}
 
 ---
 
@@ -1670,8 +1836,8 @@ project.ProjectCloudOrganizationLinkResourceTags(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTags.property.key">key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#key Project#key}. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTags.property.value">value</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#value Project#value}. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTags.property.key">key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#key Project#key}. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTags.property.value">value</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#value Project#value}. |
 
 ---
 
@@ -1683,7 +1849,7 @@ key: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#key Project#key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#key Project#key}.
 
 ---
 
@@ -1695,7 +1861,7 @@ value: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#value Project#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#value Project#value}.
 
 ---
 
@@ -1742,13 +1908,13 @@ project.ProjectConfig(
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.name">name</a></code> | <code>str</code> | The project name to display in Wiz. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.archived">archived</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether the project is archived/inactive - Defaults to `false`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.archived">archived</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether the project is archived/inactive     - Defaults to `false`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.businessUnit">business_unit</a></code> | <code>str</code> | The business unit to which the project belongs. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.cloudAccountLink">cloud_account_link</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLink">ProjectCloudAccountLink</a>]]</code> | cloud_account_link block. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.cloudOrganizationLink">cloud_organization_link</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLink">ProjectCloudOrganizationLink</a>]]</code> | cloud_organization_link block. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.description">description</a></code> | <code>str</code> | The project description. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.identifiers">identifiers</a></code> | <code>typing.List[str]</code> | Identifiers for the project. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.isFolder">is_folder</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether the project is a folder. - Defaults to `false`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.isFolder">is_folder</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether the project is a folder.     - Defaults to `false`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.kubernetesClusterLink">kubernetes_cluster_link</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#rhizo-co-terraform-provider-wiz.project.ProjectKubernetesClusterLink">ProjectKubernetesClusterLink</a>]]</code> | kubernetes_cluster_link block. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.parentProjectId">parent_project_id</a></code> | <code>str</code> | The parent project ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectConfig.property.projectOwners">project_owners</a></code> | <code>typing.List[str]</code> | A list of project owner IDs. |
@@ -1837,7 +2003,7 @@ name: str
 
 The project name to display in Wiz.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#name Project#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#name Project#name}
 
 ---
 
@@ -1849,9 +2015,9 @@ archived: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Whether the project is archived/inactive - Defaults to `false`.
+Whether the project is archived/inactive     - Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#archived Project#archived}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#archived Project#archived}
 
 ---
 
@@ -1865,7 +2031,7 @@ business_unit: str
 
 The business unit to which the project belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#business_unit Project#business_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#business_unit Project#business_unit}
 
 ---
 
@@ -1879,7 +2045,7 @@ cloud_account_link: typing.Union[IResolvable, typing.List[ProjectCloudAccountLin
 
 cloud_account_link block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_account_link Project#cloud_account_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_account_link Project#cloud_account_link}
 
 ---
 
@@ -1893,7 +2059,7 @@ cloud_organization_link: typing.Union[IResolvable, typing.List[ProjectCloudOrgan
 
 cloud_organization_link block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#cloud_organization_link Project#cloud_organization_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#cloud_organization_link Project#cloud_organization_link}
 
 ---
 
@@ -1907,7 +2073,7 @@ description: str
 
 The project description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#description Project#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#description Project#description}
 
 ---
 
@@ -1921,7 +2087,7 @@ identifiers: typing.List[str]
 
 Identifiers for the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#identifiers Project#identifiers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#identifiers Project#identifiers}
 
 ---
 
@@ -1933,9 +2099,9 @@ is_folder: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Whether the project is a folder. - Defaults to `false`.
+Whether the project is a folder.     - Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_folder Project#is_folder}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_folder Project#is_folder}
 
 ---
 
@@ -1949,7 +2115,7 @@ kubernetes_cluster_link: typing.Union[IResolvable, typing.List[ProjectKubernetes
 
 kubernetes_cluster_link block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#kubernetes_cluster_link Project#kubernetes_cluster_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#kubernetes_cluster_link Project#kubernetes_cluster_link}
 
 ---
 
@@ -1963,7 +2129,7 @@ parent_project_id: str
 
 The parent project ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#parent_project_id Project#parent_project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#parent_project_id Project#parent_project_id}
 
 ---
 
@@ -1977,7 +2143,7 @@ project_owners: typing.List[str]
 
 A list of project owner IDs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#project_owners Project#project_owners}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#project_owners Project#project_owners}
 
 ---
 
@@ -1991,7 +2157,7 @@ risk_profile: ProjectRiskProfile
 
 risk_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#risk_profile Project#risk_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#risk_profile Project#risk_profile}
 
 ---
 
@@ -2005,7 +2171,7 @@ security_champions: typing.List[str]
 
 A list of security champions IDs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#security_champions Project#security_champions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#security_champions Project#security_champions}
 
 ---
 
@@ -2045,7 +2211,7 @@ kubernetes_cluster: str
 
 The Wiz internal identifier for the kubernetes cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#kubernetes_cluster Project#kubernetes_cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#kubernetes_cluster Project#kubernetes_cluster}
 
 ---
 
@@ -2060,15 +2226,15 @@ environment: str
 The environment.
 
 * Allowed values:
+  - PRODUCTION
+  - STAGING
+  - DEVELOPMENT
+  - TESTING
+  - OTHER
 
-  * PRODUCTION
-  * STAGING
-  * DEVELOPMENT
-  * TESTING
-  * OTHER
-* Defaults to `{{`PRODUCTION`}}`.
+  * Defaults to `PRODUCTION`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#environment Project#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#environment Project#environment}
 
 ---
 
@@ -2082,7 +2248,7 @@ namespaces: typing.List[str]
 
 The kubernetes namespaces to link. `shared` must be set to `true` if namespaces are set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#namespaces Project#namespaces}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#namespaces Project#namespaces}
 
 ---
 
@@ -2097,10 +2263,9 @@ shared: typing.Union[bool, IResolvable]
 Mark the kubernetes cluster as shared, in which case, specific namespaces can be linked.
 
 This needs to be set to `true` if `namespaces` are set.
+- Defaults to `true`.
 
-* Defaults to `true`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#shared Project#shared}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#shared Project#shared}
 
 ---
 
@@ -2153,12 +2318,11 @@ business_impact: str
 Business impact.
 
 * Allowed values:
+  - LBI
+  - MBI
+  - HBI
 
-  * LBI
-  * MBI
-  * HBI
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#business_impact Project#business_impact}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#business_impact Project#business_impact}
 
 ---
 
@@ -2173,13 +2337,13 @@ has_authentication: str
 Does the project require authentication?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#has_authentication Project#has_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#has_authentication Project#has_authentication}
 
 ---
 
@@ -2194,13 +2358,13 @@ has_exposed_api: str
 Does the project expose an API?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#has_exposed_api Project#has_exposed_api}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#has_exposed_api Project#has_exposed_api}
 
 ---
 
@@ -2215,13 +2379,13 @@ is_actively_developed: str
 Is the project under active development?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_actively_developed Project#is_actively_developed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_actively_developed Project#is_actively_developed}
 
 ---
 
@@ -2236,13 +2400,13 @@ is_customer_facing: str
 Is the project customer facing?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_customer_facing Project#is_customer_facing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_customer_facing Project#is_customer_facing}
 
 ---
 
@@ -2257,13 +2421,13 @@ is_internet_facing: str
 Is the project Internet facing?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_internet_facing Project#is_internet_facing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_internet_facing Project#is_internet_facing}
 
 ---
 
@@ -2278,13 +2442,13 @@ is_regulated: str
 Is the project regulated?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#is_regulated Project#is_regulated}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#is_regulated Project#is_regulated}
 
 ---
 
@@ -2299,27 +2463,26 @@ regulatory_standards: typing.List[str]
 Regulatory Standards.
 
 * Allowed values:
+  - ISO_20000_1_2011
+  - ISO_22301
+  - ISO_27001
+  - ISO_27017
+  - ISO_27018
+  - ISO_27701
+  - ISO_9001
+  - SOC
+  - FEDRAMP
+  - NIST_800_171
+  - NIST_CSF
+  - HIPPA_HITECH
+  - HITRUST
+  - PCI_DSS
+  - SEC_17A_4
+  - SEC_REGULATION_SCI
+  - SOX
+  - GDPR
 
-  * ISO_20000_1_2011
-  * ISO_22301
-  * ISO_27001
-  * ISO_27017
-  * ISO_27018
-  * ISO_27701
-  * ISO_9001
-  * SOC
-  * FEDRAMP
-  * NIST_800_171
-  * NIST_CSF
-  * HIPPA_HITECH
-  * HITRUST
-  * PCI_DSS
-  * SEC_17A_4
-  * SEC_REGULATION_SCI
-  * SOX
-  * GDPR
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#regulatory_standards Project#regulatory_standards}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#regulatory_standards Project#regulatory_standards}
 
 ---
 
@@ -2334,15 +2497,14 @@ sensitive_data_types: typing.List[str]
 Sensitive Data Types.
 
 * Allowed values:
+  - CLASSIFIED
+  - HEALTH
+  - PII
+  - PCI
+  - FINANCIAL
+  - CUSTOMER
 
-  * CLASSIFIED
-  * HEALTH
-  * PII
-  * PCI
-  * FINANCIAL
-  * CUSTOMER
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#sensitive_data_types Project#sensitive_data_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#sensitive_data_types Project#sensitive_data_types}
 
 ---
 
@@ -2357,13 +2519,13 @@ stores_data: str
 Does the project store data?
 
 * Allowed values:
+  - YES
+  - NO
+  - UNKNOWN
 
-  * YES
-  * NO
-  * UNKNOWN
-* Defaults to `{{`UNKNOWN`}}`.
+  * Defaults to `UNKNOWN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/project#stores_data Project#stores_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/project#stores_data Project#stores_data}
 
 ---
 
@@ -2419,10 +2581,29 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkList.computeFqn">compute_fqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
 
 ---
 
@@ -3017,10 +3198,29 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTagsList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTagsList.computeFqn">compute_fqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTagsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTagsList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTagsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTagsList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="rhizo-co-terraform-provider-wiz.project.ProjectCloudAccountLinkResourceTagsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
 
 ---
 
@@ -3506,10 +3706,29 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkList.computeFqn">compute_fqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
 
 ---
 
@@ -4104,10 +4323,29 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTagsList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTagsList.computeFqn">compute_fqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTagsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTagsList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTagsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTagsList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="rhizo-co-terraform-provider-wiz.project.ProjectCloudOrganizationLinkResourceTagsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
 
 ---
 
@@ -4593,10 +4831,29 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectKubernetesClusterLinkList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectKubernetesClusterLinkList.computeFqn">compute_fqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectKubernetesClusterLinkList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectKubernetesClusterLinkList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.project.ProjectKubernetesClusterLinkList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="rhizo-co-terraform-provider-wiz.project.ProjectKubernetesClusterLinkList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="rhizo-co-terraform-provider-wiz.project.ProjectKubernetesClusterLinkList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
 
 ---
 

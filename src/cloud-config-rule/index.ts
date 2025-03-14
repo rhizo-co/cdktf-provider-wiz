@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,93 +9,93 @@ import * as cdktf from 'cdktf';
 export interface CloudConfigRuleConfig extends cdktf.TerraformMetaArguments {
   /**
   * Detailed description for this rule. There is a defect in the API that makes this required; the description field cannot be nullified after one is defined, so we make it required.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#description CloudConfigRule#description}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#description CloudConfigRule#description}
   */
   readonly description: string;
   /**
   * Enable/disable this rule.
-    - Defaults to `true`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#enabled CloudConfigRule#enabled}
+  *     - Defaults to `true`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#enabled CloudConfigRule#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Make this rule function as a Control that creates Issues for new findings. By default only findings are created. If enabled=false, an error will be returned if this is set to true.
-    - Defaults to `false`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#function_as_control CloudConfigRule#function_as_control}
+  *     - Defaults to `false`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#function_as_control CloudConfigRule#function_as_control}
   */
   readonly functionAsControl?: boolean | cdktf.IResolvable;
   /**
   * Name of this rule, as appeared in the UI in the portal.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#name CloudConfigRule#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#name CloudConfigRule#name}
   */
   readonly name: string;
   /**
   * OPA rego policy that defines this rule.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#opa_policy CloudConfigRule#opa_policy}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#opa_policy CloudConfigRule#opa_policy}
   */
   readonly opaPolicy?: string;
   /**
   * Steps to mitigate the issue that match this rule. If possible, include sample commands to execute in your cloud provider's console. Markdown formatting is supported.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#remediation_instructions CloudConfigRule#remediation_instructions}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#remediation_instructions CloudConfigRule#remediation_instructions}
   */
   readonly remediationInstructions: string;
   /**
   * Set the rule scope of cloud account IDs. Select only subscriptions matching to the rule cloud provider. To change scope to 'all relevant resources' set to empty array. This must be the Wiz internal identifier for the account(uuid format).
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#scope_account_ids CloudConfigRule#scope_account_ids}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#scope_account_ids CloudConfigRule#scope_account_ids}
   */
   readonly scopeAccountIds?: string[];
   /**
   * Severity that will be set for findings of this rule.
-    - Allowed values: 
-        - INFORMATIONAL
-        - LOW
-        - MEDIUM
-        - HIGH
-        - CRITICAL
-
-    - Defaults to `{{`MEDIUM`}}`.
+  *     - Allowed values: 
+  *         - INFORMATIONAL
+  *         - LOW
+  *         - MEDIUM
+  *         - HIGH
+  *         - CRITICAL
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#severity CloudConfigRule#severity}
+  *     - Defaults to `MEDIUM`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#severity CloudConfigRule#severity}
   */
   readonly severity?: string;
   /**
   * The identifier types of the resources targeted by this rule, as seen on the cloud provider service. e.g. 'ec2'
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#target_native_types CloudConfigRule#target_native_types}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#target_native_types CloudConfigRule#target_native_types}
   */
   readonly targetNativeTypes: string[];
   /**
   * iac_matchers block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#iac_matchers CloudConfigRule#iac_matchers}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#iac_matchers CloudConfigRule#iac_matchers}
   */
   readonly iacMatchers?: CloudConfigRuleIacMatchers[] | cdktf.IResolvable;
 }
 export interface CloudConfigRuleIacMatchers {
   /**
   * Write code in the Rego query language. This code will be evaluated against the JSON representation of each resource of the selected Native Type to determine if it passes or fails the rule.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#rego_code CloudConfigRule#rego_code}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#rego_code CloudConfigRule#rego_code}
   */
   readonly regoCode: string;
   /**
   * The type of resource that will be evaluated by the Rego Code.
-    - Allowed values: 
-        - TERRAFORM
-        - CLOUD_FORMATION
-        - KUBERNETES
-        - AZURE_RESOURCE_MANAGER
-        - DOCKER_FILE
-        - ADMISSION_CONTROLLER
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule#type CloudConfigRule#type}
+  *     - Allowed values: 
+  *         - TERRAFORM
+  *         - CLOUD_FORMATION
+  *         - KUBERNETES
+  *         - AZURE_RESOURCE_MANAGER
+  *         - DOCKER_FILE
+  *         - ADMISSION_CONTROLLER
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#type CloudConfigRule#type}
   */
   readonly type: string;
 }
@@ -114,6 +109,31 @@ export function cloudConfigRuleIacMatchersToTerraform(struct?: CloudConfigRuleIa
     rego_code: cdktf.stringToTerraform(struct!.regoCode),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function cloudConfigRuleIacMatchersToHclTerraform(struct?: CloudConfigRuleIacMatchers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    rego_code: {
+      value: cdktf.stringToHclTerraform(struct!.regoCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CloudConfigRuleIacMatchersOutputReference extends cdktf.ComplexObject {
@@ -214,7 +234,7 @@ export class CloudConfigRuleIacMatchersList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule wiz_cloud_config_rule}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule wiz_cloud_config_rule}
 */
 export class CloudConfigRule extends cdktf.TerraformResource {
 
@@ -223,12 +243,26 @@ export class CloudConfigRule extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "wiz_cloud_config_rule";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a CloudConfigRule resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the CloudConfigRule to import
+  * @param importFromId The id of the existing CloudConfigRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the CloudConfigRule to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_cloud_config_rule", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/cloud_config_rule wiz_cloud_config_rule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/cloud_config_rule wiz_cloud_config_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,8 +273,8 @@ export class CloudConfigRule extends cdktf.TerraformResource {
       terraformResourceType: 'wiz_cloud_config_rule',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -441,5 +475,73 @@ export class CloudConfigRule extends cdktf.TerraformResource {
       target_native_types: cdktf.listMapper(cdktf.stringToTerraform, false)(this._targetNativeTypes),
       iac_matchers: cdktf.listMapper(cloudConfigRuleIacMatchersToTerraform, true)(this._iacMatchers.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      function_as_control: {
+        value: cdktf.booleanToHclTerraform(this._functionAsControl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      opa_policy: {
+        value: cdktf.stringToHclTerraform(this._opaPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      remediation_instructions: {
+        value: cdktf.stringToHclTerraform(this._remediationInstructions),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope_account_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._scopeAccountIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      severity: {
+        value: cdktf.stringToHclTerraform(this._severity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_native_types: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._targetNativeTypes),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      iac_matchers: {
+        value: cdktf.listMapperHcl(cloudConfigRuleIacMatchersToHclTerraform, true)(this._iacMatchers.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CloudConfigRuleIacMatchersList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

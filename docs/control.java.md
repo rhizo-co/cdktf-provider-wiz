@@ -1,14 +1,10 @@
-# `wiz_control`
-
-Refer to the Terraform Registory for docs: [`wiz_control`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control).
-
 # `control` Submodule <a name="`control` Submodule" id="rhizo-co-terraform-provider-wiz.control"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### Control <a name="Control" id="rhizo-co-terraform-provider-wiz.control.Control"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control wiz_control}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control wiz_control}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.control.Control.Initializer"></a>
 
@@ -56,7 +52,7 @@ Control.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.Initializer.parameter.severity">severity</a></code> | <code>java.lang.String</code> | Severity that will be set for this control. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | Description of the Control. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.Initializer.parameter.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether to enable the Control. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.Initializer.parameter.projectId">projectId</a></code> | <code>java.lang.String</code> | Project scope of the control. Use '*' for all projects. - Defaults to `{{`*`}}`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.Initializer.parameter.projectId">projectId</a></code> | <code>java.lang.String</code> | Project scope of the control. Use '*' for all projects.     - Defaults to `*`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.Initializer.parameter.resolutionRecommendation">resolutionRecommendation</a></code> | <code>java.lang.String</code> | Guidance on how the user should address an issue that was created by this control. |
 
 ---
@@ -127,7 +123,7 @@ Must be unique amongst siblings in the same scope
 
 Name of the Control.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#name Control#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#name Control#name}
 
 ---
 
@@ -137,7 +133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 The query that the control runs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#query Control#query}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#query Control#query}
 
 ---
 
@@ -147,7 +143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 The query that represents the control's scope.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#scope_query Control#scope_query}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#scope_query Control#scope_query}
 
 ---
 
@@ -158,14 +154,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Severity that will be set for this control.
 
 * Allowed values:
+  - INFORMATIONAL
+  - LOW
+  - MEDIUM
+  - HIGH
+  - CRITICAL
 
-  * INFORMATIONAL
-  * LOW
-  * MEDIUM
-  * HIGH
-  * CRITICAL
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#severity Control#severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#severity Control#severity}
 
 ---
 
@@ -175,7 +170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Description of the Control.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#description Control#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#description Control#description}
 
 ---
 
@@ -186,10 +181,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Whether to enable the Control.
 
 This has a known defect where if set to false, it will be created as true because the API to create Controls does not accept this parameter.
+- Defaults to `true`.
 
-* Defaults to `true`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#enabled Control#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#enabled Control#enabled}
 
 ---
 
@@ -197,9 +191,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* java.lang.String
 
-Project scope of the control. Use '*' for all projects. - Defaults to `{{`*`}}`.
+Project scope of the control. Use '*' for all projects.     - Defaults to `*`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#project_id Control#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#project_id Control#project_id}
 
 ---
 
@@ -209,7 +203,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Guidance on how the user should address an issue that was created by this control.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#resolution_recommendation Control#resolution_recommendation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#resolution_recommendation Control#resolution_recommendation}
 
 ---
 
@@ -221,8 +215,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.addMoveTarget">addMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
@@ -232,7 +228,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.getStringAttribute">getStringAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.hasResourceMove">hasResourceMove</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.importFrom">importFrom</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.resetDescription">resetDescription</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.resetEnabled">resetEnabled</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.resetProjectId">resetProjectId</a></code> | *No description.* |
@@ -290,6 +291,12 @@ public void resetOverrideLogicalId()
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `toHclTerraform` <a name="toHclTerraform" id="rhizo-co-terraform-provider-wiz.control.Control.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
 ##### `toMetadata` <a name="toMetadata" id="rhizo-co-terraform-provider-wiz.control.Control.toMetadata"></a>
 
 ```java
@@ -303,6 +310,22 @@ public java.lang.Object toTerraform()
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `addMoveTarget` <a name="addMoveTarget" id="rhizo-co-terraform-provider-wiz.control.Control.addMoveTarget"></a>
+
+```java
+public void addMoveTarget(java.lang.String moveTarget)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-wiz.control.Control.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* java.lang.String
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="rhizo-co-terraform-provider-wiz.control.Control.getAnyMapAttribute"></a>
 
@@ -412,6 +435,31 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 
 ---
 
+##### `hasResourceMove` <a name="hasResourceMove" id="rhizo-co-terraform-provider-wiz.control.Control.hasResourceMove"></a>
+
+```java
+public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+```
+
+##### `importFrom` <a name="importFrom" id="rhizo-co-terraform-provider-wiz.control.Control.importFrom"></a>
+
+```java
+public void importFrom(java.lang.String id)
+public void importFrom(java.lang.String id, TerraformProvider provider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.control.Control.importFrom.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.control.Control.importFrom.parameter.provider"></a>
+
+- *Type:* com.hashicorp.cdktf.TerraformProvider
+
+---
+
 ##### `interpolationForAttribute` <a name="interpolationForAttribute" id="rhizo-co-terraform-provider-wiz.control.Control.interpolationForAttribute"></a>
 
 ```java
@@ -421,6 +469,65 @@ public IResolvable interpolationForAttribute(java.lang.String terraformAttribute
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-wiz.control.Control.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
+
+---
+
+##### `moveFromId` <a name="moveFromId" id="rhizo-co-terraform-provider-wiz.control.Control.moveFromId"></a>
+
+```java
+public void moveFromId(java.lang.String id)
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.control.Control.moveFromId.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `moveTo` <a name="moveTo" id="rhizo-co-terraform-provider-wiz.control.Control.moveTo"></a>
+
+```java
+public void moveTo(java.lang.String moveTarget)
+public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-wiz.control.Control.moveTo.parameter.moveTarget"></a>
+
+- *Type:* java.lang.String
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="rhizo-co-terraform-provider-wiz.control.Control.moveTo.parameter.index"></a>
+
+- *Type:* java.lang.String OR java.lang.Number
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `moveToId` <a name="moveToId" id="rhizo-co-terraform-provider-wiz.control.Control.moveToId"></a>
+
+```java
+public void moveToId(java.lang.String id)
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.control.Control.moveToId.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
@@ -455,6 +562,7 @@ public void resetResolutionRecommendation()
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.isTerraformResource">isTerraformResource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.Control.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a Control resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -515,6 +623,50 @@ Control.isTerraformResource(java.lang.Object x)
 ###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.control.Control.isTerraformResource.parameter.x"></a>
 
 - *Type:* java.lang.Object
+
+---
+
+##### `generateConfigForImport` <a name="generateConfigForImport" id="rhizo-co-terraform-provider-wiz.control.Control.generateConfigForImport"></a>
+
+```java
+import com.hashicorp.cdktf.providers.wiz.control.Control;
+
+Control.generateConfigForImport(Construct scope, java.lang.String importToId, java.lang.String importFromId),Control.generateConfigForImport(Construct scope, java.lang.String importToId, java.lang.String importFromId, TerraformProvider provider)
+```
+
+Generates CDKTF code for importing a Control resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.control.Control.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="rhizo-co-terraform-provider-wiz.control.Control.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* java.lang.String
+
+The construct id used in the generated config for the Control to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="rhizo-co-terraform-provider-wiz.control.Control.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* java.lang.String
+
+The id of the existing Control that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.control.Control.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* com.hashicorp.cdktf.TerraformProvider
+
+? Optional instance of the provider where the Control to import is found.
 
 ---
 
@@ -947,7 +1099,7 @@ ControlConfig.builder()
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.ControlConfig.property.severity">severity</a></code> | <code>java.lang.String</code> | Severity that will be set for this control. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.ControlConfig.property.description">description</a></code> | <code>java.lang.String</code> | Description of the Control. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.ControlConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether to enable the Control. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.control.ControlConfig.property.projectId">projectId</a></code> | <code>java.lang.String</code> | Project scope of the control. Use '*' for all projects. - Defaults to `{{`*`}}`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.control.ControlConfig.property.projectId">projectId</a></code> | <code>java.lang.String</code> | Project scope of the control. Use '*' for all projects.     - Defaults to `*`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.control.ControlConfig.property.resolutionRecommendation">resolutionRecommendation</a></code> | <code>java.lang.String</code> | Guidance on how the user should address an issue that was created by this control. |
 
 ---
@@ -1032,7 +1184,7 @@ public java.lang.String getName();
 
 Name of the Control.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#name Control#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#name Control#name}
 
 ---
 
@@ -1046,7 +1198,7 @@ public java.lang.String getQuery();
 
 The query that the control runs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#query Control#query}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#query Control#query}
 
 ---
 
@@ -1060,7 +1212,7 @@ public java.lang.String getScopeQuery();
 
 The query that represents the control's scope.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#scope_query Control#scope_query}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#scope_query Control#scope_query}
 
 ---
 
@@ -1075,14 +1227,13 @@ public java.lang.String getSeverity();
 Severity that will be set for this control.
 
 * Allowed values:
+  - INFORMATIONAL
+  - LOW
+  - MEDIUM
+  - HIGH
+  - CRITICAL
 
-  * INFORMATIONAL
-  * LOW
-  * MEDIUM
-  * HIGH
-  * CRITICAL
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#severity Control#severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#severity Control#severity}
 
 ---
 
@@ -1096,7 +1247,7 @@ public java.lang.String getDescription();
 
 Description of the Control.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#description Control#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#description Control#description}
 
 ---
 
@@ -1111,10 +1262,9 @@ public java.lang.Object getEnabled();
 Whether to enable the Control.
 
 This has a known defect where if set to false, it will be created as true because the API to create Controls does not accept this parameter.
+- Defaults to `true`.
 
-* Defaults to `true`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#enabled Control#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#enabled Control#enabled}
 
 ---
 
@@ -1126,9 +1276,9 @@ public java.lang.String getProjectId();
 
 - *Type:* java.lang.String
 
-Project scope of the control. Use '*' for all projects. - Defaults to `{{`*`}}`.
+Project scope of the control. Use '*' for all projects.     - Defaults to `*`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#project_id Control#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#project_id Control#project_id}
 
 ---
 
@@ -1142,7 +1292,7 @@ public java.lang.String getResolutionRecommendation();
 
 Guidance on how the user should address an issue that was created by this control.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/control#resolution_recommendation Control#resolution_recommendation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/control#resolution_recommendation Control#resolution_recommendation}
 
 ---
 

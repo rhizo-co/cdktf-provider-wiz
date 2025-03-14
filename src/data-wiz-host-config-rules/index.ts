@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/host_config_rules
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/host_config_rules
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,33 +9,33 @@ import * as cdktf from 'cdktf';
 export interface DataWizHostConfigRulesConfig extends cdktf.TerraformMetaArguments {
   /**
   * Host Configuration Rule enabled status.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/host_config_rules#enabled DataWizHostConfigRules#enabled}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/host_config_rules#enabled DataWizHostConfigRules#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * How many results to return
-    - Defaults to `500`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/host_config_rules#first DataWizHostConfigRules#first}
+  *     - Defaults to `500`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/host_config_rules#first DataWizHostConfigRules#first}
   */
   readonly first?: number;
   /**
   * Search rules by any of securityFramework | securitySubCategory | securityCategory.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/host_config_rules#framework_category DataWizHostConfigRules#framework_category}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/host_config_rules#framework_category DataWizHostConfigRules#framework_category}
   */
   readonly frameworkCategory?: string[];
   /**
   * Free text search on id, name, externalId.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/host_config_rules#search DataWizHostConfigRules#search}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/host_config_rules#search DataWizHostConfigRules#search}
   */
   readonly search?: string;
   /**
   * Search by target platforms.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/host_config_rules#target_platform DataWizHostConfigRules#target_platform}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/host_config_rules#target_platform DataWizHostConfigRules#target_platform}
   */
   readonly targetPlatform?: string[];
 }
@@ -54,6 +49,17 @@ export function dataWizHostConfigRulesHostConfigurationRulesToTerraform(struct?:
   }
   return {
   }
+}
+
+
+export function dataWizHostConfigRulesHostConfigurationRulesToHclTerraform(struct?: DataWizHostConfigRulesHostConfigurationRules): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataWizHostConfigRulesHostConfigurationRulesOutputReference extends cdktf.ComplexObject {
@@ -155,7 +161,7 @@ export class DataWizHostConfigRulesHostConfigurationRulesList extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/host_config_rules wiz_host_config_rules}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/host_config_rules wiz_host_config_rules}
 */
 export class DataWizHostConfigRules extends cdktf.TerraformDataSource {
 
@@ -164,12 +170,26 @@ export class DataWizHostConfigRules extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "wiz_host_config_rules";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataWizHostConfigRules resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataWizHostConfigRules to import
+  * @param importFromId The id of the existing DataWizHostConfigRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/host_config_rules#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataWizHostConfigRules to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_host_config_rules", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/host_config_rules wiz_host_config_rules} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/host_config_rules wiz_host_config_rules} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -180,8 +200,8 @@ export class DataWizHostConfigRules extends cdktf.TerraformDataSource {
       terraformResourceType: 'wiz_host_config_rules',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -305,5 +325,43 @@ export class DataWizHostConfigRules extends cdktf.TerraformDataSource {
       search: cdktf.stringToTerraform(this._search),
       target_platform: cdktf.listMapper(cdktf.stringToTerraform, false)(this._targetPlatform),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      first: {
+        value: cdktf.numberToHclTerraform(this._first),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      framework_category: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._frameworkCategory),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      search: {
+        value: cdktf.stringToHclTerraform(this._search),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_platform: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._targetPlatform),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

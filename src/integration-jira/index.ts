@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,88 +9,88 @@ import * as cdktf from 'cdktf';
 export interface IntegrationJiraConfig extends cdktf.TerraformMetaArguments {
   /**
   * Jira integration TLS setting
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#jira_allow_insecure_tls IntegrationJira#jira_allow_insecure_tls}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#jira_allow_insecure_tls IntegrationJira#jira_allow_insecure_tls}
   */
   readonly jiraAllowInsecureTls?: boolean | cdktf.IResolvable;
   /**
   * Jira PEM with client certificate and private key
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#jira_client_certificate_and_private_key IntegrationJira#jira_client_certificate_and_private_key}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#jira_client_certificate_and_private_key IntegrationJira#jira_client_certificate_and_private_key}
   */
   readonly jiraClientCertificateAndPrivateKey?: string;
   /**
   * Whether Jira instance is on prem
-    - Defaults to `false`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#jira_is_on_prem IntegrationJira#jira_is_on_prem}
+  *     - Defaults to `false`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#jira_is_on_prem IntegrationJira#jira_is_on_prem}
   */
   readonly jiraIsOnPrem?: boolean | cdktf.IResolvable;
   /**
   * Jira password. (default: none, environment variable: WIZ_INTEGRATION_JIRA_PASSWORD)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#jira_password IntegrationJira#jira_password}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#jira_password IntegrationJira#jira_password}
   */
   readonly jiraPassword?: string;
   /**
   * Jira personal access token (used for on-prem). (default: none, environment variable: WIZ_INTEGRATION_JIRA_PAT)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#jira_pat IntegrationJira#jira_pat}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#jira_pat IntegrationJira#jira_pat}
   */
   readonly jiraPat?: string;
   /**
   * Jira server CA
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#jira_server_ca IntegrationJira#jira_server_ca}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#jira_server_ca IntegrationJira#jira_server_ca}
   */
   readonly jiraServerCa?: string;
   /**
   * Jira server type
-    - Defaults to `{{`CLOUD`}}`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#jira_server_type IntegrationJira#jira_server_type}
+  *     - Defaults to `CLOUD`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#jira_server_type IntegrationJira#jira_server_type}
   */
   readonly jiraServerType?: string;
   /**
   * Jira URL. (default: none, environment variable: WIZ_INTEGRATION_JIRA_URL)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#jira_url IntegrationJira#jira_url}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#jira_url IntegrationJira#jira_url}
   */
   readonly jiraUrl: string;
   /**
   * Email of a Jira user with permissions to create tickets. (default: none, environment variable: WIZ_INTEGRATION_JIRA_USERNAME)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#jira_username IntegrationJira#jira_username}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#jira_username IntegrationJira#jira_username}
   */
   readonly jiraUsername?: string;
   /**
   * The name of the integration.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#name IntegrationJira#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#name IntegrationJira#name}
   */
   readonly name: string;
   /**
   * The project this action is scoped to.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#project_id IntegrationJira#project_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#project_id IntegrationJira#project_id}
   */
   readonly projectId?: string;
   /**
   * Scoping to a selected Project makes this Integration accessible only to users with global roles or Project-scoped access to the selected Project. Other users will not be able to see it, use it, or view its results. Integrations restricted to global roles cannot be seen or used by users with Project-scoped roles. 
-    - Allowed values: 
-        - Selected Project
-        - All Resources
-        - All Resources, Restrict this Integration to global roles only
-
-    - Defaults to `{{`All Resources, Restrict this Integration to global roles only`}}`.
+  *     - Allowed values: 
+  *         - Selected Project
+  *         - All Resources
+  *         - All Resources, Restrict this Integration to global roles only
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira#scope IntegrationJira#scope}
+  *     - Defaults to `All Resources, Restrict this Integration to global roles only`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#scope IntegrationJira#scope}
   */
   readonly scope?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira wiz_integration_jira}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira wiz_integration_jira}
 */
 export class IntegrationJira extends cdktf.TerraformResource {
 
@@ -104,12 +99,26 @@ export class IntegrationJira extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "wiz_integration_jira";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a IntegrationJira resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the IntegrationJira to import
+  * @param importFromId The id of the existing IntegrationJira that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the IntegrationJira to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_integration_jira", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/integration_jira wiz_integration_jira} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/integration_jira wiz_integration_jira} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -120,8 +129,8 @@ export class IntegrationJira extends cdktf.TerraformResource {
       terraformResourceType: 'wiz_integration_jira',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -364,5 +373,85 @@ export class IntegrationJira extends cdktf.TerraformResource {
       project_id: cdktf.stringToTerraform(this._projectId),
       scope: cdktf.stringToTerraform(this._scope),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      jira_allow_insecure_tls: {
+        value: cdktf.booleanToHclTerraform(this._jiraAllowInsecureTls),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      jira_client_certificate_and_private_key: {
+        value: cdktf.stringToHclTerraform(this._jiraClientCertificateAndPrivateKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_is_on_prem: {
+        value: cdktf.booleanToHclTerraform(this._jiraIsOnPrem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      jira_password: {
+        value: cdktf.stringToHclTerraform(this._jiraPassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_pat: {
+        value: cdktf.stringToHclTerraform(this._jiraPat),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_server_ca: {
+        value: cdktf.stringToHclTerraform(this._jiraServerCa),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_server_type: {
+        value: cdktf.stringToHclTerraform(this._jiraServerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_url: {
+        value: cdktf.stringToHclTerraform(this._jiraUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_username: {
+        value: cdktf.stringToHclTerraform(this._jiraUsername),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project_id: {
+        value: cdktf.stringToHclTerraform(this._projectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope: {
+        value: cdktf.stringToHclTerraform(this._scope),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

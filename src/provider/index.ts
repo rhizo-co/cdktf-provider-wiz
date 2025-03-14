@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,89 +9,89 @@ import * as cdktf from 'cdktf';
 export interface WizProviderConfig {
   /**
   * Base64 encoded PEM of the CA chain used when communicating with Wiz. If a proxy performs TLS interception/inspection, this will be the CA chain for the certificate used by the proxy. The default includes the CAs known to be used by Wiz: `C=IE, O=Baltimore, OU=CyberTrust, CN=Baltimore CyberTrust Root`, `C=US, O=Cloudflare, Inc., CN=Cloudflare Inc ECC CA-3`, `C=US, ST=Arizona, L=Scottsdale, O=Starfield Technologies, Inc., CN=Starfield Services Root Certificate Authority - G2`, `C=US, O=Amazon, CN=Amazon Root CA 1`, `C=US, O=Amazon, OU=Server CA 1B, CN=Amazon`. (environment variable: CA_CHAIN)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#ca_chain WizProvider#ca_chain}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#ca_chain WizProvider#ca_chain}
   */
   readonly caChain?: string;
   /**
   * Maximum retry attempts.
-    - Defaults to `10`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_max WizProvider#http_client_retry_max}
+  *     - Defaults to `10`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#http_client_retry_max WizProvider#http_client_retry_max}
   */
   readonly httpClientRetryMax?: number;
   /**
   * Maximum time to wait before retrying, in seconds.
-    - Defaults to `10`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_max WizProvider#http_client_retry_wait_max}
+  *     - Defaults to `10`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#http_client_retry_wait_max WizProvider#http_client_retry_wait_max}
   */
   readonly httpClientRetryWaitMax?: number;
   /**
   * Minimum time to wait before retrying, in seconds.
-    - Defaults to `1`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#http_client_retry_wait_min WizProvider#http_client_retry_wait_min}
+  *     - Defaults to `1`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#http_client_retry_wait_min WizProvider#http_client_retry_wait_min}
   */
   readonly httpClientRetryWaitMin?: number;
   /**
   * Use an http proxy server? (default: false, environment variable: PROXY)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy WizProvider#proxy}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#proxy WizProvider#proxy}
   */
   readonly proxy?: boolean | cdktf.IResolvable;
   /**
   * Proxy server address.  Syntax: http[s]://[host]:[port]. (default: none, environment variable: PROXY_SERVER)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#proxy_server WizProvider#proxy_server}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#proxy_server WizProvider#proxy_server}
   */
   readonly proxyServer?: string;
   /**
   * Set this to 'beyond-api' if using auth0 and 'wiz-api' if using Cognito. (default: wiz-api, environment variable: WIZ_AUTH_AUDIENCE)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_audience WizProvider#wiz_auth_audience}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_audience WizProvider#wiz_auth_audience}
   */
   readonly wizAuthAudience?: string;
   /**
   * Your application's Client ID. You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_ID)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_id WizProvider#wiz_auth_client_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_client_id WizProvider#wiz_auth_client_id}
   */
   readonly wizAuthClientId: string;
   /**
   * Your application's Client Secret. You can find this value on the Settings > Service Accounts page. (default: none, environment variable: WIZ_AUTH_CLIENT_SECRET)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_client_secret WizProvider#wiz_auth_client_secret}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_client_secret WizProvider#wiz_auth_client_secret}
   */
   readonly wizAuthClientSecret: string;
   /**
   * Set this to 'client_credentials'. (default: client_credentials, environment variable: WIZ_AUTH_GRANT_TYPE)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_grant_type WizProvider#wiz_auth_grant_type}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_grant_type WizProvider#wiz_auth_grant_type}
   */
   readonly wizAuthGrantType?: string;
   /**
   * The authentication endpoint. (default: https://auth.app.wiz.io/oauth/token, environment variable: WIZ_AUTH_URL)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_auth_url WizProvider#wiz_auth_url}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_auth_url WizProvider#wiz_auth_url}
   */
   readonly wizAuthUrl?: string;
   /**
   * Wiz api endpoint.  This varies for each Wiz deployment.  See https://docs.wiz.io/wiz-docs/docs/using-the-wiz-api#the-graphql-endpoint. (default: none, environment variable: WIZ_URL)
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#wiz_url WizProvider#wiz_url}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#wiz_url WizProvider#wiz_url}
   */
   readonly wizUrl: string;
   /**
   * Alias name
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs#alias WizProvider#alias}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#alias WizProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs wiz}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs wiz}
 */
 export class WizProvider extends cdktf.TerraformProvider {
 
@@ -105,12 +100,26 @@ export class WizProvider extends cdktf.TerraformProvider {
   // =================
   public static readonly tfResourceType = "wiz";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a WizProvider resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the WizProvider to import
+  * @param importFromId The id of the existing WizProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the WizProvider to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs wiz} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs wiz} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -121,10 +130,10 @@ export class WizProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'wiz',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
-      terraformProviderSource: 'rhizo-co/wiz'
+      terraformProviderSource: 'AxtonGrams/wiz'
     });
     this._caChain = config.caChain;
     this._httpClientRetryMax = config.httpClientRetryMax;
@@ -364,5 +373,91 @@ export class WizProvider extends cdktf.TerraformProvider {
       wiz_url: cdktf.stringToTerraform(this._wizUrl),
       alias: cdktf.stringToTerraform(this._alias),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      ca_chain: {
+        value: cdktf.stringToHclTerraform(this._caChain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      http_client_retry_max: {
+        value: cdktf.numberToHclTerraform(this._httpClientRetryMax),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      http_client_retry_wait_max: {
+        value: cdktf.numberToHclTerraform(this._httpClientRetryWaitMax),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      http_client_retry_wait_min: {
+        value: cdktf.numberToHclTerraform(this._httpClientRetryWaitMin),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      proxy: {
+        value: cdktf.booleanToHclTerraform(this._proxy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      proxy_server: {
+        value: cdktf.stringToHclTerraform(this._proxyServer),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      wiz_auth_audience: {
+        value: cdktf.stringToHclTerraform(this._wizAuthAudience),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      wiz_auth_client_id: {
+        value: cdktf.stringToHclTerraform(this._wizAuthClientId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      wiz_auth_client_secret: {
+        value: cdktf.stringToHclTerraform(this._wizAuthClientSecret),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      wiz_auth_grant_type: {
+        value: cdktf.stringToHclTerraform(this._wizAuthGrantType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      wiz_auth_url: {
+        value: cdktf.stringToHclTerraform(this._wizAuthUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      wiz_url: {
+        value: cdktf.stringToHclTerraform(this._wizUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      alias: {
+        value: cdktf.stringToHclTerraform(this._alias),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

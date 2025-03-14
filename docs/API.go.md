@@ -1,6 +1,9 @@
-# Submodules <a name="Submodules" id="submodules"></a>
+# API Reference <a name="API Reference" id="api-reference"></a>
+
+## Submodules <a name="Submodules" id="submodules"></a>
 
 The following submodules are available:
+
 - [automationRuleAwsSns](./automationRuleAwsSns.go.md)
 - [automationRuleJiraAddComment](./automationRuleJiraAddComment.go.md)
 - [automationRuleJiraCreateTicket](./automationRuleJiraCreateTicket.go.md)
@@ -11,6 +14,7 @@ The following submodules are available:
 - [cloudConfigRule](./cloudConfigRule.go.md)
 - [cloudConfigRuleAssociations](./cloudConfigRuleAssociations.go.md)
 - [connectorAws](./connectorAws.go.md)
+- [connectorGcp](./connectorGcp.go.md)
 - [control](./control.go.md)
 - [controlAssociations](./controlAssociations.go.md)
 - [dataWizCloudAccounts](./dataWizCloudAccounts.go.md)
@@ -25,8 +29,16 @@ The following submodules are available:
 - [integrationJira](./integrationJira.go.md)
 - [integrationServicenow](./integrationServicenow.go.md)
 - [project](./project.go.md)
+- [projectCloudAccountLink](./projectCloudAccountLink.go.md)
 - [provider](./provider.go.md)
+- [reportGraphQuery](./reportGraphQuery.go.md)
+- [samlGroupMapping](./samlGroupMapping.go.md)
 - [samlIdp](./samlIdp.go.md)
 - [securityFramework](./securityFramework.go.md)
 - [serviceAccount](./serviceAccount.go.md)
 - [user](./user.go.md)
+
+
+
+
+

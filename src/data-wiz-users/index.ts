@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,53 +9,53 @@ import * as cdktf from 'cdktf';
 export interface DataWizUsersConfig extends cdktf.TerraformMetaArguments {
   /**
   * Authentication Source.
-    - Allowed values: 
-        - LEGACY
-        - MODERN
-
-    - Defaults to `{{`MODERN`}}`.
+  *     - Allowed values: 
+  *         - LEGACY
+  *         - MODERN
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#authentication_source DataWizUsers#authentication_source}
+  *     - Defaults to `MODERN`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#authentication_source DataWizUsers#authentication_source}
   */
   readonly authenticationSource?: string;
   /**
   * How many matches to return, maximum is `100` is per page.
-    - Defaults to `50`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#first DataWizUsers#first}
+  *     - Defaults to `50`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#first DataWizUsers#first}
   */
   readonly first?: number;
   /**
   * How many pages to return. 0 means all pages.
-    - Defaults to `0`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#max_pages DataWizUsers#max_pages}
+  *     - Defaults to `0`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#max_pages DataWizUsers#max_pages}
   */
   readonly maxPages?: number;
   /**
   * List of roles to filter by.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#roles DataWizUsers#roles}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#roles DataWizUsers#roles}
   */
   readonly roles?: string[];
   /**
   * Free text search. Specify empty string to return all users.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#search DataWizUsers#search}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#search DataWizUsers#search}
   */
   readonly search?: string;
   /**
   * users block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#users DataWizUsers#users}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#users DataWizUsers#users}
   */
   readonly users?: DataWizUsersUsers[] | cdktf.IResolvable;
 }
 export interface DataWizUsersUsersEffectiveRole {
   /**
   * The role internal identifier.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#id DataWizUsers#id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#id DataWizUsers#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -68,14 +63,14 @@ export interface DataWizUsersUsersEffectiveRole {
   readonly id?: string;
   /**
   * The role name.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#name DataWizUsers#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#name DataWizUsers#name}
   */
   readonly name?: string;
   /**
   * Permission Scopes.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#scopes DataWizUsers#scopes}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#scopes DataWizUsers#scopes}
   */
   readonly scopes?: string[];
 }
@@ -90,6 +85,37 @@ export function dataWizUsersUsersEffectiveRoleToTerraform(struct?: DataWizUsersU
     name: cdktf.stringToTerraform(struct!.name),
     scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scopes),
   }
+}
+
+
+export function dataWizUsersUsersEffectiveRoleToHclTerraform(struct?: DataWizUsersUsersEffectiveRole | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    scopes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.scopes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataWizUsersUsersEffectiveRoleOutputReference extends cdktf.ComplexObject {
@@ -219,8 +245,8 @@ export class DataWizUsersUsersEffectiveRoleList extends cdktf.ComplexList {
 export interface DataWizUsersUsersIdentityProvider {
   /**
   * The identity provider name.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#name DataWizUsers#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#name DataWizUsers#name}
   */
   readonly name?: string;
 }
@@ -233,6 +259,25 @@ export function dataWizUsersUsersIdentityProviderToTerraform(struct?: DataWizUse
   return {
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function dataWizUsersUsersIdentityProviderToHclTerraform(struct?: DataWizUsersUsersIdentityProvider | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataWizUsersUsersIdentityProviderOutputReference extends cdktf.ComplexObject {
@@ -318,14 +363,14 @@ export class DataWizUsersUsersIdentityProviderList extends cdktf.ComplexList {
 export interface DataWizUsersUsers {
   /**
   * User email address.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#email DataWizUsers#email}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#email DataWizUsers#email}
   */
   readonly email?: string;
   /**
   * Internal Wiz ID.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#id DataWizUsers#id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#id DataWizUsers#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -333,32 +378,32 @@ export interface DataWizUsersUsers {
   readonly id?: string;
   /**
   * Identity Provider Type.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#identity_provider_type DataWizUsers#identity_provider_type}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#identity_provider_type DataWizUsers#identity_provider_type}
   */
   readonly identityProviderType?: string;
   /**
   * If user is suspended.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#is_suspended DataWizUsers#is_suspended}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#is_suspended DataWizUsers#is_suspended}
   */
   readonly isSuspended?: boolean | cdktf.IResolvable;
   /**
   * User email name.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#name DataWizUsers#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#name DataWizUsers#name}
   */
   readonly name?: string;
   /**
   * effective_role block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#effective_role DataWizUsers#effective_role}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#effective_role DataWizUsers#effective_role}
   */
   readonly effectiveRole?: DataWizUsersUsersEffectiveRole[] | cdktf.IResolvable;
   /**
   * identity_provider block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users#identity_provider DataWizUsers#identity_provider}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#identity_provider DataWizUsers#identity_provider}
   */
   readonly identityProvider?: DataWizUsersUsersIdentityProvider[] | cdktf.IResolvable;
 }
@@ -377,6 +422,61 @@ export function dataWizUsersUsersToTerraform(struct?: DataWizUsersUsers | cdktf.
     effective_role: cdktf.listMapper(dataWizUsersUsersEffectiveRoleToTerraform, true)(struct!.effectiveRole),
     identity_provider: cdktf.listMapper(dataWizUsersUsersIdentityProviderToTerraform, true)(struct!.identityProvider),
   }
+}
+
+
+export function dataWizUsersUsersToHclTerraform(struct?: DataWizUsersUsers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email: {
+      value: cdktf.stringToHclTerraform(struct!.email),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    identity_provider_type: {
+      value: cdktf.stringToHclTerraform(struct!.identityProviderType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_suspended: {
+      value: cdktf.booleanToHclTerraform(struct!.isSuspended),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    effective_role: {
+      value: cdktf.listMapperHcl(dataWizUsersUsersEffectiveRoleToHclTerraform, true)(struct!.effectiveRole),
+      isBlock: true,
+      type: "set",
+      storageClassType: "DataWizUsersUsersEffectiveRoleList",
+    },
+    identity_provider: {
+      value: cdktf.listMapperHcl(dataWizUsersUsersIdentityProviderToHclTerraform, true)(struct!.identityProvider),
+      isBlock: true,
+      type: "set",
+      storageClassType: "DataWizUsersUsersIdentityProviderList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataWizUsersUsersOutputReference extends cdktf.ComplexObject {
@@ -593,7 +693,7 @@ export class DataWizUsersUsersList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users wiz_users}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users wiz_users}
 */
 export class DataWizUsers extends cdktf.TerraformDataSource {
 
@@ -602,12 +702,26 @@ export class DataWizUsers extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "wiz_users";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataWizUsers resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataWizUsers to import
+  * @param importFromId The id of the existing DataWizUsers that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataWizUsers to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_users", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/users wiz_users} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/users wiz_users} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -618,8 +732,8 @@ export class DataWizUsers extends cdktf.TerraformDataSource {
       terraformResourceType: 'wiz_users',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -755,5 +869,49 @@ export class DataWizUsers extends cdktf.TerraformDataSource {
       search: cdktf.stringToTerraform(this._search),
       users: cdktf.listMapper(dataWizUsersUsersToTerraform, true)(this._users.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      authentication_source: {
+        value: cdktf.stringToHclTerraform(this._authenticationSource),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      first: {
+        value: cdktf.numberToHclTerraform(this._first),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      max_pages: {
+        value: cdktf.numberToHclTerraform(this._maxPages),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      roles: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._roles),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      search: {
+        value: cdktf.stringToHclTerraform(this._search),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      users: {
+        value: cdktf.listMapperHcl(dataWizUsersUsersToHclTerraform, true)(this._users.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "DataWizUsersUsersList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

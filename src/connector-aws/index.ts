@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/connector_aws
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/connector_aws
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,33 +9,33 @@ import * as cdktf from 'cdktf';
 export interface ConnectorAwsConfig extends cdktf.TerraformMetaArguments {
   /**
   * The authentication parameters. Must be represented in `JSON` format.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/connector_aws#auth_params ConnectorAws#auth_params}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/connector_aws#auth_params ConnectorAws#auth_params}
   */
   readonly authParams: string;
   /**
   * Whether the connector is enabled.
-    - Defaults to `true`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/connector_aws#enabled ConnectorAws#enabled}
+  *     - Defaults to `true`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/connector_aws#enabled ConnectorAws#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Extra configuration for the connector. Must be represented in `JSON` format.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/connector_aws#extra_config ConnectorAws#extra_config}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/connector_aws#extra_config ConnectorAws#extra_config}
   */
   readonly extraConfig?: string;
   /**
   * The connector name.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/connector_aws#name ConnectorAws#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/connector_aws#name ConnectorAws#name}
   */
   readonly name: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/connector_aws wiz_connector_aws}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/connector_aws wiz_connector_aws}
 */
 export class ConnectorAws extends cdktf.TerraformResource {
 
@@ -49,12 +44,26 @@ export class ConnectorAws extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "wiz_connector_aws";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a ConnectorAws resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the ConnectorAws to import
+  * @param importFromId The id of the existing ConnectorAws that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/connector_aws#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the ConnectorAws to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_connector_aws", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/connector_aws wiz_connector_aws} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/connector_aws wiz_connector_aws} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -65,8 +74,8 @@ export class ConnectorAws extends cdktf.TerraformResource {
       terraformResourceType: 'wiz_connector_aws',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -107,11 +116,6 @@ export class ConnectorAws extends cdktf.TerraformResource {
   // customer_role_arn - computed: true, optional: false, required: false
   public get customerRoleArn() {
     return this.getStringAttribute('customer_role_arn');
-  }
-
-  // disk_analyzer_inflight_disabled - computed: true, optional: false, required: false
-  public get diskAnalyzerInflightDisabled() {
-    return this.getBooleanAttribute('disk_analyzer_inflight_disabled');
   }
 
   // enabled - computed: false, optional: true, required: false
@@ -220,5 +224,37 @@ export class ConnectorAws extends cdktf.TerraformResource {
       extra_config: cdktf.stringToTerraform(this._extraConfig),
       name: cdktf.stringToTerraform(this._name),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      auth_params: {
+        value: cdktf.stringToHclTerraform(this._authParams),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      extra_config: {
+        value: cdktf.stringToHclTerraform(this._extraConfig),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

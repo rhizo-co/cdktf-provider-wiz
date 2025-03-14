@@ -1,14 +1,10 @@
-# `data_wiz_cloud_accounts`
-
-Refer to the Terraform Registory for docs: [`data_wiz_cloud_accounts`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts).
-
 # `dataWizCloudAccounts` Submodule <a name="`dataWizCloudAccounts` Submodule" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### DataWizCloudAccounts <a name="DataWizCloudAccounts" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts wiz_cloud_accounts}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts wiz_cloud_accounts}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer"></a>
 
@@ -54,10 +50,10 @@ dataWizCloudAccounts.DataWizCloudAccounts(
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.cloudProvider">cloud_provider</a></code> | <code>typing.List[str]</code> | Query cloud accounts of specific cloud provider. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.connectorId">connector_id</a></code> | <code>typing.List[str]</code> | Query cloud accounts by specific connector ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.connectorIssueId">connector_issue_id</a></code> | <code>typing.List[str]</code> | Query cloud accounts by specific connector issue ID. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.first">first</a></code> | <code>typing.Union[int, float]</code> | How many results to return, maximum is `500` is per page. - Defaults to `500`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.first">first</a></code> | <code>typing.Union[int, float]</code> | How many results to return, maximum is `500` is per page.     - Defaults to `500`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.hasMultipleConnectorSources">has_multiple_connector_sources</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | QueryQuery cloud accounts by project assignment state. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.ids">ids</a></code> | <code>typing.List[str]</code> | Get specific Cloud Accounts by their IDs. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.maxPages">max_pages</a></code> | <code>typing.Union[int, float]</code> | How many pages to return. 0 means all pages. - Defaults to `0`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.maxPages">max_pages</a></code> | <code>typing.Union[int, float]</code> | How many pages to return. 0 means all pages.     - Defaults to `0`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.projectId">project_id</a></code> | <code>str</code> | Query cloud accounts of a specific linked project, given its id. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.search">search</a></code> | <code>typing.List[str]</code> | Free text search on cloud account name or tags or external-id. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.Initializer.parameter.status">status</a></code> | <code>typing.List[str]</code> | Query cloud accounts by status. |
@@ -130,7 +126,7 @@ Must be unique amongst siblings in the same scope
 
 QueryQuery cloud accounts by project assignment state.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#assigned_to_project DataWizCloudAccounts#assigned_to_project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#assigned_to_project DataWizCloudAccounts#assigned_to_project}
 
 ---
 
@@ -141,17 +137,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Query cloud accounts of specific cloud provider.
 
 * Allowed values:
+  - GCP
+  - AWS
+  - Azure
+  - OCI
+  - Alibaba
+  - vSphere
+  - OpenShift
+  - Kubernetes
 
-  * GCP
-  * AWS
-  * Azure
-  * OCI
-  * Alibaba
-  * vSphere
-  * OpenShift
-  * Kubernetes
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#cloud_provider DataWizCloudAccounts#cloud_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#cloud_provider DataWizCloudAccounts#cloud_provider}
 
 ---
 
@@ -161,7 +156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Query cloud accounts by specific connector ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#connector_id DataWizCloudAccounts#connector_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#connector_id DataWizCloudAccounts#connector_id}
 
 ---
 
@@ -171,7 +166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Query cloud accounts by specific connector issue ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#connector_issue_id DataWizCloudAccounts#connector_issue_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#connector_issue_id DataWizCloudAccounts#connector_issue_id}
 
 ---
 
@@ -179,9 +174,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* typing.Union[int, float]
 
-How many results to return, maximum is `500` is per page. - Defaults to `500`.
+How many results to return, maximum is `500` is per page.     - Defaults to `500`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#first DataWizCloudAccounts#first}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#first DataWizCloudAccounts#first}
 
 ---
 
@@ -191,7 +186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 QueryQuery cloud accounts by project assignment state.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#has_multiple_connector_sources DataWizCloudAccounts#has_multiple_connector_sources}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#has_multiple_connector_sources DataWizCloudAccounts#has_multiple_connector_sources}
 
 ---
 
@@ -201,7 +196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Get specific Cloud Accounts by their IDs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#ids DataWizCloudAccounts#ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#ids DataWizCloudAccounts#ids}
 
 ---
 
@@ -209,9 +204,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 - *Type:* typing.Union[int, float]
 
-How many pages to return. 0 means all pages. - Defaults to `0`.
+How many pages to return. 0 means all pages.     - Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#max_pages DataWizCloudAccounts#max_pages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#max_pages DataWizCloudAccounts#max_pages}
 
 ---
 
@@ -221,7 +216,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 Query cloud accounts of a specific linked project, given its id.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#project_id DataWizCloudAccounts#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#project_id DataWizCloudAccounts#project_id}
 
 ---
 
@@ -233,7 +228,7 @@ Free text search on cloud account name or tags or external-id.
 
 Specify list of empty string to return all cloud accounts.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#search DataWizCloudAccounts#search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#search DataWizCloudAccounts#search}
 
 ---
 
@@ -244,16 +239,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Query cloud accounts by status.
 
 * Allowed values:
+  - CONNECTED
+  - ERROR
+  - DISABLED
+  - INITIAL_SCANNING
+  - PARTIALLY_CONNECTED
+  - DISCONNECTED
+  - DISCOVERED
 
-  * CONNECTED
-  * ERROR
-  * DISABLED
-  * INITIAL_SCANNING
-  * PARTIALLY_CONNECTED
-  * DISCONNECTED
-  * DISCOVERED
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#status DataWizCloudAccounts#status}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#status DataWizCloudAccounts#status}
 
 ---
 
@@ -265,6 +259,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.addOverride">add_override</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.toHclTerraform">to_hcl_terraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.toMetadata">to_metadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
@@ -345,6 +340,14 @@ def reset_override_logical_id() -> None
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `to_metadata` <a name="to_metadata" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.toMetadata"></a>
 
@@ -573,6 +576,7 @@ def reset_status() -> None
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.isTerraformDataSource">is_terraform_data_source</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a DataWizCloudAccounts resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -639,6 +643,55 @@ dataWizCloudAccounts.DataWizCloudAccounts.is_terraform_data_source(
 ###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* typing.Any
+
+---
+
+##### `generate_config_for_import` <a name="generate_config_for_import" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.generateConfigForImport"></a>
+
+```python
+from rhizo-co_cdktf_provider_wiz import data_wiz_cloud_accounts
+
+dataWizCloudAccounts.DataWizCloudAccounts.generate_config_for_import(
+  scope: Construct,
+  import_to_id: str,
+  import_from_id: str,
+  provider: TerraformProvider = None
+)
+```
+
+Generates CDKTF code for importing a DataWizCloudAccounts resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `import_to_id`<sup>Required</sup> <a name="import_to_id" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* str
+
+The construct id used in the generated config for the DataWizCloudAccounts to import.
+
+---
+
+###### `import_from_id`<sup>Required</sup> <a name="import_from_id" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* str
+
+The id of the existing DataWizCloudAccounts that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccounts.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataWizCloudAccounts to import is found.
 
 ---
 
@@ -1122,10 +1175,10 @@ dataWizCloudAccounts.DataWizCloudAccountsConfig(
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.cloudProvider">cloud_provider</a></code> | <code>typing.List[str]</code> | Query cloud accounts of specific cloud provider. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.connectorId">connector_id</a></code> | <code>typing.List[str]</code> | Query cloud accounts by specific connector ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.connectorIssueId">connector_issue_id</a></code> | <code>typing.List[str]</code> | Query cloud accounts by specific connector issue ID. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.first">first</a></code> | <code>typing.Union[int, float]</code> | How many results to return, maximum is `500` is per page. - Defaults to `500`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.first">first</a></code> | <code>typing.Union[int, float]</code> | How many results to return, maximum is `500` is per page.     - Defaults to `500`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.hasMultipleConnectorSources">has_multiple_connector_sources</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | QueryQuery cloud accounts by project assignment state. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.ids">ids</a></code> | <code>typing.List[str]</code> | Get specific Cloud Accounts by their IDs. |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.maxPages">max_pages</a></code> | <code>typing.Union[int, float]</code> | How many pages to return. 0 means all pages. - Defaults to `0`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.maxPages">max_pages</a></code> | <code>typing.Union[int, float]</code> | How many pages to return. 0 means all pages.     - Defaults to `0`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.projectId">project_id</a></code> | <code>str</code> | Query cloud accounts of a specific linked project, given its id. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.search">search</a></code> | <code>typing.List[str]</code> | Free text search on cloud account name or tags or external-id. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsConfig.property.status">status</a></code> | <code>typing.List[str]</code> | Query cloud accounts by status. |
@@ -1212,7 +1265,7 @@ assigned_to_project: typing.Union[bool, IResolvable]
 
 QueryQuery cloud accounts by project assignment state.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#assigned_to_project DataWizCloudAccounts#assigned_to_project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#assigned_to_project DataWizCloudAccounts#assigned_to_project}
 
 ---
 
@@ -1227,17 +1280,16 @@ cloud_provider: typing.List[str]
 Query cloud accounts of specific cloud provider.
 
 * Allowed values:
+  - GCP
+  - AWS
+  - Azure
+  - OCI
+  - Alibaba
+  - vSphere
+  - OpenShift
+  - Kubernetes
 
-  * GCP
-  * AWS
-  * Azure
-  * OCI
-  * Alibaba
-  * vSphere
-  * OpenShift
-  * Kubernetes
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#cloud_provider DataWizCloudAccounts#cloud_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#cloud_provider DataWizCloudAccounts#cloud_provider}
 
 ---
 
@@ -1251,7 +1303,7 @@ connector_id: typing.List[str]
 
 Query cloud accounts by specific connector ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#connector_id DataWizCloudAccounts#connector_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#connector_id DataWizCloudAccounts#connector_id}
 
 ---
 
@@ -1265,7 +1317,7 @@ connector_issue_id: typing.List[str]
 
 Query cloud accounts by specific connector issue ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#connector_issue_id DataWizCloudAccounts#connector_issue_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#connector_issue_id DataWizCloudAccounts#connector_issue_id}
 
 ---
 
@@ -1277,9 +1329,9 @@ first: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-How many results to return, maximum is `500` is per page. - Defaults to `500`.
+How many results to return, maximum is `500` is per page.     - Defaults to `500`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#first DataWizCloudAccounts#first}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#first DataWizCloudAccounts#first}
 
 ---
 
@@ -1293,7 +1345,7 @@ has_multiple_connector_sources: typing.Union[bool, IResolvable]
 
 QueryQuery cloud accounts by project assignment state.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#has_multiple_connector_sources DataWizCloudAccounts#has_multiple_connector_sources}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#has_multiple_connector_sources DataWizCloudAccounts#has_multiple_connector_sources}
 
 ---
 
@@ -1307,7 +1359,7 @@ ids: typing.List[str]
 
 Get specific Cloud Accounts by their IDs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#ids DataWizCloudAccounts#ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#ids DataWizCloudAccounts#ids}
 
 ---
 
@@ -1319,9 +1371,9 @@ max_pages: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-How many pages to return. 0 means all pages. - Defaults to `0`.
+How many pages to return. 0 means all pages.     - Defaults to `0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#max_pages DataWizCloudAccounts#max_pages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#max_pages DataWizCloudAccounts#max_pages}
 
 ---
 
@@ -1335,7 +1387,7 @@ project_id: str
 
 Query cloud accounts of a specific linked project, given its id.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#project_id DataWizCloudAccounts#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#project_id DataWizCloudAccounts#project_id}
 
 ---
 
@@ -1351,7 +1403,7 @@ Free text search on cloud account name or tags or external-id.
 
 Specify list of empty string to return all cloud accounts.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#search DataWizCloudAccounts#search}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#search DataWizCloudAccounts#search}
 
 ---
 
@@ -1366,16 +1418,15 @@ status: typing.List[str]
 Query cloud accounts by status.
 
 * Allowed values:
+  - CONNECTED
+  - ERROR
+  - DISABLED
+  - INITIAL_SCANNING
+  - PARTIALLY_CONNECTED
+  - DISCONNECTED
+  - DISCOVERED
 
-  * CONNECTED
-  * ERROR
-  * DISABLED
-  * INITIAL_SCANNING
-  * PARTIALLY_CONNECTED
-  * DISCONNECTED
-  * DISCOVERED
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/cloud_accounts#status DataWizCloudAccounts#status}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/cloud_accounts#status DataWizCloudAccounts#status}
 
 ---
 
@@ -1431,10 +1482,29 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsCloudAccountsList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsCloudAccountsList.computeFqn">compute_fqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsCloudAccountsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsCloudAccountsList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsCloudAccountsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsCloudAccountsList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="rhizo-co-terraform-provider-wiz.dataWizCloudAccounts.DataWizCloudAccountsCloudAccountsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
 
 ---
 

@@ -1,14 +1,10 @@
-# `wiz_service_account`
-
-Refer to the Terraform Registory for docs: [`wiz_service_account`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/service_account).
-
 # `serviceAccount` Submodule <a name="`serviceAccount` Submodule" id="rhizo-co-terraform-provider-wiz.serviceAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### ServiceAccount <a name="ServiceAccount" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/service_account wiz_service_account}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/service_account wiz_service_account}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.Initializer"></a>
 
@@ -58,8 +54,10 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.addMoveTarget">addMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +67,12 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.getStringAttribute">getStringAttribute</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.hasResourceMove">hasResourceMove</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.importFrom">importFrom</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.resetAssignedProjects">resetAssignedProjects</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.resetRecreateIfRotated">resetRecreateIfRotated</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.resetScopes">resetScopes</a></code> | *No description.* |
@@ -127,6 +130,12 @@ public resetOverrideLogicalId(): void
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `toHclTerraform` <a name="toHclTerraform" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.toHclTerraform"></a>
+
+```typescript
+public toHclTerraform(): any
+```
+
 ##### `toMetadata` <a name="toMetadata" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.toMetadata"></a>
 
 ```typescript
@@ -140,6 +149,22 @@ public toTerraform(): any
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `addMoveTarget` <a name="addMoveTarget" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.addMoveTarget"></a>
+
+```typescript
+public addMoveTarget(moveTarget: string): void
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.getAnyMapAttribute"></a>
 
@@ -249,6 +274,30 @@ public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: stri
 
 ---
 
+##### `hasResourceMove` <a name="hasResourceMove" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.hasResourceMove"></a>
+
+```typescript
+public hasResourceMove(): TerraformResourceMoveByTarget | TerraformResourceMoveById
+```
+
+##### `importFrom` <a name="importFrom" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.importFrom"></a>
+
+```typescript
+public importFrom(id: string, provider?: TerraformProvider): void
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.importFrom.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.importFrom.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
 ##### `interpolationForAttribute` <a name="interpolationForAttribute" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.interpolationForAttribute"></a>
 
 ```typescript
@@ -258,6 +307,64 @@ public interpolationForAttribute(terraformAttribute: string): IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* string
+
+---
+
+##### `moveFromId` <a name="moveFromId" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveFromId"></a>
+
+```typescript
+public moveFromId(id: string): void
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveFromId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `moveTo` <a name="moveTo" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveTo"></a>
+
+```typescript
+public moveTo(moveTarget: string, index?: string | number): void
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveTo.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveTo.parameter.index"></a>
+
+- *Type:* string | number
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `moveToId` <a name="moveToId" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveToId"></a>
+
+```typescript
+public moveToId(id: string): void
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.moveToId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
@@ -292,6 +399,7 @@ public resetType(): void
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.isTerraformResource">isTerraformResource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a ServiceAccount resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -352,6 +460,50 @@ serviceAccount.ServiceAccount.isTerraformResource(x: any)
 ###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.isTerraformResource.parameter.x"></a>
 
 - *Type:* any
+
+---
+
+##### `generateConfigForImport` <a name="generateConfigForImport" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.generateConfigForImport"></a>
+
+```typescript
+import { serviceAccount } from 'rhizo-co-terraform-provider-wiz'
+
+serviceAccount.ServiceAccount.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
+```
+
+Generates CDKTF code for importing a ServiceAccount resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* string
+
+The construct id used in the generated config for the ServiceAccount to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* string
+
+The id of the existing ServiceAccount that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/service_account#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccount.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the ServiceAccount to import is found.
 
 ---
 
@@ -724,11 +876,11 @@ const serviceAccountConfig: serviceAccount.ServiceAccountConfig = { ... }
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/service_account#name ServiceAccount#name}. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/service_account#name ServiceAccount#name}. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.assignedProjects">assignedProjects</a></code> | <code>string[]</code> | Project ID assignments, optional with THIRD_PARTY (GraphQL API type). |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.recreateIfRotated">recreateIfRotated</a></code> | <code>boolean \| cdktf.IResolvable</code> | Recreate the resource if rotated outside Terraform? |
 | <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.scopes">scopes</a></code> | <code>string[]</code> | Scopes, required with THIRD_PARTY (GraphQL API type). |
-| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.type">type</a></code> | <code>string</code> | Service account type, for Helm use `BROKER` type.` - Allowed values:      - THIRD_PARTY     - SENSOR     - KUBERNETES_ADMISSION_CONTROLLER     - BROKER. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.serviceAccount.ServiceAccountConfig.property.type">type</a></code> | <code>string</code> | Service account type, for Helm use `BROKER` type.`     - Allowed values:          - THIRD_PARTY         - SENSOR         - KUBERNETES_ADMISSION_CONTROLLER         - BROKER         - KUBERNETES_CONNECTOR         - FIRST_PARTY. |
 
 ---
 
@@ -810,7 +962,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/service_account#name ServiceAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/service_account#name ServiceAccount#name}.
 
 ---
 
@@ -824,7 +976,7 @@ public readonly assignedProjects: string[];
 
 Project ID assignments, optional with THIRD_PARTY (GraphQL API type).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/service_account#assigned_projects ServiceAccount#assigned_projects}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/service_account#assigned_projects ServiceAccount#assigned_projects}
 
 ---
 
@@ -839,9 +991,9 @@ public readonly recreateIfRotated: boolean | IResolvable;
 Recreate the resource if rotated outside Terraform?
 
 This can be used to ensure the state contains valid authentication information. This option should be disabled if external tools are used to manage the credentials for this service account.
-- Defaults to `false`.
+    - Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/service_account#recreate_if_rotated ServiceAccount#recreate_if_rotated}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/service_account#recreate_if_rotated ServiceAccount#recreate_if_rotated}
 
 ---
 
@@ -856,134 +1008,134 @@ public readonly scopes: string[];
 Scopes, required with THIRD_PARTY (GraphQL API type).
 
 Allowed values: 
-    - admin:all
-    - admin:audit
-    - admin:digital_trust_settings
-    - admin:identity_providers
-    - admin:projects
-    - admin:reports
-    - admin:security_settings
-    - admin:users
-    - create:action_templates
-    - create:admission_controllers
-    - create:all
-    - create:automation_actions
-    - create:automation_rules
-    - create:cloud_configuration
-    - create:cloud_event_rules
-    - create:connectors
-    - create:controls
-    - create:host_configuration
-    - create:integrations
-    - create:outposts
-    - create:reports
-    - create:run_action
-    - create:run_control
-    - create:saved_cloud_event_filters
-    - create:saved_graph_queries
-    - create:scan_policies
-    - create:security_frameworks
-    - create:security_scans
-    - create:service_accounts
-    - create:service_tickets
-    - delete:action_templates
-    - delete:all
-    - delete:automation_actions
-    - delete:automation_rules
-    - delete:cloud_configuration
-    - delete:cloud_event_rules
-    - delete:connectors
-    - delete:controls
-    - delete:host_configuration
-    - delete:integrations
-    - delete:outposts
-    - delete:reports
-    - delete:saved_cloud_event_filters
-    - delete:saved_graph_queries
-    - delete:scan_policies
-    - delete:security_frameworks
-    - delete:security_scans
-    - delete:service_accounts
-    - read:action_templates
-    - read:admission_controllers
-    - read:all
-    - read:automation_actions
-    - read:automation_rules
-    - read:benchmarks
-    - read:cloud_accounts
-    - read:cloud_configuration
-    - read:cloud_event_rules
-    - read:cloud_events
-    - read:connectors
-    - read:controls
-    - read:digital_trust_settings
-    - read:host_configuration
-    - read:integrations
-    - read:inventory
-    - read:issue_settings
-    - read:issues
-    - read:kubernetes_clusters
-    - read:licenses
-    - read:outposts
-    - read:projects
-    - read:reports
-    - read:resources
-    - read:saved_cloud_event_filters
-    - read:saved_graph_queries
-    - read:scan_policies
-    - read:scanner_settings
-    - read:security_frameworks
-    - read:security_scans
-    - read:security_settings
-    - read:service_accounts
-    - read:system_activities
-    - read:users
-    - read:vulnerabilities
-    - update:admission_controllers
-    - update:all
-    - update:automation_actions
-    - update:automation_rules
-    - update:cloud_configuration
-    - update:cloud_event_rules
-    - update:connectors
-    - update:controls
-    - update:host_configuration
-    - update:integrations
-    - update:inventory
-    - update:issue_settings
-    - update:issues
-    - update:outposts
-    - update:reports
-    - update:resources
-    - update:saved_cloud_event_filters
-    - update:saved_graph_queries
-    - update:scan_policies
-    - update:scanner_settings
-    - update:security_frameworks
-    - update:security_scans
-    - update:service_accounts
-    - update:vulnerabilities
-    - write:all
-    - write:automation_actions
-    - write:automation_rules
-    - write:cloud_configuration
-    - write:cloud_event_rules
-    - write:connectors
-    - write:controls
-    - write:host_configuration
-    - write:issue_settings
-    - write:issues
-    - write:outposts
-    - write:reports
-    - write:saved_cloud_event_filters
-    - write:saved_graph_queries
-    - write:scan_policies
-    - write:scanner_settings
-    - write:security_frameworks
-    - write:security_scans
-    - write:service_accounts
+        - admin:all
+        - admin:audit
+        - admin:digital_trust_settings
+        - admin:identity_providers
+        - admin:projects
+        - admin:reports
+        - admin:security_settings
+        - admin:users
+        - create:action_templates
+        - create:admission_controllers
+        - create:all
+        - create:automation_actions
+        - create:automation_rules
+        - create:cloud_configuration
+        - create:cloud_event_rules
+        - create:connectors
+        - create:controls
+        - create:host_configuration
+        - create:integrations
+        - create:outposts
+        - create:reports
+        - create:run_action
+        - create:run_control
+        - create:saved_cloud_event_filters
+        - create:saved_graph_queries
+        - create:scan_policies
+        - create:security_frameworks
+        - create:security_scans
+        - create:service_accounts
+        - create:service_tickets
+        - delete:action_templates
+        - delete:all
+        - delete:automation_actions
+        - delete:automation_rules
+        - delete:cloud_configuration
+        - delete:cloud_event_rules
+        - delete:connectors
+        - delete:controls
+        - delete:host_configuration
+        - delete:integrations
+        - delete:outposts
+        - delete:reports
+        - delete:saved_cloud_event_filters
+        - delete:saved_graph_queries
+        - delete:scan_policies
+        - delete:security_frameworks
+        - delete:security_scans
+        - delete:service_accounts
+        - read:action_templates
+        - read:admission_controllers
+        - read:all
+        - read:automation_actions
+        - read:automation_rules
+        - read:benchmarks
+        - read:cloud_accounts
+        - read:cloud_configuration
+        - read:cloud_event_rules
+        - read:cloud_events
+        - read:connectors
+        - read:controls
+        - read:digital_trust_settings
+        - read:host_configuration
+        - read:integrations
+        - read:inventory
+        - read:issue_settings
+        - read:issues
+        - read:kubernetes_clusters
+        - read:licenses
+        - read:outposts
+        - read:projects
+        - read:reports
+        - read:resources
+        - read:saved_cloud_event_filters
+        - read:saved_graph_queries
+        - read:scan_policies
+        - read:scanner_settings
+        - read:security_frameworks
+        - read:security_scans
+        - read:security_settings
+        - read:service_accounts
+        - read:system_activities
+        - read:users
+        - read:vulnerabilities
+        - update:admission_controllers
+        - update:all
+        - update:automation_actions
+        - update:automation_rules
+        - update:cloud_configuration
+        - update:cloud_event_rules
+        - update:connectors
+        - update:controls
+        - update:host_configuration
+        - update:integrations
+        - update:inventory
+        - update:issue_settings
+        - update:issues
+        - update:outposts
+        - update:reports
+        - update:resources
+        - update:saved_cloud_event_filters
+        - update:saved_graph_queries
+        - update:scan_policies
+        - update:scanner_settings
+        - update:security_frameworks
+        - update:security_scans
+        - update:service_accounts
+        - update:vulnerabilities
+        - write:all
+        - write:automation_actions
+        - write:automation_rules
+        - write:cloud_configuration
+        - write:cloud_event_rules
+        - write:connectors
+        - write:controls
+        - write:host_configuration
+        - write:issue_settings
+        - write:issues
+        - write:outposts
+        - write:reports
+        - write:saved_cloud_event_filters
+        - write:saved_graph_queries
+        - write:scan_policies
+        - write:scanner_settings
+        - write:security_frameworks
+        - write:security_scans
+        - write:service_accounts
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/service_account#scopes ServiceAccount#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/service_account#scopes ServiceAccount#scopes}
 
 ---
 
@@ -995,11 +1147,11 @@ public readonly type: string;
 
 - *Type:* string
 
-Service account type, for Helm use `BROKER` type.` - Allowed values:      - THIRD_PARTY     - SENSOR     - KUBERNETES_ADMISSION_CONTROLLER     - BROKER.
+Service account type, for Helm use `BROKER` type.`     - Allowed values:          - THIRD_PARTY         - SENSOR         - KUBERNETES_ADMISSION_CONTROLLER         - BROKER         - KUBERNETES_CONNECTOR         - FIRST_PARTY.
 
-Defaults to `{{`THIRD_PARTY`}}`.
+Defaults to `THIRD_PARTY`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/service_account#type ServiceAccount#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/service_account#type ServiceAccount#type}
 
 ---
 

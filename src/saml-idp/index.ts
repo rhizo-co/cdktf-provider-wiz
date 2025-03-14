@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,84 +9,84 @@ import * as cdktf from 'cdktf';
 export interface SamlIdpConfig extends cdktf.TerraformMetaArguments {
   /**
   * When set to true, allow overriding the mapped SSO role for specific users. Must be set `true` if `use_provided_roles` is false.
-    - Defaults to `true`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#allow_manual_role_override SamlIdp#allow_manual_role_override}
+  *     - Defaults to `true`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#allow_manual_role_override SamlIdp#allow_manual_role_override}
   */
   readonly allowManualRoleOverride?: boolean | cdktf.IResolvable;
   /**
   * PEM certificate from IdP
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#certificate SamlIdp#certificate}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#certificate SamlIdp#certificate}
   */
   readonly certificate: string;
   /**
   * A list of domains the IdP handles.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#domains SamlIdp#domains}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#domains SamlIdp#domains}
   */
   readonly domains?: string[];
   /**
   * If undefined, this will default to the login_url value. Set to the same value as login_url if unsure what value to use.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#issuer_url SamlIdp#issuer_url}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#issuer_url SamlIdp#issuer_url}
   */
   readonly issuerUrl?: string;
   /**
   * IdP Login URL
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#login_url SamlIdp#login_url}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#login_url SamlIdp#login_url}
   */
   readonly loginUrl: string;
   /**
   * IdP Logout URL
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#logout_url SamlIdp#logout_url}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#logout_url SamlIdp#logout_url}
   */
   readonly logoutUrl?: string;
   /**
   * Manage group mapping by role?
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#merge_groups_mapping_by_role SamlIdp#merge_groups_mapping_by_role}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#merge_groups_mapping_by_role SamlIdp#merge_groups_mapping_by_role}
   */
   readonly mergeGroupsMappingByRole?: boolean | cdktf.IResolvable;
   /**
   * IdP name to display in Wiz.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#name SamlIdp#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#name SamlIdp#name}
   */
   readonly name: string;
   /**
   * When set to true, roles will be provided by the SSO provider. Manage the roles via Wiz portal otherwise.
-    - Defaults to `false`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#use_provider_managed_roles SamlIdp#use_provider_managed_roles}
+  *     - Defaults to `false`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#use_provider_managed_roles SamlIdp#use_provider_managed_roles}
   */
   readonly useProviderManagedRoles?: boolean | cdktf.IResolvable;
   /**
   * group_mapping block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#group_mapping SamlIdp#group_mapping}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#group_mapping SamlIdp#group_mapping}
   */
   readonly groupMapping?: SamlIdpGroupMapping[] | cdktf.IResolvable;
 }
 export interface SamlIdpGroupMapping {
   /**
   * Project mapping
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#projects SamlIdp#projects}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#projects SamlIdp#projects}
   */
   readonly projects?: string[];
   /**
   * Provider group ID
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#provider_group_id SamlIdp#provider_group_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#provider_group_id SamlIdp#provider_group_id}
   */
   readonly providerGroupId: string;
   /**
   * Wiz Role name
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp#role SamlIdp#role}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#role SamlIdp#role}
   */
   readonly role: string;
 }
@@ -106,6 +101,37 @@ export function samlIdpGroupMappingToTerraform(struct?: SamlIdpGroupMapping | cd
     provider_group_id: cdktf.stringToTerraform(struct!.providerGroupId),
     role: cdktf.stringToTerraform(struct!.role),
   }
+}
+
+
+export function samlIdpGroupMappingToHclTerraform(struct?: SamlIdpGroupMapping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    projects: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.projects),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    provider_group_id: {
+      value: cdktf.stringToHclTerraform(struct!.providerGroupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    role: {
+      value: cdktf.stringToHclTerraform(struct!.role),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SamlIdpGroupMappingOutputReference extends cdktf.ComplexObject {
@@ -228,7 +254,7 @@ export class SamlIdpGroupMappingList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp wiz_saml_idp}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp wiz_saml_idp}
 */
 export class SamlIdp extends cdktf.TerraformResource {
 
@@ -237,12 +263,26 @@ export class SamlIdp extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "wiz_saml_idp";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a SamlIdp resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the SamlIdp to import
+  * @param importFromId The id of the existing SamlIdp that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the SamlIdp to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_saml_idp", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/saml_idp wiz_saml_idp} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/saml_idp wiz_saml_idp} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -253,8 +293,8 @@ export class SamlIdp extends cdktf.TerraformResource {
       terraformResourceType: 'wiz_saml_idp',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -453,5 +493,73 @@ export class SamlIdp extends cdktf.TerraformResource {
       use_provider_managed_roles: cdktf.booleanToTerraform(this._useProviderManagedRoles),
       group_mapping: cdktf.listMapper(samlIdpGroupMappingToTerraform, true)(this._groupMapping.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allow_manual_role_override: {
+        value: cdktf.booleanToHclTerraform(this._allowManualRoleOverride),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      certificate: {
+        value: cdktf.stringToHclTerraform(this._certificate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domains: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._domains),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      issuer_url: {
+        value: cdktf.stringToHclTerraform(this._issuerUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      login_url: {
+        value: cdktf.stringToHclTerraform(this._loginUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      logout_url: {
+        value: cdktf.stringToHclTerraform(this._logoutUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      merge_groups_mapping_by_role: {
+        value: cdktf.booleanToHclTerraform(this._mergeGroupsMappingByRole),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      use_provider_managed_roles: {
+        value: cdktf.booleanToHclTerraform(this._useProviderManagedRoles),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      group_mapping: {
+        value: cdktf.listMapperHcl(samlIdpGroupMappingToHclTerraform, true)(this._groupMapping.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "SamlIdpGroupMappingList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

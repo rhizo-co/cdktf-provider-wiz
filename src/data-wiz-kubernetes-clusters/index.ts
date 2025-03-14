@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,56 +9,56 @@ import * as cdktf from 'cdktf';
 export interface DataWizKubernetesClustersConfig extends cdktf.TerraformMetaArguments {
   /**
   * Query cloud accounts of specific cloud provider.
-    - Allowed values: 
-        - GCP
-        - AWS
-        - Azure
-        - OCI
-        - Alibaba
-        - vSphere
-        - OpenShift
-        - Kubernetes
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#cloud_provider DataWizKubernetesClusters#cloud_provider}
+  *     - Allowed values: 
+  *         - GCP
+  *         - AWS
+  *         - Azure
+  *         - OCI
+  *         - Alibaba
+  *         - vSphere
+  *         - OpenShift
+  *         - Kubernetes
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#cloud_provider DataWizKubernetesClusters#cloud_provider}
   */
   readonly cloudProvider?: string[];
   /**
   * The ID(s) to search by. i.e `Azure Subscription ID` or `AWS account number`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#external_ids DataWizKubernetesClusters#external_ids}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#external_ids DataWizKubernetesClusters#external_ids}
   */
   readonly externalIds?: string[];
   /**
   * How many matches to return, maximum is `500` per page.
-    - Defaults to `50`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#first DataWizKubernetesClusters#first}
+  *     - Defaults to `50`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#first DataWizKubernetesClusters#first}
   */
   readonly first?: number;
   /**
   * Query Kubernetes Cluster of specific kind(s) or cloud provider(s).
-    - Allowed values: 
-        - EKS
-        - GKE
-        - AKS
-        - OKE
-        - OPEN_SHIFT
-        - SELF_HOSTED
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#kind DataWizKubernetesClusters#kind}
+  *     - Allowed values: 
+  *         - EKS
+  *         - GKE
+  *         - AKS
+  *         - OKE
+  *         - OPEN_SHIFT
+  *         - SELF_HOSTED
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#kind DataWizKubernetesClusters#kind}
   */
   readonly kind?: string[];
   /**
   * How many pages to return. 0 means all pages.
-    - Defaults to `0`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#max_pages DataWizKubernetesClusters#max_pages}
+  *     - Defaults to `0`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#max_pages DataWizKubernetesClusters#max_pages}
   */
   readonly maxPages?: number;
   /**
   * Free text search. Specify empty string to return all kubernetes clusters
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters#search DataWizKubernetesClusters#search}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#search DataWizKubernetesClusters#search}
   */
   readonly search?: string;
 }
@@ -77,6 +72,17 @@ export function dataWizKubernetesClustersKubernetesClustersCloudAccountToTerrafo
   }
   return {
   }
+}
+
+
+export function dataWizKubernetesClustersKubernetesClustersCloudAccountToHclTerraform(struct?: DataWizKubernetesClustersKubernetesClustersCloudAccount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataWizKubernetesClustersKubernetesClustersCloudAccountOutputReference extends cdktf.ComplexObject {
@@ -158,6 +164,17 @@ export function dataWizKubernetesClustersKubernetesClustersToTerraform(struct?: 
   }
 }
 
+
+export function dataWizKubernetesClustersKubernetesClustersToHclTerraform(struct?: DataWizKubernetesClustersKubernetesClusters): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataWizKubernetesClustersKubernetesClustersOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -223,7 +240,7 @@ export class DataWizKubernetesClustersKubernetesClustersList extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters wiz_kubernetes_clusters}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters wiz_kubernetes_clusters}
 */
 export class DataWizKubernetesClusters extends cdktf.TerraformDataSource {
 
@@ -232,12 +249,26 @@ export class DataWizKubernetesClusters extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "wiz_kubernetes_clusters";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataWizKubernetesClusters resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataWizKubernetesClusters to import
+  * @param importFromId The id of the existing DataWizKubernetesClusters that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataWizKubernetesClusters to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_kubernetes_clusters", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/kubernetes_clusters wiz_kubernetes_clusters} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/kubernetes_clusters wiz_kubernetes_clusters} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -248,8 +279,8 @@ export class DataWizKubernetesClusters extends cdktf.TerraformDataSource {
       terraformResourceType: 'wiz_kubernetes_clusters',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -391,5 +422,49 @@ export class DataWizKubernetesClusters extends cdktf.TerraformDataSource {
       max_pages: cdktf.numberToTerraform(this._maxPages),
       search: cdktf.stringToTerraform(this._search),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cloud_provider: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._cloudProvider),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      external_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._externalIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      first: {
+        value: cdktf.numberToHclTerraform(this._first),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      kind: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._kind),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      max_pages: {
+        value: cdktf.numberToHclTerraform(this._maxPages),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      search: {
+        value: cdktf.stringToHclTerraform(this._search),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

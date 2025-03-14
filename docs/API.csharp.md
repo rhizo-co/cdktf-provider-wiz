@@ -1,6 +1,9 @@
-# Submodules <a name="Submodules" id="submodules"></a>
+# API Reference <a name="API Reference" id="api-reference"></a>
+
+## Submodules <a name="Submodules" id="submodules"></a>
 
 The following submodules are available:
+
 - [automationRuleAwsSns](./automationRuleAwsSns.csharp.md)
 - [automationRuleJiraAddComment](./automationRuleJiraAddComment.csharp.md)
 - [automationRuleJiraCreateTicket](./automationRuleJiraCreateTicket.csharp.md)
@@ -11,6 +14,7 @@ The following submodules are available:
 - [cloudConfigRule](./cloudConfigRule.csharp.md)
 - [cloudConfigRuleAssociations](./cloudConfigRuleAssociations.csharp.md)
 - [connectorAws](./connectorAws.csharp.md)
+- [connectorGcp](./connectorGcp.csharp.md)
 - [control](./control.csharp.md)
 - [controlAssociations](./controlAssociations.csharp.md)
 - [dataWizCloudAccounts](./dataWizCloudAccounts.csharp.md)
@@ -25,8 +29,16 @@ The following submodules are available:
 - [integrationJira](./integrationJira.csharp.md)
 - [integrationServicenow](./integrationServicenow.csharp.md)
 - [project](./project.csharp.md)
+- [projectCloudAccountLink](./projectCloudAccountLink.csharp.md)
 - [provider](./provider.csharp.md)
+- [reportGraphQuery](./reportGraphQuery.csharp.md)
+- [samlGroupMapping](./samlGroupMapping.csharp.md)
 - [samlIdp](./samlIdp.csharp.md)
 - [securityFramework](./securityFramework.csharp.md)
 - [serviceAccount](./serviceAccount.csharp.md)
 - [user](./user.csharp.md)
+
+
+
+
+

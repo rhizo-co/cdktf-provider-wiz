@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/organizations
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/organizations
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,15 +9,15 @@ import * as cdktf from 'cdktf';
 export interface DataWizOrganizationsConfig extends cdktf.TerraformMetaArguments {
   /**
   * How many matches to return.
-    - Defaults to `500`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/organizations#first DataWizOrganizations#first}
+  *     - Defaults to `500`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/organizations#first DataWizOrganizations#first}
   */
   readonly first?: number;
   /**
   * Organization search string. Used to search all organization attributes.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/organizations#search DataWizOrganizations#search}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/organizations#search DataWizOrganizations#search}
   */
   readonly search: string;
 }
@@ -36,6 +31,17 @@ export function dataWizOrganizationsOrganizationsToTerraform(struct?: DataWizOrg
   }
   return {
   }
+}
+
+
+export function dataWizOrganizationsOrganizationsToHclTerraform(struct?: DataWizOrganizationsOrganizations): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataWizOrganizationsOrganizationsOutputReference extends cdktf.ComplexObject {
@@ -112,7 +118,7 @@ export class DataWizOrganizationsOrganizationsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/organizations wiz_organizations}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/organizations wiz_organizations}
 */
 export class DataWizOrganizations extends cdktf.TerraformDataSource {
 
@@ -121,12 +127,26 @@ export class DataWizOrganizations extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "wiz_organizations";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataWizOrganizations resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataWizOrganizations to import
+  * @param importFromId The id of the existing DataWizOrganizations that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/organizations#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataWizOrganizations to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_organizations", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/organizations wiz_organizations} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/organizations wiz_organizations} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -137,8 +157,8 @@ export class DataWizOrganizations extends cdktf.TerraformDataSource {
       terraformResourceType: 'wiz_organizations',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -205,5 +225,25 @@ export class DataWizOrganizations extends cdktf.TerraformDataSource {
       first: cdktf.numberToTerraform(this._first),
       search: cdktf.stringToTerraform(this._search),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      first: {
+        value: cdktf.numberToHclTerraform(this._first),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      search: {
+        value: cdktf.stringToHclTerraform(this._search),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

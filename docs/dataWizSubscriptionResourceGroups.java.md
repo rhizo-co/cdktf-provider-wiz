@@ -1,14 +1,10 @@
-# `data_wiz_subscription_resource_groups`
-
-Refer to the Terraform Registory for docs: [`data_wiz_subscription_resource_groups`](https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups).
-
 # `dataWizSubscriptionResourceGroups` Submodule <a name="`dataWizSubscriptionResourceGroups` Submodule" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
 ### DataWizSubscriptionResourceGroups <a name="DataWizSubscriptionResourceGroups" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups"></a>
 
-Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups wiz_subscription_resource_groups}.
+Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups wiz_subscription_resource_groups}.
 
 #### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.Initializer"></a>
 
@@ -44,7 +40,7 @@ DataWizSubscriptionResourceGroups.Builder.create(Construct scope, java.lang.Stri
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.Initializer.parameter.first">first</a></code> | <code>java.lang.Number</code> | How many matches to return. - Defaults to `50`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.Initializer.parameter.first">first</a></code> | <code>java.lang.Number</code> | How many matches to return.     - Defaults to `50`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.Initializer.parameter.relationshipType">relationshipType</a></code> | <code>java.lang.String</code> | Relationship type, will default to `CONTAINS` if not specified. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.Initializer.parameter.subscriptionId">subscriptionId</a></code> | <code>java.lang.String</code> | The Wiz subscription ID to search by. |
 
@@ -114,9 +110,9 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.Number
 
-How many matches to return. - Defaults to `50`.
+How many matches to return.     - Defaults to `50`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups#first DataWizSubscriptionResourceGroups#first}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#first DataWizSubscriptionResourceGroups#first}
 
 ---
 
@@ -127,85 +123,85 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 Relationship type, will default to `CONTAINS` if not specified.
 
 * Allowed values:
+  - ANY
+  - ANY_OUTGOING
+  - ACTING_AS
+  - ADMINISTRATE
+  - ALERTED_ON
+  - ALLOWS
+  - ALLOWS_ACCESS_TO
+  - APPLIES_TO
+  - ASSIGNED_TO
+  - ATTACHED_TO
+  - BEHIND
+  - BOOTS
+  - BUILT_FROM
+  - CAUSES
+  - COLLABORATES
+  - CONNECTED_TO
+  - CONTAINS
+  - CONTAINS_DST_IP_RANGE
+  - CONTAINS_DST_PORT_RANGE
+  - CONTAINS_SRC_IP_RANGE
+  - CONTAINS_SRC_PORT_RANGE
+  - DENIES
+  - DEPENDS_ON
+  - DEPLOYED_TO
+  - ENCRYPTS
+  - ENCRYPTS_PARTITION
+  - ENTITLES
+  - EXCLUDES
+  - EXPOSES
+  - GOVERNS
+  - HAS
+  - HAS_BOUNDARY_POLICY
+  - HAS_DATA_FINDING
+  - HAS_DATA_INVENTORY
+  - HAS_DATA_SCHEMA
+  - HAS_DATA_STORE
+  - HAS_ORGANIZATION_POLICY
+  - HAS_PRINCIPAL_POLICY
+  - HAS_RESOURCE_POLICY
+  - HAS_SNAPSHOT
+  - HAS_SOURCE
+  - HAS_STANDARD_WEB_ACCESS_FROM
+  - HAS_TECH
+  - HOSTS
+  - IGNORES
+  - IMPLEMENTS
+  - INCLUDES
+  - INFECTS
+  - INSIDE
+  - INSTANCE_OF
+  - INVOKES
+  - LOGS_DATA_FOR
+  - MANAGES
+  - MOUNTS
+  - OWNS
+  - PART_OF
+  - PEERED_TO
+  - PERFORMED
+  - PERFORMED_IMPERSONATED
+  - PERMITS
+  - POINTS_TO
+  - PROTECTS
+  - READS_DATA_FROM
+  - REFERENCED_BY
+  - REPLICA_OF
+  - ROUTES_TRAFFIC_FROM
+  - ROUTES_TRAFFIC_TO
+  - RUNS
+  - SCANNED
+  - SEND_MESSAGES_TO
+  - SERVES
+  - STORES_DATA_IN
+  - TRANSIT_PEERED_TO
+  - USES
+  - VALIDATES
 
-  * ANY
-  * ANY_OUTGOING
-  * ACTING_AS
-  * ADMINISTRATE
-  * ALERTED_ON
-  * ALLOWS
-  * ALLOWS_ACCESS_TO
-  * APPLIES_TO
-  * ASSIGNED_TO
-  * ATTACHED_TO
-  * BEHIND
-  * BOOTS
-  * BUILT_FROM
-  * CAUSES
-  * COLLABORATES
-  * CONNECTED_TO
-  * CONTAINS
-  * CONTAINS_DST_IP_RANGE
-  * CONTAINS_DST_PORT_RANGE
-  * CONTAINS_SRC_IP_RANGE
-  * CONTAINS_SRC_PORT_RANGE
-  * DENIES
-  * DEPENDS_ON
-  * DEPLOYED_TO
-  * ENCRYPTS
-  * ENCRYPTS_PARTITION
-  * ENTITLES
-  * EXCLUDES
-  * EXPOSES
-  * GOVERNS
-  * HAS
-  * HAS_BOUNDARY_POLICY
-  * HAS_DATA_FINDING
-  * HAS_DATA_INVENTORY
-  * HAS_DATA_SCHEMA
-  * HAS_DATA_STORE
-  * HAS_ORGANIZATION_POLICY
-  * HAS_PRINCIPAL_POLICY
-  * HAS_RESOURCE_POLICY
-  * HAS_SNAPSHOT
-  * HAS_SOURCE
-  * HAS_STANDARD_WEB_ACCESS_FROM
-  * HAS_TECH
-  * HOSTS
-  * IGNORES
-  * IMPLEMENTS
-  * INCLUDES
-  * INFECTS
-  * INSIDE
-  * INSTANCE_OF
-  * INVOKES
-  * LOGS_DATA_FOR
-  * MANAGES
-  * MOUNTS
-  * OWNS
-  * PART_OF
-  * PEERED_TO
-  * PERFORMED
-  * PERFORMED_IMPERSONATED
-  * PERMITS
-  * POINTS_TO
-  * PROTECTS
-  * READS_DATA_FROM
-  * REFERENCED_BY
-  * REPLICA_OF
-  * ROUTES_TRAFFIC_FROM
-  * ROUTES_TRAFFIC_TO
-  * RUNS
-  * SCANNED
-  * SEND_MESSAGES_TO
-  * SERVES
-  * STORES_DATA_IN
-  * TRANSIT_PEERED_TO
-  * USES
-  * VALIDATES
-* Defaults to `{{`CONTAINS`}}`.
+  * Defaults to `CONTAINS`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups#relationship_type DataWizSubscriptionResourceGroups#relationship_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#relationship_type DataWizSubscriptionResourceGroups#relationship_type}
 
 ---
 
@@ -215,7 +211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 
 The Wiz subscription ID to search by.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups#subscription_id DataWizSubscriptionResourceGroups#subscription_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#subscription_id DataWizSubscriptionResourceGroups#subscription_id}
 
 ---
 
@@ -227,6 +223,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.toHclTerraform">toHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
@@ -294,6 +291,14 @@ public void resetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `toMetadata` <a name="toMetadata" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.toMetadata"></a>
 
@@ -454,6 +459,7 @@ public void resetSubscriptionId()
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.isTerraformDataSource">isTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a DataWizSubscriptionResourceGroups resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -514,6 +520,50 @@ DataWizSubscriptionResourceGroups.isTerraformDataSource(java.lang.Object x)
 ###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* java.lang.Object
+
+---
+
+##### `generateConfigForImport` <a name="generateConfigForImport" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.generateConfigForImport"></a>
+
+```java
+import com.hashicorp.cdktf.providers.wiz.data_wiz_subscription_resource_groups.DataWizSubscriptionResourceGroups;
+
+DataWizSubscriptionResourceGroups.generateConfigForImport(Construct scope, java.lang.String importToId, java.lang.String importFromId),DataWizSubscriptionResourceGroups.generateConfigForImport(Construct scope, java.lang.String importToId, java.lang.String importFromId, TerraformProvider provider)
+```
+
+Generates CDKTF code for importing a DataWizSubscriptionResourceGroups resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* java.lang.String
+
+The construct id used in the generated config for the DataWizSubscriptionResourceGroups to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* java.lang.String
+
+The id of the existing DataWizSubscriptionResourceGroups that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroups.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* com.hashicorp.cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataWizSubscriptionResourceGroups to import is found.
 
 ---
 
@@ -802,7 +852,7 @@ DataWizSubscriptionResourceGroupsConfig.builder()
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsConfig.property.first">first</a></code> | <code>java.lang.Number</code> | How many matches to return. - Defaults to `50`. |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsConfig.property.first">first</a></code> | <code>java.lang.Number</code> | How many matches to return.     - Defaults to `50`. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsConfig.property.relationshipType">relationshipType</a></code> | <code>java.lang.String</code> | Relationship type, will default to `CONTAINS` if not specified. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsConfig.property.subscriptionId">subscriptionId</a></code> | <code>java.lang.String</code> | The Wiz subscription ID to search by. |
 
@@ -886,9 +936,9 @@ public java.lang.Number getFirst();
 
 - *Type:* java.lang.Number
 
-How many matches to return. - Defaults to `50`.
+How many matches to return.     - Defaults to `50`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups#first DataWizSubscriptionResourceGroups#first}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#first DataWizSubscriptionResourceGroups#first}
 
 ---
 
@@ -903,85 +953,85 @@ public java.lang.String getRelationshipType();
 Relationship type, will default to `CONTAINS` if not specified.
 
 * Allowed values:
+  - ANY
+  - ANY_OUTGOING
+  - ACTING_AS
+  - ADMINISTRATE
+  - ALERTED_ON
+  - ALLOWS
+  - ALLOWS_ACCESS_TO
+  - APPLIES_TO
+  - ASSIGNED_TO
+  - ATTACHED_TO
+  - BEHIND
+  - BOOTS
+  - BUILT_FROM
+  - CAUSES
+  - COLLABORATES
+  - CONNECTED_TO
+  - CONTAINS
+  - CONTAINS_DST_IP_RANGE
+  - CONTAINS_DST_PORT_RANGE
+  - CONTAINS_SRC_IP_RANGE
+  - CONTAINS_SRC_PORT_RANGE
+  - DENIES
+  - DEPENDS_ON
+  - DEPLOYED_TO
+  - ENCRYPTS
+  - ENCRYPTS_PARTITION
+  - ENTITLES
+  - EXCLUDES
+  - EXPOSES
+  - GOVERNS
+  - HAS
+  - HAS_BOUNDARY_POLICY
+  - HAS_DATA_FINDING
+  - HAS_DATA_INVENTORY
+  - HAS_DATA_SCHEMA
+  - HAS_DATA_STORE
+  - HAS_ORGANIZATION_POLICY
+  - HAS_PRINCIPAL_POLICY
+  - HAS_RESOURCE_POLICY
+  - HAS_SNAPSHOT
+  - HAS_SOURCE
+  - HAS_STANDARD_WEB_ACCESS_FROM
+  - HAS_TECH
+  - HOSTS
+  - IGNORES
+  - IMPLEMENTS
+  - INCLUDES
+  - INFECTS
+  - INSIDE
+  - INSTANCE_OF
+  - INVOKES
+  - LOGS_DATA_FOR
+  - MANAGES
+  - MOUNTS
+  - OWNS
+  - PART_OF
+  - PEERED_TO
+  - PERFORMED
+  - PERFORMED_IMPERSONATED
+  - PERMITS
+  - POINTS_TO
+  - PROTECTS
+  - READS_DATA_FROM
+  - REFERENCED_BY
+  - REPLICA_OF
+  - ROUTES_TRAFFIC_FROM
+  - ROUTES_TRAFFIC_TO
+  - RUNS
+  - SCANNED
+  - SEND_MESSAGES_TO
+  - SERVES
+  - STORES_DATA_IN
+  - TRANSIT_PEERED_TO
+  - USES
+  - VALIDATES
 
-  * ANY
-  * ANY_OUTGOING
-  * ACTING_AS
-  * ADMINISTRATE
-  * ALERTED_ON
-  * ALLOWS
-  * ALLOWS_ACCESS_TO
-  * APPLIES_TO
-  * ASSIGNED_TO
-  * ATTACHED_TO
-  * BEHIND
-  * BOOTS
-  * BUILT_FROM
-  * CAUSES
-  * COLLABORATES
-  * CONNECTED_TO
-  * CONTAINS
-  * CONTAINS_DST_IP_RANGE
-  * CONTAINS_DST_PORT_RANGE
-  * CONTAINS_SRC_IP_RANGE
-  * CONTAINS_SRC_PORT_RANGE
-  * DENIES
-  * DEPENDS_ON
-  * DEPLOYED_TO
-  * ENCRYPTS
-  * ENCRYPTS_PARTITION
-  * ENTITLES
-  * EXCLUDES
-  * EXPOSES
-  * GOVERNS
-  * HAS
-  * HAS_BOUNDARY_POLICY
-  * HAS_DATA_FINDING
-  * HAS_DATA_INVENTORY
-  * HAS_DATA_SCHEMA
-  * HAS_DATA_STORE
-  * HAS_ORGANIZATION_POLICY
-  * HAS_PRINCIPAL_POLICY
-  * HAS_RESOURCE_POLICY
-  * HAS_SNAPSHOT
-  * HAS_SOURCE
-  * HAS_STANDARD_WEB_ACCESS_FROM
-  * HAS_TECH
-  * HOSTS
-  * IGNORES
-  * IMPLEMENTS
-  * INCLUDES
-  * INFECTS
-  * INSIDE
-  * INSTANCE_OF
-  * INVOKES
-  * LOGS_DATA_FOR
-  * MANAGES
-  * MOUNTS
-  * OWNS
-  * PART_OF
-  * PEERED_TO
-  * PERFORMED
-  * PERFORMED_IMPERSONATED
-  * PERMITS
-  * POINTS_TO
-  * PROTECTS
-  * READS_DATA_FROM
-  * REFERENCED_BY
-  * REPLICA_OF
-  * ROUTES_TRAFFIC_FROM
-  * ROUTES_TRAFFIC_TO
-  * RUNS
-  * SCANNED
-  * SEND_MESSAGES_TO
-  * SERVES
-  * STORES_DATA_IN
-  * TRANSIT_PEERED_TO
-  * USES
-  * VALIDATES
-* Defaults to `{{`CONTAINS`}}`.
+  * Defaults to `CONTAINS`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups#relationship_type DataWizSubscriptionResourceGroups#relationship_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#relationship_type DataWizSubscriptionResourceGroups#relationship_type}
 
 ---
 
@@ -995,7 +1045,7 @@ public java.lang.String getSubscriptionId();
 
 The Wiz subscription ID to search by.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/data-sources/subscription_resource_groups#subscription_id DataWizSubscriptionResourceGroups#subscription_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/data-sources/subscription_resource_groups#subscription_id DataWizSubscriptionResourceGroups#subscription_id}
 
 ---
 
@@ -1059,10 +1109,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsResourceGroupsList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsResourceGroupsList.computeFqn">computeFqn</a></code> | *No description.* |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsResourceGroupsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsResourceGroupsList.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsResourceGroupsList.get">get</a></code> | *No description.* |
+
+---
+
+##### `allWithMapKey` <a name="allWithMapKey" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsResourceGroupsList.allWithMapKey"></a>
+
+```java
+public DynamicListTerraformIterator allWithMapKey(java.lang.String mapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="rhizo-co-terraform-provider-wiz.dataWizSubscriptionResourceGroups.DataWizSubscriptionResourceGroupsResourceGroupsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
 
 ---
 

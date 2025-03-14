@@ -1,6 +1,9 @@
-# Submodules <a name="Submodules" id="submodules"></a>
+# API Reference <a name="API Reference" id="api-reference"></a>
+
+## Submodules <a name="Submodules" id="submodules"></a>
 
 The following submodules are available:
+
 - [automationRuleAwsSns](./automationRuleAwsSns.python.md)
 - [automationRuleJiraAddComment](./automationRuleJiraAddComment.python.md)
 - [automationRuleJiraCreateTicket](./automationRuleJiraCreateTicket.python.md)
@@ -11,6 +14,7 @@ The following submodules are available:
 - [cloudConfigRule](./cloudConfigRule.python.md)
 - [cloudConfigRuleAssociations](./cloudConfigRuleAssociations.python.md)
 - [connectorAws](./connectorAws.python.md)
+- [connectorGcp](./connectorGcp.python.md)
 - [control](./control.python.md)
 - [controlAssociations](./controlAssociations.python.md)
 - [dataWizCloudAccounts](./dataWizCloudAccounts.python.md)
@@ -25,8 +29,16 @@ The following submodules are available:
 - [integrationJira](./integrationJira.python.md)
 - [integrationServicenow](./integrationServicenow.python.md)
 - [project](./project.python.md)
+- [projectCloudAccountLink](./projectCloudAccountLink.python.md)
 - [provider](./provider.python.md)
+- [reportGraphQuery](./reportGraphQuery.python.md)
+- [samlGroupMapping](./samlGroupMapping.python.md)
 - [samlIdp](./samlIdp.python.md)
 - [securityFramework](./securityFramework.python.md)
 - [serviceAccount](./serviceAccount.python.md)
 - [user](./user.python.md)
+
+
+
+
+

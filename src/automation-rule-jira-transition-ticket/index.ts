@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,103 +9,103 @@ import * as cdktf from 'cdktf';
 export interface AutomationRuleJiraTransitionTicketConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of the automation rule
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#description AutomationRuleJiraTransitionTicket#description}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#description AutomationRuleJiraTransitionTicket#description}
   */
   readonly description?: string;
   /**
   * Enabled?
-    - Defaults to `true`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#enabled AutomationRuleJiraTransitionTicket#enabled}
+  *     - Defaults to `true`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#enabled AutomationRuleJiraTransitionTicket#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Value should be wrapped in jsonencode() to avoid diff detection. This is required even though the API states it is not required.  Validate is performed by the UI.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#filters AutomationRuleJiraTransitionTicket#filters}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#filters AutomationRuleJiraTransitionTicket#filters}
   */
   readonly filters: string;
   /**
   * Wiz identifier for the Integration to leverage for this action. Must be resource type integration_jira.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#integration_id AutomationRuleJiraTransitionTicket#integration_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#integration_id AutomationRuleJiraTransitionTicket#integration_id}
   */
   readonly integrationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#jira_advanced_fields AutomationRuleJiraTransitionTicket#jira_advanced_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#jira_advanced_fields AutomationRuleJiraTransitionTicket#jira_advanced_fields}
   */
   readonly jiraAdvancedFields?: string;
   /**
   * Upload issues report as attachment Only relevant in CONTROL-triggered Actions.
-    - Defaults to `false`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#jira_attach_evidence_csv AutomationRuleJiraTransitionTicket#jira_attach_evidence_csv}
+  *     - Defaults to `false`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#jira_attach_evidence_csv AutomationRuleJiraTransitionTicket#jira_attach_evidence_csv}
   */
   readonly jiraAttachEvidenceCsv?: boolean | cdktf.IResolvable;
   /**
   * Issue Jira comment
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#jira_comment AutomationRuleJiraTransitionTicket#jira_comment}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#jira_comment AutomationRuleJiraTransitionTicket#jira_comment}
   */
   readonly jiraComment?: string;
   /**
   * Whether or not to send comment during follow-up call, if this is disabled comment will be sent as update field
-    - Defaults to `false`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#jira_comment_on_transition AutomationRuleJiraTransitionTicket#jira_comment_on_transition}
+  *     - Defaults to `false`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#jira_comment_on_transition AutomationRuleJiraTransitionTicket#jira_comment_on_transition}
   */
   readonly jiraCommentOnTransition?: boolean | cdktf.IResolvable;
   /**
   * Issue project
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#jira_project AutomationRuleJiraTransitionTicket#jira_project}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#jira_project AutomationRuleJiraTransitionTicket#jira_project}
   */
   readonly jiraProject?: string;
   /**
   * Issue transition ID or Name
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#jira_transition_id AutomationRuleJiraTransitionTicket#jira_transition_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#jira_transition_id AutomationRuleJiraTransitionTicket#jira_transition_id}
   */
   readonly jiraTransitionId?: string;
   /**
   * Name of the automation rule
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#name AutomationRuleJiraTransitionTicket#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#name AutomationRuleJiraTransitionTicket#name}
   */
   readonly name: string;
   /**
   * Wiz internal ID for a project.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#project_id AutomationRuleJiraTransitionTicket#project_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#project_id AutomationRuleJiraTransitionTicket#project_id}
   */
   readonly projectId?: string;
   /**
   * Trigger source.
-    - Allowed values: 
-        - ISSUES
-        - CLOUD_EVENTS
-        - CONTROL
-        - CONFIGURATION_FINDING
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#trigger_source AutomationRuleJiraTransitionTicket#trigger_source}
+  *     - Allowed values: 
+  *         - ISSUES
+  *         - CLOUD_EVENTS
+  *         - CONTROL
+  *         - CONFIGURATION_FINDING
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#trigger_source AutomationRuleJiraTransitionTicket#trigger_source}
   */
   readonly triggerSource: string;
   /**
   * Trigger type. Must be set to `CREATED` for wiz_automation_rule_jira_transition_ticket.
-    - Allowed values: 
-        - CREATED
-        - UPDATED
-        - RESOLVED
-        - REOPENED
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket#trigger_type AutomationRuleJiraTransitionTicket#trigger_type}
+  *     - Allowed values: 
+  *         - CREATED
+  *         - UPDATED
+  *         - RESOLVED
+  *         - REOPENED
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#trigger_type AutomationRuleJiraTransitionTicket#trigger_type}
   */
   readonly triggerType: string[];
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket wiz_automation_rule_jira_transition_ticket}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket wiz_automation_rule_jira_transition_ticket}
 */
 export class AutomationRuleJiraTransitionTicket extends cdktf.TerraformResource {
 
@@ -119,12 +114,26 @@ export class AutomationRuleJiraTransitionTicket extends cdktf.TerraformResource 
   // =================
   public static readonly tfResourceType = "wiz_automation_rule_jira_transition_ticket";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a AutomationRuleJiraTransitionTicket resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AutomationRuleJiraTransitionTicket to import
+  * @param importFromId The id of the existing AutomationRuleJiraTransitionTicket that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AutomationRuleJiraTransitionTicket to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_automation_rule_jira_transition_ticket", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_jira_transition_ticket wiz_automation_rule_jira_transition_ticket} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_jira_transition_ticket wiz_automation_rule_jira_transition_ticket} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -135,8 +144,8 @@ export class AutomationRuleJiraTransitionTicket extends cdktf.TerraformResource 
       terraformResourceType: 'wiz_automation_rule_jira_transition_ticket',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -411,5 +420,97 @@ export class AutomationRuleJiraTransitionTicket extends cdktf.TerraformResource 
       trigger_source: cdktf.stringToTerraform(this._triggerSource),
       trigger_type: cdktf.listMapper(cdktf.stringToTerraform, false)(this._triggerType),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      filters: {
+        value: cdktf.stringToHclTerraform(this._filters),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      integration_id: {
+        value: cdktf.stringToHclTerraform(this._integrationId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_advanced_fields: {
+        value: cdktf.stringToHclTerraform(this._jiraAdvancedFields),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_attach_evidence_csv: {
+        value: cdktf.booleanToHclTerraform(this._jiraAttachEvidenceCsv),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      jira_comment: {
+        value: cdktf.stringToHclTerraform(this._jiraComment),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_comment_on_transition: {
+        value: cdktf.booleanToHclTerraform(this._jiraCommentOnTransition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      jira_project: {
+        value: cdktf.stringToHclTerraform(this._jiraProject),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      jira_transition_id: {
+        value: cdktf.stringToHclTerraform(this._jiraTransitionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project_id: {
+        value: cdktf.stringToHclTerraform(this._projectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trigger_source: {
+        value: cdktf.stringToHclTerraform(this._triggerSource),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trigger_type: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._triggerType),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

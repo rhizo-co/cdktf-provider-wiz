@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,85 +9,85 @@ import * as cdktf from 'cdktf';
 export interface AutomationRuleServicenowUpdateTicketConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of the automation rule
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#description AutomationRuleServicenowUpdateTicket#description}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#description AutomationRuleServicenowUpdateTicket#description}
   */
   readonly description: string;
   /**
   * Enabled?
-    - Defaults to `true`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#enabled AutomationRuleServicenowUpdateTicket#enabled}
+  *     - Defaults to `true`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#enabled AutomationRuleServicenowUpdateTicket#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Value should be wrapped in jsonencode() to avoid diff detection. This is required even though the API states it is not required.  Validate is performed by the UI.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#filters AutomationRuleServicenowUpdateTicket#filters}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#filters AutomationRuleServicenowUpdateTicket#filters}
   */
   readonly filters: string;
   /**
   * Wiz identifier for the Integration to leverage for this action. Must be resource type integration_aws_sns.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#integration_id AutomationRuleServicenowUpdateTicket#integration_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#integration_id AutomationRuleServicenowUpdateTicket#integration_id}
   */
   readonly integrationId: string;
   /**
   * Name of the automation rule
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#name AutomationRuleServicenowUpdateTicket#name}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#name AutomationRuleServicenowUpdateTicket#name}
   */
   readonly name: string;
   /**
   * Wiz internal ID for a project.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#project_id AutomationRuleServicenowUpdateTicket#project_id}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#project_id AutomationRuleServicenowUpdateTicket#project_id}
   */
   readonly projectId?: string;
   /**
   * Upload issues report as attachment Only relevant in CONTROL-triggered Actions.
-    - Defaults to `false`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#servicenow_attach_issues_report AutomationRuleServicenowUpdateTicket#servicenow_attach_issues_report}
+  *     - Defaults to `false`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#servicenow_attach_issues_report AutomationRuleServicenowUpdateTicket#servicenow_attach_issues_report}
   */
   readonly servicenowAttachIssuesReport?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#servicenow_fields AutomationRuleServicenowUpdateTicket#servicenow_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#servicenow_fields AutomationRuleServicenowUpdateTicket#servicenow_fields}
   */
   readonly servicenowFields?: string;
   /**
   * Table name to which new tickets will be added to, e.g: 'incident'.
-    - Defaults to `{{`incident`}}`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#servicenow_table_name AutomationRuleServicenowUpdateTicket#servicenow_table_name}
+  *     - Defaults to `incident`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#servicenow_table_name AutomationRuleServicenowUpdateTicket#servicenow_table_name}
   */
   readonly servicenowTableName?: string;
   /**
   * Trigger source.
-    - Allowed values: 
-        - ISSUES
-        - CLOUD_EVENTS
-        - CONTROL
-        - CONFIGURATION_FINDING
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#trigger_source AutomationRuleServicenowUpdateTicket#trigger_source}
+  *     - Allowed values: 
+  *         - ISSUES
+  *         - CLOUD_EVENTS
+  *         - CONTROL
+  *         - CONFIGURATION_FINDING
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#trigger_source AutomationRuleServicenowUpdateTicket#trigger_source}
   */
   readonly triggerSource: string;
   /**
   * Trigger type. Must be set to `CREATED` for wiz_automation_rule_servicenow_update_ticket.
-    - Allowed values: 
-        - CREATED
-        - UPDATED
-        - RESOLVED
-        - REOPENED
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket#trigger_type AutomationRuleServicenowUpdateTicket#trigger_type}
+  *     - Allowed values: 
+  *         - CREATED
+  *         - UPDATED
+  *         - RESOLVED
+  *         - REOPENED
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#trigger_type AutomationRuleServicenowUpdateTicket#trigger_type}
   */
   readonly triggerType: string[];
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket wiz_automation_rule_servicenow_update_ticket}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket wiz_automation_rule_servicenow_update_ticket}
 */
 export class AutomationRuleServicenowUpdateTicket extends cdktf.TerraformResource {
 
@@ -101,12 +96,26 @@ export class AutomationRuleServicenowUpdateTicket extends cdktf.TerraformResourc
   // =================
   public static readonly tfResourceType = "wiz_automation_rule_servicenow_update_ticket";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a AutomationRuleServicenowUpdateTicket resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AutomationRuleServicenowUpdateTicket to import
+  * @param importFromId The id of the existing AutomationRuleServicenowUpdateTicket that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AutomationRuleServicenowUpdateTicket to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_automation_rule_servicenow_update_ticket", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/automation_rule_servicenow_update_ticket wiz_automation_rule_servicenow_update_ticket} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/automation_rule_servicenow_update_ticket wiz_automation_rule_servicenow_update_ticket} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -117,8 +126,8 @@ export class AutomationRuleServicenowUpdateTicket extends cdktf.TerraformResourc
       terraformResourceType: 'wiz_automation_rule_servicenow_update_ticket',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -336,5 +345,79 @@ export class AutomationRuleServicenowUpdateTicket extends cdktf.TerraformResourc
       trigger_source: cdktf.stringToTerraform(this._triggerSource),
       trigger_type: cdktf.listMapper(cdktf.stringToTerraform, false)(this._triggerType),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      filters: {
+        value: cdktf.stringToHclTerraform(this._filters),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      integration_id: {
+        value: cdktf.stringToHclTerraform(this._integrationId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project_id: {
+        value: cdktf.stringToHclTerraform(this._projectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      servicenow_attach_issues_report: {
+        value: cdktf.booleanToHclTerraform(this._servicenowAttachIssuesReport),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      servicenow_fields: {
+        value: cdktf.stringToHclTerraform(this._servicenowFields),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      servicenow_table_name: {
+        value: cdktf.stringToHclTerraform(this._servicenowTableName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trigger_source: {
+        value: cdktf.stringToHclTerraform(this._triggerSource),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trigger_type: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._triggerType),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

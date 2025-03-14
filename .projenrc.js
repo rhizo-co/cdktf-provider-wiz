@@ -9,12 +9,13 @@ const project = new CdktfProviderProject({
   packageName: 'rhizo-co-terraform-provider-wiz',
   githubNamespace: 'rhizo-co',
   useCustomGithubRunner: false,
-  terraformProvider: "rhizo-co/wiz@~> 1.1.6",
-  cdktfVersion: "0.16.0",
-  constructsVersion: "10.2.23",
-  minNodeVersion: "18.0.0",
-  jsiiVersion: "^5.0.1",
-  devDeps: ["@cdktf/provider-project@^0.2.95"],
+  terraformProvider: "AxtonGrams/wiz@~> 1.2.5",
+  cdktfVersion: "^0.20.0",
+  constructsVersion: "^10.3.0",
+  minNodeVersion: "18.12.0",
+  jsiiVersion: "~5.5.0",
+  typescriptVersion: "~5.5.0", // NOTE: this should be the same major/minor version as JSII
+  devDeps: ["@cdktf/provider-project@^0.6.44"],
 });
 
 

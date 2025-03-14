@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/host_config_rule_associations
+// https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/host_config_rule_associations
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,27 +9,27 @@ import * as cdktf from 'cdktf';
 export interface HostConfigRuleAssociationsConfig extends cdktf.TerraformMetaArguments {
   /**
   * Details of the association. This information is not used to manage resources but can serve as notes or documentation for the associations.
-    - Defaults to `{{`undefined`}}`.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/host_config_rule_associations#details HostConfigRuleAssociations#details}
+  *     - Defaults to `undefined`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/host_config_rule_associations#details HostConfigRuleAssociations#details}
   */
   readonly details?: string;
   /**
   * List of host configuration rule IDs.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/host_config_rule_associations#host_config_rule_ids HostConfigRuleAssociations#host_config_rule_ids}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/host_config_rule_associations#host_config_rule_ids HostConfigRuleAssociations#host_config_rule_ids}
   */
   readonly hostConfigRuleIds: string[];
   /**
   * List of security sub-category IDs.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/host_config_rule_associations#security_sub_category_ids HostConfigRuleAssociations#security_sub_category_ids}
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/host_config_rule_associations#security_sub_category_ids HostConfigRuleAssociations#security_sub_category_ids}
   */
   readonly securitySubCategoryIds: string[];
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/host_config_rule_associations wiz_host_config_rule_associations}
+* Represents a {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/host_config_rule_associations wiz_host_config_rule_associations}
 */
 export class HostConfigRuleAssociations extends cdktf.TerraformResource {
 
@@ -43,12 +38,26 @@ export class HostConfigRuleAssociations extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "wiz_host_config_rule_associations";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a HostConfigRuleAssociations resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the HostConfigRuleAssociations to import
+  * @param importFromId The id of the existing HostConfigRuleAssociations that should be imported. Refer to the {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/host_config_rule_associations#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the HostConfigRuleAssociations to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "wiz_host_config_rule_associations", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/rhizo-co/wiz/1.1.6/docs/resources/host_config_rule_associations wiz_host_config_rule_associations} Resource
+  * Create a new {@link https://registry.terraform.io/providers/axtongrams/wiz/1.2.5/docs/resources/host_config_rule_associations wiz_host_config_rule_associations} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -59,8 +68,8 @@ export class HostConfigRuleAssociations extends cdktf.TerraformResource {
       terraformResourceType: 'wiz_host_config_rule_associations',
       terraformGeneratorMetadata: {
         providerName: 'wiz',
-        providerVersion: '1.1.6',
-        providerVersionConstraint: '~> 1.1.6'
+        providerVersion: '1.2.5',
+        providerVersionConstraint: '~> 1.2.5'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -136,5 +145,31 @@ export class HostConfigRuleAssociations extends cdktf.TerraformResource {
       host_config_rule_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._hostConfigRuleIds),
       security_sub_category_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._securitySubCategoryIds),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      details: {
+        value: cdktf.stringToHclTerraform(this._details),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      host_config_rule_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._hostConfigRuleIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      security_sub_category_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._securitySubCategoryIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
